@@ -1,0 +1,25 @@
+CACHE MANIFEST
+
+# Version 1
+
+CACHE:
+index.html
+scripts/appUpgrade.js
+scripts/contribute.js
+scripts/download_CB.js
+scripts/fileManipulation.js
+scripts/genericSpotlight.js
+scripts/GoogleAnalyticsPlugin.js
+scripts/init.js
+scripts/listing.js
+scripts/MainPageLoad.js
+scripts/playlist.js
+scripts/showContent.js
+scripts/Sync.js
+scripts/techtime.js
+images/
+
+
+FALLBACK:
+
+NETWORK:

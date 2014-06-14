@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes
+END
+NSData+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSData+Base64.h
+END
+CDVGlobalization.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVGlobalization.h
+END
+CDVSplashScreen.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVSplashScreen.m
+END
+NSData+Base64.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSData+Base64.m
+END
+CDVGlobalization.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVGlobalization.m
+END
+CDVWebViewDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVWebViewDelegate.h
+END
+CDVWebViewDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVWebViewDelegate.m
+END
+CDVCommandDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCommandDelegate.h
+END
+CDVDebugConsole.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVDebugConsole.h
+END
+CDVAvailability.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVAvailability.h
+END
+CDVAccelerometer.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVAccelerometer.h
+END
+NSArray+Comparisons.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSArray+Comparisons.h
+END
+CDVDebugConsole.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVDebugConsole.m
+END
+CDVEcho.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVEcho.h
+END
+CDVAccelerometer.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVAccelerometer.m
+END
+NSArray+Comparisons.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSArray+Comparisons.m
+END
+CDVConfigParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVConfigParser.h
+END
+CDVCommandQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCommandQueue.h
+END
+CDVEcho.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVEcho.m
+END
+CDVFileTransfer.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVFileTransfer.h
+END
+CDVConfigParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVConfigParser.m
+END
+CDVCommandQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCommandQueue.m
+END
+CDVFileTransfer.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/109/Sample_google/Sample_google/CordovaLib/Classes/CDVFileTransfer.m
+END
+CDVContact.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVContact.h
+END
+CDVDevice.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVDevice.h
+END
+CDVReachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVReachability.h
+END
+CDVContact.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVContact.m
+END
+CDVDevice.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVDevice.m
+END
+CDVReachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVReachability.m
+END
+CDVInAppBrowser.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVInAppBrowser.h
+END
+CDVWhitelist.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVWhitelist.h
+END
+CDVLocalStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLocalStorage.h
+END
+CDV.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDV.h
+END
+CDVFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVFile.h
+END
+CDVInAppBrowser.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVInAppBrowser.m
+END
+CDVInvokedUrlCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVInvokedUrlCommand.h
+END
+CDVWhitelist.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVWhitelist.m
+END
+CDVURLProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVURLProtocol.h
+END
+CDVLocalStorage.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLocalStorage.m
+END
+CDVFile.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVFile.m
+END
+CDVScreenOrientationDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVScreenOrientationDelegate.h
+END
+CDVInvokedUrlCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVInvokedUrlCommand.m
+END
+CDVSound.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVSound.h
+END
+CDVCamera.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCamera.h
+END
+CDVURLProtocol.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVURLProtocol.m
+END
+CDVUserAgentUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVUserAgentUtil.h
+END
+CDVCommandDelegateImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCommandDelegateImpl.h
+END
+CDVSound.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVSound.m
+END
+CDVPluginResult.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVPluginResult.h
+END
+CDVCamera.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCamera.m
+END
+CDVCommandDelegateImpl.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCommandDelegateImpl.m
+END
+CDVUserAgentUtil.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVUserAgentUtil.m
+END
+CDVPluginResult.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVPluginResult.m
+END
+CDVCapture.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCapture.h
+END
+NSDictionary+Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSDictionary+Extensions.h
+END
+CDVCapture.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVCapture.m
+END
+CDVJSON.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVJSON.h
+END
+NSDictionary+Extensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSDictionary+Extensions.m
+END
+CDVBattery.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVBattery.h
+END
+NSMutableArray+QueueAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
+END
+CDVJSON.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVJSON.m
+END
+CDVViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVViewController.h
+END
+CDVBattery.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVBattery.m
+END
+CDVLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLogger.h
+END
+NSMutableArray+QueueAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
+END
+CDVViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TechtimeMobileIOS/!svn/ver/109/Sample_google/Sample_google/CordovaLib/Classes/CDVViewController.m
+END
+CDVLogger.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLogger.m
+END
+CDVNotification.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVNotification.h
+END
+CDVNotification.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVNotification.m
+END
+UIDevice+Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/UIDevice+Extensions.h
+END
+CDVPlugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVPlugin.h
+END
+CDVConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVConnection.h
+END
+UIDevice+Extensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/UIDevice+Extensions.m
+END
+CDVPlugin.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVPlugin.m
+END
+CDVConnection.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVConnection.m
+END
+CDVLocation.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLocation.h
+END
+CDVLocation.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVLocation.m
+END
+CDVContacts.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVContacts.h
+END
+CDVContacts.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVContacts.m
+END
+CDVDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVDebug.h
+END
+CDVSplashScreen.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/Classes/CDVSplashScreen.h
+END

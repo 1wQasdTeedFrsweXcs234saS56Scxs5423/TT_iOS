@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TechTime</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css" />
+<link rel="stylesheet" href="css/tech.css" />
+<link rel="stylesheet" href="css/techtime.css">
+<script type="text/javascript" src="scripts/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="scripts/jquery.mobile-1.1.1.js"></script>
+
+<style>
+	
+</style>
+
+<script type="text/javascript">
+	
+//    function store(event)
+//    {
+//        document.location = "myapp:" + "myfunction:" + param1 + ":" + param2;
+//    }
+    
+    function initPref()
+    {
+        
+        var status = "";
+        var statusCN = window.localStorage.getItem("status");
+        var currentPage = window.localStorage.getItem("currentPage");
+        
+       // alert("currentPAge"+currentPage);
+       
+        
+        if(statusCN == null || statusCN == "")
+        {
+            statusCN = "online";
+            window.localStorage.setItem("status","online");
+        }
+       
+        if(currentPage == null || currentPage == "")
+        {
+            currentPage = "businessCategory";
+        }
+        
+      
+       // statusCN  = "online";
+               
+       // AndroidFunction.getStatus(statusCN);
+        if(statusCN == "online")
+        {
+            parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
+            
+        }
+        else
+        {
+           
+           parent.window.location.href = "index.html";
+        }
+        return statusCN;
+    }
+	
+    
+    
+</script>
+
+</head>
+
+    <body class="backgd" style = "color: #FF9900;font-family: Arial;background: white;width:100%;overflow: hidden">
+        
+        <div id="PrefPage" data-role="page" style='border:none;overflow :hidden'>
+            
+            
+            <table border="0" align="center" style="position:absolute;top:45%;width:100%;">
+                
+                <tr>
+                    
+                    <td align='center'><img src="css/images/ajax-loader.gif" width="25" height="25" /></td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    <td align='center'><label class="labelMsg" >Launching Tech Time…</label></td>
+                    
+                </tr>
+                
+            </table>
+            
+        </div>
+        
+        
+        
+    </body>
+</html>

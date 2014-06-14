@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova
+END
+build
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova/build
+END
+release
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova/release
+END
+log
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova/log
+END
+run
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova/run
+END
+emulate
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/cordova/emulate
+END

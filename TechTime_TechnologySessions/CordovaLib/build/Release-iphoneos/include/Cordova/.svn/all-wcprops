@@ -1,0 +1,263 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova
+END
+CDVPluginResult.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVPluginResult.h
+END
+NSData+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/NSData+Base64.h
+END
+CDVGlobalization.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVGlobalization.h
+END
+CDVCapture.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVCapture.h
+END
+CDVWebViewDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVWebViewDelegate.h
+END
+NSDictionary+Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/NSDictionary+Extensions.h
+END
+CDVJSON.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVJSON.h
+END
+CDVCommandDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVCommandDelegate.h
+END
+CDVDebugConsole.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVDebugConsole.h
+END
+CDVAccelerometer.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVAccelerometer.h
+END
+CDVAvailability.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVAvailability.h
+END
+CDVBattery.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVBattery.h
+END
+NSArray+Comparisons.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/NSArray+Comparisons.h
+END
+NSMutableArray+QueueAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/NSMutableArray+QueueAdditions.h
+END
+CDVEcho.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVEcho.h
+END
+CDVViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVViewController.h
+END
+CDVLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVLogger.h
+END
+CDVConfigParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVConfigParser.h
+END
+CDVCommandQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVCommandQueue.h
+END
+CDVFileTransfer.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVFileTransfer.h
+END
+CDVNotification.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVNotification.h
+END
+UIDevice+Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/UIDevice+Extensions.h
+END
+CDVContact.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVContact.h
+END
+CDVPlugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVPlugin.h
+END
+CDVDevice.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVDevice.h
+END
+CDVConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVConnection.h
+END
+CDVReachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVReachability.h
+END
+CDVLocation.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVLocation.h
+END
+CDVInAppBrowser.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVInAppBrowser.h
+END
+CDVWhitelist.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVWhitelist.h
+END
+CDVContacts.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVContacts.h
+END
+CDVLocalStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVLocalStorage.h
+END
+CDVFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVFile.h
+END
+CDV.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDV.h
+END
+CDVInvokedUrlCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVInvokedUrlCommand.h
+END
+CDVURLProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVURLProtocol.h
+END
+CDVScreenOrientationDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVScreenOrientationDelegate.h
+END
+CDVDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVDebug.h
+END
+CDVSound.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVSound.h
+END
+CDVCamera.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVCamera.h
+END
+CDVSplashScreen.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVSplashScreen.h
+END
+CDVCommandDelegateImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVCommandDelegateImpl.h
+END
+CDVUserAgentUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/TechtimeMobileIOS/!svn/ver/84/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/include/Cordova/CDVUserAgentUtil.h
+END

@@ -1,0 +1,1198 @@
+TTech Time
+v5
+r1
+cCheck dependencies
+cCpResource /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Release-iphoneos/Sample_google.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Info.plist Sample_google/Sample_google-Info.plist
+cPhaseScriptExecution "Copy www directory" "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh"
+cCpResource Sample_google/config.xml build/Release-iphoneos/Sample_google.app/config.xml
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon-72.png Sample_google/Resources/icons/icon-72.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon.png Sample_google/Resources/icons/icon.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon@2x.png Sample_google/Resources/icons/icon@2x.png
+cCpResource Sample_google/Resources/Capture.bundle build/Release-iphoneos/Sample_google.app/Capture.bundle
+cCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/en.lproj/Localizable.strings Sample_google/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/es.lproj/Localizable.strings Sample_google/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib
+cCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/de.lproj/Localizable.strings Sample_google/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/se.lproj/Localizable.strings Sample_google/Resources/se.lproj/Localizable.strings
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Sample_google/Resources/splash/Default-Landscape@2x~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Default-Landscape@2x~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Sample_google/Resources/splash/Default-Landscape~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Default-Landscape~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Sample_google/Resources/splash/Default-Portrait@2x~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Default-Portrait@2x~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Sample_google/Resources/splash/Default-Portrait~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Default-Portrait~ipad.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png Sample_google/Resources/splash/Default@2x~iphone.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default~iphone.png Sample_google/Resources/splash/Default~iphone.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png Sample_google/Resources/splash/Default-568h@2x~iphone.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default%402x.png Default%402x.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/340x490.png 340x490.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x960.png 640x960.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x1136.png 640x1136.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x.png Default-568h@2x.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default.png Default.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x.png Default@2x.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png TechTime_iOS6Logo72X72.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png TechTimeLogo72X72.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png TechTime-App-Icon114x114.png
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png TechTime_iOS6Logo57X57.png
+cCompileXIB /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib
+cCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png TechTimeLogo57X57.png
+cCpResource Sample_google/Plugins/ChildBrowser.bundle build/Release-iphoneos/Sample_google.app/ChildBrowser.bundle
+cProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Users/administrator/Documents/Sample_google/Sample_google/340x490.png
+c000000005130697C0000000000003DA2
+t1362127228
+s15778
+
+N/Users/administrator/Documents/Sample_google/Sample_google/640x1136.png
+c000000005130697C0000000000006205
+t1362127228
+s25093
+
+N/Users/administrator/Documents/Sample_google/Sample_google/640x960.png
+c000000005130697C0000000000005771
+t1362127228
+s22385
+
+N/Users/administrator/Documents/Sample_google/Sample_google/CordovaLib/build/Release-iphoneos/libCordova.a
+c00000000516A6C6E00000000006953B0
+t1365929070
+s6902704
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default%402x.png
+c000000005130F9D40000000000002AB0
+t1362164180
+s10928
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default-568h@2x.png
+c000000005130697C0000000000006205
+t1362127228
+s25093
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape@2x~ipad.png
+c0000000051311C780000000000011FEC
+t1362173048
+s73708
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape~ipad.png
+c0000000051311C780000000000005777
+t1362173048
+s22391
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait@2x~ipad.png
+c0000000051311C780000000000012798
+t1362173048
+s75672
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait~ipad.png
+c0000000051311C780000000000005B33
+t1362173048
+s23347
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default.png
+c000000005130697C0000000000003DA2
+t1362127228
+s15778
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Default@2x.png
+c000000005130697C0000000000005771
+t1362127228
+s22385
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m
+c0000000051668A84000000000000124C
+t1365674628
+s4684
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m
+c000000005167B13B0000000000002DAD
+t1365750075
+s11693
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib
+c00000000516687B50000000000001759
+t1365673909
+s5977
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m
+c000000004C34EF79000000000000239B
+t1278537593
+s9115
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowser.bundle
+c00000000513890240000000000000154
+t1362661412
+s340
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m
+c00000000509A52CC00000000000008BF
+t1352291020
+s2239
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m
+c0000000050A689FB0000000000001CE0
+t1353091579
+s7392
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib
+c00000000515D17890000000000005AF6
+t1365055369
+s23286
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/Capture.bundle
+c00000000516687B5000000000000030E
+t1365673909
+s782
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/de.lproj/Localizable.strings
+c00000000516687B50000000000000485
+t1365673909
+s1157
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/en.lproj/Localizable.strings
+c00000000516687B50000000000000470
+t1365673909
+s1136
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/es.lproj/Localizable.strings
+c00000000516687B5000000000000047D
+t1365673909
+s1149
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon-72.png
+c00000000516687B50000000000001350
+t1365673909
+s4944
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon.png
+c00000000516687B50000000000000F3E
+t1365673909
+s3902
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon@2x.png
+c00000000516687B50000000000001EBD
+t1365673909
+s7869
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/se.lproj/Localizable.strings
+c00000000516687B50000000000000471
+t1365673909
+s1137
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-568h@2x~iphone.png
+c00000000516687B500000000000074F8
+t1365673909
+s29944
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape@2x~ipad.png
+c00000000516687B50000000000012735
+t1365673909
+s75573
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape~ipad.png
+c00000000516687B5000000000000817B
+t1365673909
+s33147
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait@2x~ipad.png
+c00000000516687B50000000000012171
+t1365673909
+s74097
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait~ipad.png
+c00000000516687B50000000000007F9A
+t1365673909
+s32666
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default@2x~iphone.png
+c00000000516687B50000000000007323
+t1365673909
+s29475
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default~iphone.png
+c00000000516687B5000000000000289A
+t1365673909
+s10394
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Prefix.pch
+c00000000516687B500000000000003CB
+t1365673909
+s971
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/config.xml
+c000000005168142D0000000000000CA3
+t1365775405
+s3235
+
+N/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m
+c00000000516687B5000000000000045F
+t1365673909
+s1119
+
+N/Users/administrator/Documents/Sample_google/Sample_google/TechTime-App-Icon114x114.png
+c000000005079393A00000000000018D9
+t1350121786
+s6361
+
+N/Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo57X57.png
+c00000000507939310000000000000A96
+t1350121777
+s2710
+
+N/Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo72X72.png
+c000000005079522A0000000000000CEE
+t1350128170
+s3310
+
+N/Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo57X57.png
+c00000000507939310000000000000A96
+t1350121777
+s2710
+
+N/Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo72X72.png
+c000000005079522A0000000000000CEE
+t1350128170
+s3310
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app.dSYM
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/340x490.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x1136.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x960.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Capture.bundle
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ChildBrowser.bundle
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ChildBrowserViewController.nib
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default%402x.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default~iphone.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Info.plist
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/MainViewController.nib
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/PkgInfo
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ResourceRules.plist
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Sample_google
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/config.xml
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon-72.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon@2x.png
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Sample_google
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Sample_google.LinkFileList
+c00000000516A6C6E00000000000003AE
+t1365929070
+s942
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/ChildBrowserCommand.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/ChildBrowserViewController.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Sample_google
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Sample_google.LinkFileList
+c00000000516A6C6E00000000000003B4
+t1365929070
+s948
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google.xcent
+t2
+s0
+
+N/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh
+c00000000516A6C6E000000000000042B
+t1365929070
+s1067
+
+N/Users/administrator/Library/MobileDevice/Provisioning Profiles/9190DF26-57D3-4FB2-BFF0-C09766FD3E6C.mobileprovision
+c000000004FF419350000000000023999
+t1341397301
+s145817
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk
+c00000000503C83D40000000000000132
+t1346143188
+s306
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist
+c00000000504A967B0000000000000094
+t1347065467
+s148
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist
+c00000000504A967B0000000000000096
+t1347065467
+s150
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000504A9687000000000036C800
+t1347065479
+s3590144
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c00000000504A9686000000000014A1D0
+t1347065478
+s1352144
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c00000000504A968700000000002AC100
+t1347065479
+s2801920
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c00000000504A9687000000000003ACE0
+t1347065479
+s240864
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000504A968700000000006ABBE0
+t1347065479
+s6994912
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000504A968800000000002C74D0
+t1347065480
+s2913488
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000504A968A0000000000322740
+t1347065482
+s3286848
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c00000000504A968B0000000000114570
+t1347065483
+s1131888
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c00000000504A968B00000000001692A0
+t1347065483
+s1479328
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000504A968F0000000000629C80
+t1347065487
+s6462592
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c00000000504A9693000000000056CC90
+t1347065491
+s5688464
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000504A9693000000000012C210
+t1347065491
+s1229328
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000504A96950000000000359720
+t1347065493
+s3512096
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c00000000504A969600000000000CAF00
+t1347065494
+s831232
+
+N/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000504A969700000000011BA850
+t1347065495
+s18589776
+
+N/var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth
+t2
+s0
+
+N/var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth
+t2
+s0
+
+NSample_google/Sample_google-Info.plist
+c0000000051680EB7000000000000066B
+t1365774007
+s1643
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc556e0eea31ab741^9489e7eea31ab741^-239"warning: no rule to process file '$(PROJECT_DIR)/ChildBrowser.js' of type sourcecode.javascript for architecture armv7warning: no rule to process file '$(PROJECT_DIR)/ChildBrowser.js' of type sourcecode.javascript for architecture armv7s2(21%IDEActivityLogMessage2@118"Warning: no rule to process file '$(PROJECT_DIR)/ChildBrowser.js' of type sourcecode.javascript for architecture armv7-387621870#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@119"Warning: no rule to process file '$(PROJECT_DIR)/ChildBrowser.js' of type sourcecode.javascript for architecture armv7s-387621870#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"ECF200E3-A140-4CAC-B6CA-24C9029BCBA6-
+
+CCodeSign /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app
+r0
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.893685
+e387621883.061201
+r0
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m:28:
+o/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.h:30:9: fatal error: 'Cordova/CDVViewController.h' file not found
+o#import <Cordova/CDVViewController.h>
+o        ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.mb7f0e4faa31ab741^aeb90ffba31ab741^-347"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m:28:/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.h:30:9: fatal error: 'Cordova/CDVViewController.h' file not found#import <Cordova/CDVViewController.h>        ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m0000000000000000^3834"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o" Sample_google/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/AppDelegate.o"36"1A12330D-015A-459E-B6F4-4AD6DCF7FD41-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894183
+e387621883.061122
+r0
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m:5:
+o/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.h:5:9: fatal error: 'Cordova/CDVPlugin.h' file not found
+o#import <Cordova/CDVPlugin.h>
+o        ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.me71be5faa31ab741^1cb40ffba31ab741^-345"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m:5:/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.h:5:9: fatal error: 'Cordova/CDVPlugin.h' file not found#import <Cordova/CDVPlugin.h>        ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m0000000000000000^3882"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o" Sample_google/Plugins/ChildBrowserCommand.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserCommand.o"36"DC74B1A5-E359-42B1-B849-51044DAF4F9C-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894165
+e387621883.061044
+r1
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.ma41be5faa31ab741^f7b00ffba31ab741^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m0000000000000000^3924"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o" Sample_google/Plugins/ChildBrowserViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/ChildBrowserViewController.o"36"DAB9A4D6-5AAC-4FA0-9F24-0534A6585AEF-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894145
+e387621882.959672
+r0
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m:28:
+o/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.h:28:9: fatal error: 'Cordova/CDVViewController.h' file not found
+o#import <Cordova/CDVViewController.h>
+o        ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.mf019e5faa31ab741^0cc9f5faa31ab741^-361"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m:28:/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.h:28:9: fatal error: 'Cordova/CDVViewController.h' file not found#import <Cordova/CDVViewController.h>        ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@44"'Cordova/CDVViewController.h' file not found-387621882#18446744073709551615#0#1(2@127"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m:28:-387621882#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@117"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m0000000000000000^27#8#27#8#955#0#30"Apple LLVM compiler 4.1 Notice--2#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.h0000000000000000^27#8#27#8#955#0#29"Lexical or Preprocessor Issue--0#0#0#-19%DVTDocumentLocation4@117"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m0000000000000000^3876"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o" Sample_google/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/MainViewController.o"36"0E56031D-1A87-456B-9FE2-FF517B9FCC42-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894150
+e387621883.061049
+r1
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m7712e5faa31ab741^b0ad0ffba31ab741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m0000000000000000^3840"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o" Sample_google/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Reachability.o"36"234FEDC5-A251-4F45-A0E6-1EBDDA1D0635-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.893665
+e387621882.933520
+r1
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.mafeee4faa31ab741^b5faeefaa31ab741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m0000000000000000^3776"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o" Sample_google/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/main.o"36"10E94A28-C4D7-412F-AD75-4886E750B081-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894229
+e387621883.061194
+r0
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m:28:
+o/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.h:30:9: fatal error: 'Cordova/CDVViewController.h' file not found
+o#import <Cordova/CDVViewController.h>
+o        ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.md61be5faa31ab741^383110fba31ab741^-347"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m:28:/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.h:30:9: fatal error: 'Cordova/CDVViewController.h' file not found#import <Cordova/CDVViewController.h>        ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m0000000000000000^3841"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o" Sample_google/Classes/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7s" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/AppDelegate.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/AppDelegate.o"36"A637C1DC-D68C-46D2-A8D2-CF9888F9C279-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/ChildBrowserCommand.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserCommand.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/ChildBrowserViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.934860
+e387621883.061129
+r0
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m:28:
+o/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.h:28:9: fatal error: 'Cordova/CDVViewController.h' file not found
+o#import <Cordova/CDVViewController.h>
+o        ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m431ff0faa31ab741^ddb60ffba31ab741^-361"In file included from /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m:28:/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.h:28:9: fatal error: 'Cordova/CDVViewController.h' file not found#import <Cordova/CDVViewController.h>        ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m0000000000000000^3883"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o" Sample_google/Classes/MainViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7s" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/MainViewController.o"36"761FBA25-C34E-4161-A84F-296AB8DFF899-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.953421
+e387621883.061591
+r1
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m124df4faa31ab741^115110fba31ab741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m0000000000000000^3847"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o" Sample_google/Classes/Reachability.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7s" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/Reachability.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Reachability.o"36"501082E3-21E1-48D6-9601-731E2E19D6D6-
+
+CCompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.894200
+e387621882.951673
+r1
+xCompileC
+xbuild/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m0c23e5faa31ab741^ffb2f3faa31ab741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m0000000000000000^3783"CompileC "build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o" Sample_google/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7s" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos -include /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch -MMD -MT dependencies -MF "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.d" --serialize-diagnostics "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.dia" -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/main.m -o "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/main.o"36"5AB55B73-774A-440C-BBE4-47911BA4DBC1-
+
+CCompileXIB /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib
+s387621871.327965
+e387621881.463776
+r1
+xCompileXIB
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib
+o2013-04-14 14:14:40.578 Interface Builder Cocoa Touch Tool[2111:14603] CFPreferences: user home directory at file://localhost/Users/administrator/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compiling /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xibaf0654efa31ab741^23bb76f9a31ab741^-247"2013-04-14 14:14:40.578 Interface Builder Cocoa Touch Tool[2111:14603] CFPreferences: user home directory at file://localhost/Users/administrator/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib0000000000000000^955"CompileXIB Sample_google/Classes/MainViewController.xib    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin/..    /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/MainViewController.nib /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Classes/MainViewController.xib --sdk /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk36"E68E874B-12D9-455B-B234-22FAFF449890-
+
+CCompileXIB /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib
+s387621872.730518
+e387621882.455875
+r1
+xCompileXIB
+x/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib
+o2013-04-14 14:14:40.578 Interface Builder Cocoa Touch Tool[2112:14603] CFPreferences: user home directory at file://localhost/Users/administrator/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compiling /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib7923bbf0a31ab741^13b574faa31ab741^-247"2013-04-14 14:14:40.578 Interface Builder Cocoa Touch Tool[2112:14603] CFPreferences: user home directory at file://localhost/Users/administrator/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib0000000000000000^979"CompileXIB Sample_google/Plugins/ChildBrowserViewController.xib    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin/..    /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ChildBrowserViewController.nib /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowserViewController.xib --sdk /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk36"79738BC7-BFD6-44E8-BF2A-D94532CE5CB2-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/340x490.png 340x490.png
+s387621872.436257
+e387621872.606115
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/340x490.png
+x340x490.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CopyPNGFile build/Release-iphoneos/Sample_google.app/340x490.png 340x490.png11c66ff0a31ab741^1b2d9bf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/340x490.png0000000000000000^659"CopyPNGFile build/Release-iphoneos/Sample_google.app/340x490.png 340x490.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/340x490.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/340x490.png36"6C30A796-9427-40AA-B27F-70857C2077E3-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x1136.png 640x1136.png
+s387621872.510649
+e387621872.729397
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x1136.png
+x640x1136.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"CopyPNGFile build/Release-iphoneos/Sample_google.app/640x1136.png 640x1136.png43cb82f0a31ab741^f1babaf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/640x1136.png0000000000000000^663"CopyPNGFile build/Release-iphoneos/Sample_google.app/640x1136.png 640x1136.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/640x1136.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x1136.png36"DDC15ED4-8220-4711-9198-F5AE89A137C5-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x960.png 640x960.png
+s387621872.497256
+e387621872.729536
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x960.png
+x640x960.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CopyPNGFile build/Release-iphoneos/Sample_google.app/640x960.png 640x960.png80637ff0a31ab741^bccabaf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/640x960.png0000000000000000^659"CopyPNGFile build/Release-iphoneos/Sample_google.app/640x960.png 640x960.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/640x960.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/640x960.png36"779AC910-DB0E-4109-9314-E43615E3CA71-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default%402x.png Default%402x.png
+s387621872.436229
+e387621872.537236
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default%402x.png
+xDefault%402x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default%402x.png Default%402x.png60c76ff0a31ab741^598989f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default%25402x.png0000000000000000^687"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default%402x.png" "Default%402x.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default%402x.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default%402x.png"36"D0475B38-B86E-4D9C-824E-923CC5E8D5FA-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x.png Default-568h@2x.png
+s387621872.518428
+e387621872.729203
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x.png
+xDefault-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-568h@2x.png Default-568h@2x.png14cc84f0a31ab741^0b9abaf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default-568h@2x.png0000000000000000^699"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-568h@2x.png" "Default-568h@2x.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default-568h@2x.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x.png"36"781B0E47-524B-4B1A-92CC-0294D836764E-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png Sample_google/Resources/splash/Default-568h@2x~iphone.png
+s387621872.369344
+e387621872.607004
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png
+xSample_google/Resources/splash/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png Sample_google/Resources/splash/Default-568h@2x~iphone.png11ac5ef0a31ab741^8fe39bf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-568h@2x~iphone.png0000000000000000^789"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png" "Sample_google/Resources/splash/Default-568h@2x~iphone.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-568h@2x~iphone.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-568h@2x~iphone.png"36"0DC0289F-2AE3-4EFD-837D-E43E5253948B-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Default-Landscape@2x~ipad.png
+s387621871.595961
+e387621872.509386
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png
+xDefault-Landscape@2x~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape@2x~ipad.png pngcrush caught libpng error:
+o   Âè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Default-Landscape@2x~ipad.pngb1a498efa31ab741^0a6882f0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@132"While reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape@2x~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@104"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape@2x~ipad.png0000000000000000^739"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png" "Default-Landscape@2x~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape@2x~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png"36"07BF7C58-5BBB-4E67-95BC-3A7835DC8D37-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Sample_google/Resources/splash/Default-Landscape@2x~ipad.png
+s387621871.481762
+e387621872.367286
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png
+xSample_google/Resources/splash/Default-Landscape@2x~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape@2x~ipad.png pngcrush caught libpng error:
+o   Íè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection143"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png Sample_google/Resources/splash/Default-Landscape@2x~ipad.png6d6f7befa31ab741^ba305ef0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@163"While reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape@2x~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@135"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape@2x~ipad.png0000000000000000^801"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png" "Sample_google/Resources/splash/Default-Landscape@2x~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape@2x~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape@2x~ipad.png"36"C4A7C8A6-BAE0-487D-B3A6-D5BD8551F8C7-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Default-Landscape~ipad.png
+s387621871.950173
+e387621872.193444
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png
+xDefault-Landscape~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape~ipad.png pngcrush caught libpng error:
+o   Ôè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Default-Landscape~ipad.png5d6bf3efa31ab741^4f9331f0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@129"While reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@101"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape~ipad.png0000000000000000^727"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png" "Default-Landscape~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default-Landscape~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png"36"0B79F827-DA05-440E-87DD-E023EC2A6305-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Sample_google/Resources/splash/Default-Landscape~ipad.png
+s387621871.595966
+e387621872.157534
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png
+xSample_google/Resources/splash/Default-Landscape~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape~ipad.png pngcrush caught libpng error:
+o   Ôè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png Sample_google/Resources/splash/Default-Landscape~ipad.pnge3a498efa31ab741^755528f0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@160"While reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@132"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape~ipad.png0000000000000000^789"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png" "Sample_google/Resources/splash/Default-Landscape~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Landscape~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Landscape~ipad.png"36"F3FFB481-E293-457E-9B3E-54A37D7F531F-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Default-Portrait@2x~ipad.png
+s387621871.951905
+e387621872.536089
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png
+xDefault-Portrait@2x~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait@2x~ipad.png pngcrush caught libpng error:
+o   Ìè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Default-Portrait@2x~ipad.png9bc9f3efa31ab741^157289f0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@131"While reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait@2x~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@103"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait@2x~ipad.png0000000000000000^735"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png" "Default-Portrait@2x~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait@2x~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png"36"93CDA3E8-7967-47D0-B27F-9785267A3A2E-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Sample_google/Resources/splash/Default-Portrait@2x~ipad.png
+s387621871.950295
+e387621872.495965
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png
+xSample_google/Resources/splash/Default-Portrait@2x~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait@2x~ipad.png pngcrush caught libpng error:
+o   Êè
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png Sample_google/Resources/splash/Default-Portrait@2x~ipad.png60acf3efa31ab741^05fc7ef0a31ab741^-182"  Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@162"While reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait@2x~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@134"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait@2x~ipad.png0000000000000000^797"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png" "Sample_google/Resources/splash/Default-Portrait@2x~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait@2x~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait@2x~ipad.png"36"4750FD5A-08D2-4D09-9D6E-B854688AA977-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Default-Portrait~ipad.png
+s387621872.158864
+e387621872.434078
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png
+xDefault-Portrait~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait~ipad.png pngcrush caught libpng error:
+o   Read Error
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Default-Portrait~ipad.png3fc628f0a31ab741^22336ff0a31ab741^-190"   Read ErCommand /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@128"While reading /Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@100"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait~ipad.png0000000000000000^723"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png" "Default-Portrait~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default-Portrait~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png"36"747CD177-0936-4F5F-BF27-38D27AE7B93F-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Sample_google/Resources/splash/Default-Portrait~ipad.png
+s387621872.064649
+e387621872.332871
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png
+xSample_google/Resources/splash/Default-Portrait~ipad.png
+o
+oWhile reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait~ipad.png pngcrush caught libpng error:
+o   Read Error
+o
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png Sample_google/Resources/splash/Default-Portrait~ipad.pngaca910f0a31ab741^713a55f0a31ab741^-190"   Read ErCommand /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure2(21%IDEActivityLogMessage2@159"While reading /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait~ipad.png pngcrush caught libpng error:-387621872#18446744073709551615#0#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"CopyPNGFile Error--2@179"Command /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng emitted errors but did not return a nonzero exit code to indicate failure-387621872#18446744073709551615#0#-2#--17"CopyPNGFile Error--0#0#0#-19%DVTDocumentLocation4@131"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait~ipad.png0000000000000000^785"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png" "Sample_google/Resources/splash/Default-Portrait~ipad.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default-Portrait~ipad.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default-Portrait~ipad.png"36"6D923520-9B6C-4EE0-AFDE-0A695B39E25A-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default.png Default.png
+s387621872.537374
+e387621872.635926
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default.png
+xDefault.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default.png Default.png97ad89f0a31ab741^18d1a2f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default.png0000000000000000^659"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default.png Default.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/Default.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default.png36"64441097-625D-41BD-BCD6-82E205B59857-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x.png Default@2x.png
+s387621872.537403
+e387621872.678072
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x.png
+xDefault@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default@2x.png Default@2x.pnga3ae89f0a31ab741^b69eadf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Default@2x.png0000000000000000^679"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default@2x.png" "Default@2x.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Default@2x.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x.png"36"9D223E8E-CD27-4EA1-97D3-A2DA25DF4FB4-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png Sample_google/Resources/splash/Default@2x~iphone.png
+s387621872.198169
+e387621872.435995
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png
+xSample_google/Resources/splash/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png Sample_google/Resources/splash/Default@2x~iphone.png232f33f0a31ab741^bf9e6ff0a31ab741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default@2x~iphone.png0000000000000000^769"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png" "Sample_google/Resources/splash/Default@2x~iphone.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default@2x~iphone.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default@2x~iphone.png"36"8016D9DE-3923-4E45-9463-3FFD8EA39085-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default~iphone.png Sample_google/Resources/splash/Default~iphone.png
+s387621872.334201
+e387621872.517128
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default~iphone.png
+xSample_google/Resources/splash/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"CopyPNGFile build/Release-iphoneos/Sample_google.app/Default~iphone.png Sample_google/Resources/splash/Default~iphone.png71ae55f0a31ab741^5a6384f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default~iphone.png0000000000000000^757"CopyPNGFile "build/Release-iphoneos/Sample_google.app/Default~iphone.png" "Sample_google/Resources/splash/Default~iphone.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/splash/Default~iphone.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Default~iphone.png"36"6B8B480B-19BB-489C-B254-31F43A521BC0-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png TechTime-App-Icon114x114.png
+s387621872.637185
+e387621872.775070
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png
+xTechTime-App-Icon114x114.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png TechTime-App-Icon114x114.png6138a3f0a31ab741^7a6dc6f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/TechTime-App-Icon114x114.png0000000000000000^727"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png TechTime-App-Icon114x114.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/TechTime-App-Icon114x114.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime-App-Icon114x114.png36"73C9CBF2-DA38-4A92-A17F-CF9D540DF802-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png TechTimeLogo57X57.png
+s387621872.730528
+e387621872.800034
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png
+xTechTimeLogo57X57.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png TechTimeLogo57X57.pngac1bbbf0a31ab741^d4d2ccf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo57X57.png0000000000000000^699"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png TechTimeLogo57X57.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo57X57.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo57X57.png36"2F11EC70-0864-4847-8F44-CF11ED29F5DC-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png TechTimeLogo72X72.png
+s387621872.608468
+e387621872.739557
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png
+xTechTimeLogo72X72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png TechTimeLogo72X72.pngeb359df0a31ab741^7654bdf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo72X72.png0000000000000000^699"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png TechTimeLogo72X72.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/TechTimeLogo72X72.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTimeLogo72X72.png36"C48FE4D2-5E00-4437-B572-0A3F2FE0A4A5-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png TechTime_iOS6Logo57X57.png
+s387621872.679364
+e387621872.751063
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png
+xTechTime_iOS6Logo57X57.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png TechTime_iOS6Logo57X57.png3a04aef0a31ab741^6346c0f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo57X57.png0000000000000000^719"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png TechTime_iOS6Logo57X57.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo57X57.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo57X57.png36"2C2809F5-CD4B-4177-895F-82C0C3AE8ADA-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png TechTime_iOS6Logo72X72.png
+s387621872.607543
+e387621872.751919
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png
+xTechTime_iOS6Logo72X72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png TechTime_iOS6Logo72X72.png08ad9bf0a31ab741^287ec0f0a31ab741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo72X72.png0000000000000000^719"CopyPNGFile build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png TechTime_iOS6Logo72X72.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/TechTime_iOS6Logo72X72.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/TechTime_iOS6Logo72X72.png36"17899FCF-CAAB-4486-9A6A-AF3E1764D099-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon-72.png Sample_google/Resources/icons/icon-72.png
+s387621871.325881
+e387621871.947973
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon-72.png
+xSample_google/Resources/icons/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/Sample_google.app/icon-72.png Sample_google/Resources/icons/icon-72.png6d8e53efa31ab741^4ce0f2efa31ab741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon-72.png0000000000000000^719"CopyPNGFile build/Release-iphoneos/Sample_google.app/icon-72.png Sample_google/Resources/icons/icon-72.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon-72.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon-72.png36"4686E237-EFF6-49E6-9178-7A8BFD458E52-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon.png Sample_google/Resources/icons/icon.png
+s387621871.326359
+e387621871.948596
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon.png
+xSample_google/Resources/icons/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"CopyPNGFile build/Release-iphoneos/Sample_google.app/icon.png Sample_google/Resources/icons/icon.png569b53efa31ab741^bbedf2efa31ab741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon.png0000000000000000^707"CopyPNGFile build/Release-iphoneos/Sample_google.app/icon.png Sample_google/Resources/icons/icon.png    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon.png /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon.png36"DD6DABFA-21A4-401B-A4BF-5F03DF9720AF-
+
+CCopyPNGFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon@2x.png Sample_google/Resources/icons/icon@2x.png
+s387621871.326410
+e387621871.950184
+r1
+xCopyPNGFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon@2x.png
+xSample_google/Resources/icons/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/Sample_google.app/icon@2x.png Sample_google/Resources/icons/icon@2x.pngd7a053efa31ab741^ef55f3efa31ab741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon@2x.png0000000000000000^727"CopyPNGFile "build/Release-iphoneos/Sample_google.app/icon@2x.png" "Sample_google/Resources/icons/icon@2x.png"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/icons/icon@2x.png" "/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/icon@2x.png"36"7B4E4D96-4020-4EBF-8683-7E25FA8B05FC-
+
+CCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/de.lproj/Localizable.strings Sample_google/Resources/de.lproj/Localizable.strings
+s387621871.426699
+e387621871.594647
+r1
+xCopyStringsFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/de.lproj/Localizable.strings
+xSample_google/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy Sample_google/Resources/de.lproj/Localizable.strings1a526defa31ab741^dd4198efa31ab741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/de.lproj/Localizable.strings0000000000000000^678"CopyStringsFile build/Release-iphoneos/Sample_google.app/de.lproj/Localizable.strings Sample_google/Resources/de.lproj/Localizable.strings    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/de.lproj -- Sample_google/Resources/de.lproj/Localizable.strings36"37BA5583-4209-412B-A86A-53194D59A638-
+
+CCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/en.lproj/Localizable.strings Sample_google/Resources/en.lproj/Localizable.strings
+s387621871.327569
+e387621871.480491
+r1
+xCopyStringsFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/en.lproj/Localizable.strings
+xSample_google/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy Sample_google/Resources/en.lproj/Localizable.stringsc4ee53efa31ab741^68047befa31ab741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/en.lproj/Localizable.strings0000000000000000^678"CopyStringsFile build/Release-iphoneos/Sample_google.app/en.lproj/Localizable.strings Sample_google/Resources/en.lproj/Localizable.strings    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/en.lproj -- Sample_google/Resources/en.lproj/Localizable.strings36"D8E9FB91-3C4A-43E8-8F66-55D84FA85184-
+
+CCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/es.lproj/Localizable.strings Sample_google/Resources/es.lproj/Localizable.strings
+s387621871.327956
+e387621871.480452
+r1
+xCopyStringsFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/es.lproj/Localizable.strings
+xSample_google/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy Sample_google/Resources/es.lproj/Localizable.strings320454efa31ab741^4cff7aefa31ab741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/es.lproj/Localizable.strings0000000000000000^678"CopyStringsFile build/Release-iphoneos/Sample_google.app/es.lproj/Localizable.strings Sample_google/Resources/es.lproj/Localizable.strings    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/es.lproj -- Sample_google/Resources/es.lproj/Localizable.strings36"1B34B614-4FC4-48D2-AE0F-D1A3B081C569-
+
+CCopyStringsFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/se.lproj/Localizable.strings Sample_google/Resources/se.lproj/Localizable.strings
+s387621871.481751
+e387621871.594937
+r1
+xCopyStringsFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/se.lproj/Localizable.strings
+xSample_google/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy Sample_google/Resources/se.lproj/Localizable.strings38687befa31ab741^5d4f98efa31ab741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/se.lproj/Localizable.strings0000000000000000^678"CopyStringsFile build/Release-iphoneos/Sample_google.app/se.lproj/Localizable.strings Sample_google/Resources/se.lproj/Localizable.strings    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/se.lproj -- Sample_google/Resources/se.lproj/Localizable.strings36"9F0762CF-89A9-42B0-A67B-B659F48DF1C1-
+
+CCpResource /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Release-iphoneos/Sample_google.app/ResourceRules.plist
+s387621870.914697
+e387621870.918538
+r1
+xCpResource
+x/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist
+xbuild/Release-iphoneos/Sample_google.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphoneos/Sample_google.app/ResourceRules.plistd13eeaeea31ab741^c425ebeea31ab741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ResourceRules.plist0000002b72021042^941"CpResource /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Release-iphoneos/Sample_google.app/ResourceRules.plist    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app36"504C9FA1-69C6-4A97-8DBA-8652CE34DE23-
+
+CCpResource Sample_google/Plugins/ChildBrowser.bundle build/Release-iphoneos/Sample_google.app/ChildBrowser.bundle
+s387621872.731091
+e387621872.802106
+r1
+xCpResource
+xSample_google/Plugins/ChildBrowser.bundle
+xbuild/Release-iphoneos/Sample_google.app/ChildBrowser.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphoneos/Sample_google.app/ChildBrowser.bundleff3ebbf0a31ab741^8a57cdf0a31ab741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ChildBrowser.bundle000000000080d041^838"CpResource Sample_google/Plugins/ChildBrowser.bundle build/Release-iphoneos/Sample_google.app/ChildBrowser.bundle    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Plugins/ChildBrowser.bundle /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app36"556F0DC0-669F-441D-A697-4A214DAD240A-
+
+CCpResource Sample_google/Resources/Capture.bundle build/Release-iphoneos/Sample_google.app/Capture.bundle
+s387621871.327561
+e387621872.059052
+r1
+xCpResource
+xSample_google/Resources/Capture.bundle
+xbuild/Release-iphoneos/Sample_google.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Release-iphoneos/Sample_google.app/Capture.bundle57ec53efa31ab741^f31e0ff0a31ab741^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Capture.bundle000000000080d041^827"CpResource Sample_google/Resources/Capture.bundle build/Release-iphoneos/Sample_google.app/Capture.bundle    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Resources/Capture.bundle /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app36"F7E412D4-EFA7-418C-A280-5F98B26E2AE1-
+
+CCpResource Sample_google/config.xml build/Release-iphoneos/Sample_google.app/config.xml
+s387621871.325878
+e387621871.425416
+r1
+xCpResource
+xSample_google/config.xml
+xbuild/Release-iphoneos/Sample_google.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Release-iphoneos/Sample_google.app/config.xml248053efa31ab741^18ea6cefa31ab741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/config.xml000000000080d041^795"CpResource Sample_google/config.xml build/Release-iphoneos/Sample_google.app/config.xml    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/config.xml /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app36"E67CB6A4-63E7-4377-823F-4DF41ECA1F88-
+
+CCreateUniversalBinary /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Sample_google normal "armv7 armv7s"
+r0
+
+CGenerateDSYMFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app.dSYM /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Sample_google
+r0
+
+CLd "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Sample_google" normal armv7
+r0
+
+CLd "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Sample_google" normal armv7s
+r0
+
+CPhaseScriptExecution "Copy www directory" "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh"
+s387621870.927327
+e387621871.316855
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.375s
+ouser	0m0.058s
+osys	0m0.126s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'5419eeeea31ab741^261d51efa31ab741^-42"real	0m0.375suser	0m0.058ssys	0m0.126s3(21%IDEActivityLogMessage2@14"real	0m0.375s-387621871#1#14#-0#-----2@14"user	0m0.058s-387621871#15#14#-0#-----2@13"sys	0m0.126s-387621871#29#13#-0#-----0#0#0#--22023"PhaseScriptExecution "Copy www directory" "build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh"    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv ACTION build    setenv AD_HOC_CODE_SIGNING_ALLOWED NO    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER administrator    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS "armv7 armv7s"    setenv ARCHS_STANDARD_32_64_BIT "armv7 armv7s"    setenv ARCHS_STANDARD_32_BIT "armv7 armv7s"    setenv ARCHS_UNIVERSAL_IPHONE_OS "armv7 armv7s"    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/administrator/Documents/Sample_google/Sample_google/build    setenv BUILD_ROOT /Users/administrator/Documents/Sample_google/Sample_google/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos    setenv CACHE_ROOT /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/JavaClasses"    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app    setenv CODE_SIGNING_ALLOWED YES    setenv CODE_SIGNING_REQUIRED YES    setenv CODE_SIGN_CONTEXT_CLASS XCiPhoneOSCodeSignContext    setenv CODE_SIGN_IDENTITY "iPhone Developer"    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Release    setenv CONFIGURATION_BUILD_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos    setenv CONFIGURATION_TEMP_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos    setenv CONTENTS_FOLDER_PATH Sample_google.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP YES    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CORDOVALIB /Users/administrator/Documents/CordovaLib    setenv CP /bin/cp    setenv CURRENT_ARCH armv7s    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources"    setenv DERIVED_FILE_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources"    setenv DERIVED_SOURCES_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources"    setenv DEVELOPER_APPLICATIONS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Volumes/Xcode/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Volumes/Xcode/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH Sample_google.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/Sample_google.dst    setenv DT_TOOLCHAIN_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME Sample_google.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos    setenv EFFECTIVE_PLATFORM_NAME -iphoneos    setenv EMBEDDED_PROFILE_NAME embedded.mobileprovision    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENTITLEMENTS_ALLOWED YES    setenv ENTITLEMENTS_REQUIRED YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH Sample_google.app/Executables    setenv EXECUTABLE_FOLDER_PATH Sample_google.app    setenv EXECUTABLE_NAME Sample_google    setenv EXECUTABLE_PATH Sample_google.app/Sample_google    setenv FILE_LIST "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects/LinkFileList"    setenv FIXED_FILES_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/FixedFiles"    setenv FRAMEWORKS_FOLDER_PATH Sample_google.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME Sample_google.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER Sample_google/Sample_google-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include\" \"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include\" \"/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include\" \"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE Sample_google/Sample_google-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH Sample_google.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH Sample_google.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/Sample_google.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER administrator    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/Sample_google.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH Sample_google.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-LinkMap-normal-armv7s.txt"    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Volumes/Xcode/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_armv7 "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7/Sample_google.LinkFileList"    setenv LINK_FILE_LIST_normal_armv7s "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal/armv7s/Sample_google.LinkFileList"    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH Sample_google.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11G63b    setenv MAC_OS_X_VERSION_ACTUAL 1075    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0705    setenv NATIVE_ARCH armv7    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects"    setenv OBJECT_FILE_DIR_normal "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Objects-normal"    setenv OBJROOT /Users/administrator/Documents/Sample_google/Sample_google/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/local/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Volumes/Xcode/Xcode.app/Contents/Developer/Headers /Volumes/Xcode/Xcode.app/Contents/Developer/SDKs /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH Sample_google.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/PkgInfo"    setenv PKGINFO_PATH Sample_google.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Volumes/Xcode/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr    setenv PLATFORM_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform    setenv PLATFORM_NAME iphoneos    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10A403    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH Sample_google.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/PrefixHeaders"    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH Sample_google.app/PrivateHeaders    setenv PRODUCT_NAME Sample_google    setenv PRODUCT_SETTINGS_PATH /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT Sample_google    setenv PROJECT_DERIVED_FILE_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/DerivedSources    setenv PROJECT_DIR /Users/administrator/Documents/Sample_google/Sample_google    setenv PROJECT_FILE_PATH /Users/administrator/Documents/Sample_google/Sample_google/Sample_google.xcodeproj    setenv PROJECT_NAME Sample_google    setenv PROJECT_TEMP_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build    setenv PROVISIONING_PROFILE_REQUIRED YES    setenv PUBLIC_HEADERS_FOLDER_PATH Sample_google.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv RESOURCE_RULES_REQUIRED YES    setenv REZ_COLLECTOR_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/ResourceManagerResources"    setenv REZ_OBJECTS_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/ResourceManagerResources/Objects"    setenv REZ_SEARCH_PATHS "\"/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH Sample_google.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk    setenv SDK_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk    setenv SDK_NAME iphoneos6.0    setenv SDK_PRODUCT_BUILD_VERSION 10A403    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH Sample_google.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH Sample_google.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/administrator/Documents/Sample_google/Sample_google    setenv SRCROOT /Users/administrator/Documents/Sample_google/Sample_google    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/administrator/Documents/Sample_google/Sample_google/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Volumes/Xcode/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Volumes/Xcode/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Volumes/Xcode/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME "Tech Time"    setenv TARGET_BUILD_DIR /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos    setenv TARGET_NAME "Tech Time"    setenv TARGET_TEMP_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build"    setenv TEMP_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build"    setenv TEMP_FILES_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build"    setenv TEMP_FILE_DIR "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build"    setenv TEMP_ROOT /Users/administrator/Documents/Sample_google/Sample_google/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH Sample_google.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER administrator    setenv USER_APPS_DIR /Users/administrator/Applications    setenv USER_LIBRARY_DIR /Users/administrator/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "armv7 armv7s"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH Sample_google.app/version.plist    setenv VERSION_INFO_BUILDER administrator    setenv VERSION_INFO_FILE Sample_google_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:Sample_google  PROJECT:Sample_google-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME Sample_google.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Volumes/Xcode/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4G182    setenv XCODE_VERSION_ACTUAL 0450    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0450    setenv YACC yacc    /bin/sh -c "\"/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Script-304B58A110DAC018002A0835.sh\""36"26FCBCF2-D69E-4F4F-8733-A7269C2D20DB-
+
+CProcessInfoPlistFile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Info.plist Sample_google/Sample_google-Info.plist
+s387621870.915170
+e387621870.919681
+r1
+xProcessInfoPlistFile
+x/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Info.plist
+xSample_google/Sample_google-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Process Sample_google/Sample_google-Info.plist8a5aeaeea31ab741^eb71ebeea31ab741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Info.plist0000000000000000^892"ProcessInfoPlistFile build/Release-iphoneos/Sample_google.app/Info.plist Sample_google/Sample_google-Info.plist    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-infoPlistUtility Sample_google/Sample_google-Info.plist -genpkginfo /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/ResourceRules.plist -o /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/Info.plist36"D5AC7AB9-5FEC-4F47-9E53-131139B5D909-
+
+CProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.464088
+e387621882.886428
+r1
+xProcessPCH
+x/var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth
+xSample_google/Sample_google-Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Precompile Sample_google/Sample_google-Prefix.pch4df376faa31ab741^f2ece2faa31ab741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Prefix.pch0000000000000000^3798"ProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos --serialize-diagnostics /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.dia -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Prefix.pch -o /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dovbfwefgdxhxtfaebqxhrxwwqla/Sample_google-Prefix.pch.d36"BE8E1D15-83A2-4518-86E2-EC5BA2B06E00-
+
+CProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387621882.464135
+e387621882.886446
+r1
+xProcessPCH
+x/var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth
+xSample_google/Sample_google-Prefix.pch
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Precompile Sample_google/Sample_google-Prefix.pch88f176faa31ab741^5ef3e2faa31ab741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Prefix.pch0000000000000000^3801"ProcessPCH /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth Sample_google/Sample_google-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Documents/Sample_google/Sample_google    setenv LANG en_US.US-ASCII    setenv PATH "/Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Volumes/Xcode/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Volumes/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7s -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=5.0 -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-generated-files.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-own-target-headers.hmap" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-all-target-headers.hmap" -iquote "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google-project-headers.hmap" -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/usr/local/lib/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/UninstalledProducts/include -I/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources/armv7s" "-I/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/DerivedSources" -F/Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos --serialize-diagnostics /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.dia -c /Users/administrator/Documents/Sample_google/Sample_google/Sample_google/Sample_google-Prefix.pch -o /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/vk/4_ttpd1x1dn8lfm4kwdbgvt00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Sample_google-Prefix-dqibbulcqkhdwxgdmndhlifblaxs/Sample_google-Prefix.pch.d36"8AEC1747-ABE2-4802-AF25-CFC108D43E64-
+
+CProcessProductPackaging "/Users/administrator/Library/MobileDevice/Provisioning Profiles/9190DF26-57D3-4FB2-BFF0-C09766FD3E6C.mobileprovision" /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app/embedded.mobileprovision
+r0
+
+CProcessProductPackaging /Volumes/Xcode/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist "/Users/administrator/Documents/Sample_google/Sample_google/build/Sample_google.build/Release-iphoneos/Tech Time.build/Sample_google.xcent"
+r0
+
+CTouch /Users/administrator/Documents/Sample_google/Sample_google/build/Release-iphoneos/Sample_google.app
+r0
+
