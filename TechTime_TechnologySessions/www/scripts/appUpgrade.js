@@ -1,3 +1,5 @@
+/* Update this File */
+
 // -------------------------- Current App Version  -------------------------- //
 
 var currentAppVersion = 3.2;
