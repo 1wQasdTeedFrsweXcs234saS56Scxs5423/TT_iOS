@@ -34,13 +34,13 @@
                         <script type="text/javascript" src="scripts/appUpgrade.js"></script>
                         <script type="text/javascript" src="scripts/techtime.js"></script>
                         <script type="text/javascript" src="scripts/MainPageLoad.js"></script>
-                        <script type="text/javascript" src="scripts/playlist.js"></script> 
+                        <script type="text/javascript" src="scripts/playlist.js"></script>
                         <script type="text/javascript" src="scripts/genericSpotlight.js"></script>
                         <script type="text/javascript" src="scripts/showContent.js"></script>
-                      <!--  <script type="text/javascript" src="scripts/recommendation.js"></script> -->
+                        <!--  <script type="text/javascript" src="scripts/recommendation.js"></script> -->
                         <script type="text/javascript" src="scripts/listing.js"></script>
                         <script type="text/javascript" src="scripts/download_CB.js"></script>
-                       <!-- <script type="text/javascript" src="scripts/digital.js"></script> -->
+                        <!-- <script type="text/javascript" src="scripts/digital.js"></script> -->
                         <script type="text/javascript" src="plugins/ChildBrowser.js"></script>
                         <script type="text/javascript" charset="utf-8" src="plugins/video.js"></script>
                         <script type="text/javascript" src="plugins/drop-down-menu.js"></script>
@@ -280,7 +280,7 @@
                         
                         <style>
                             
-                            @media screen and (orientation:portrait) {                                       
+                            @media screen and (orientation:portrait) {
                                 .navigateMenu
                                 {
                                     position : absolute;
@@ -316,7 +316,7 @@
                             }
                             
                             
-                            @media screen and (orientation:landscape) {                                
+                            @media screen and (orientation:landscape) {
                                 .navigateMenu
                                 {
                                     position : absolute;
@@ -366,7 +366,7 @@
                                 
                             }
                             
-
+                            
                             @media only screen and (max-device-width: 650px) {
                                 
                                 
@@ -475,7 +475,7 @@
                                 
                                 var allNavigateDiv = ["navigateDiv","navigateBusinessCategory","navigateDetailMediaPage", "navigateTechWatch","navigateDetailAuthor","navigateSpotlightPage","navigateUpcomingEventsPage","navigateSubscribePage","navigateAboutTectTimePage","navigateContactUsPage","navigateFaqPage","navigateTAListResult","navigateResultPage","navigatePlaylistsPage", "navigatePlaylistItemPage", "navigatePlaylistsPage", "navigateAddToPlaylistPage", "navigateSharePlaylistsPage", "navigateContributePage", "navigateDigitalAreaHomePage"];
                                 
-                                currNavigateDivContent = document.getElementById(currNavigateDiv).innerHTML;                                           
+                                currNavigateDivContent = document.getElementById(currNavigateDiv).innerHTML;
                                 $.each(allNavigateDiv, function(key, tempAuthor) {
                                        document.getElementById(currNavigateDiv).style.display = 'none';
                                        document.getElementById(currNavigateDiv).innerHTML = '';
@@ -497,11 +497,11 @@
                                     
                                     $('.searchTDTAListResult').show();
                                     $(".navigateArrow").rotate(0);
-                                   
+                                    
                                 }else{
                                     
                                     $('.footerPadding').hide();
-                                    setNavFlagActive = 'false';                                    
+                                    setNavFlagActive = 'false';
                                     console.log("###### " + setNavFlagActive);
                                     
                                     currNavigateDiv = NewNavigateDivArea;
@@ -666,7 +666,7 @@
         <!-- ******************************************** Page - Tech Time List ******************************************** -->
         
         <!-- ******************************************** Application Upgrade Page ******************************************** -->
-
+        
         
         <div id="upgradeApplicationPage" data-role="page" class="applicationPage" style="overflow-x:hidden;position:relative;overflow-y:hidden;background:#FFFFFF;">
             
@@ -724,10 +724,10 @@
                             <img id='accHPD'>
                                 </td>
                         
-
+                        
                         
                         <td style="width: 50%; height:25px; background-color:#cbcccc" align="right">
-
+                            
                             <img src="images/btn_navigate.png" class="navigateBtn" onclick='showNavigateDiv("navigateBusinessCategory");'/>
                         </td>
                     </tr>
@@ -737,7 +737,7 @@
                         </td>
                     </tr>
                     <tr>
-                       
+                        
                         <td style="width: 50%;height:20px;background-color :white;top:0px;" colspan = "2" valign="top">
                             <div style="border:none;">
                                 <label id="usernameDisplay" style="padding-left:3px;font-style: normal; font-size: 13px; margin-left : 4%; padding-bottom:4px;">Welcome <label id="lblUserName" class="labelLoginName"  style="font-size:13px;font-style: normal;font-weight: bold;  "></label></label>
@@ -758,11 +758,11 @@
                     </tr>
                     
                 </table>
-               
-                <div style="width:100%;margin-top:8px;display:none;" id="applicationUpgradeTab">
+                
+               <!-- <div style="width:100%;margin-top:8px;display:none;" id="applicationUpgradeTab">
                     <div id="applicationUpdateButton" style="display:none;width:100%;line-height:35px;height:35px;margin:auto;background:orange;text-align:center;font-weight:bolder;color:#FFFFFF" onclick="upgradeUserApplication();">New Update Available</div>
-                </div>
-                        
+                </div> -->
+                
                 
                 <div id='navigateBusinessCategory' class='navigateMenu'></div>
                 
@@ -803,15 +803,15 @@
                         <div data-role="content" class="backgd"></div>
                     </div>
                     
-                   <!-- <div class=dynamicDiv id="digitalAreaHomePageTab" style='display:none;'>
-                        <a id="digitalAreaHomePage" class='anchorCategory test' href="#digitalAreaHomePage" onclick='defaultNavigate();loadDigitalContents();'>
-                            <div style='color:white;'>Digital
-                                <div id="digitalAreaHomePageArrow" style="width:50px;float:right;" onclick=''>
-                                    <img src='images/icon_whiteRight.png' style='float:right;height:20px;width:20px;padding-right:15px;'/>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
+                    <!-- <div class=dynamicDiv id="digitalAreaHomePageTab" style='display:none;'>
+                     <a id="digitalAreaHomePage" class='anchorCategory test' href="#digitalAreaHomePage" onclick='defaultNavigate();loadDigitalContents();'>
+                     <div style='color:white;'>Digital
+                     <div id="digitalAreaHomePageArrow" style="width:50px;float:right;" onclick=''>
+                     <img src='images/icon_whiteRight.png' style='float:right;height:20px;width:20px;padding-right:15px;'/>
+                     </div>
+                     </div>
+                     </a>
+                     </div> -->
                     
                     
                     <div class=dynamicDiv>
@@ -863,8 +863,8 @@
                         <div id="spotlightList"></div>
                         <ul id="spotlightListArea" data-role="listview" data-theme="b"></ul>
                     </div>
-                
-                  <div class=dynamicDiv id="homescreenContribute" onclick='defaultNavigate();resetSearchBar(currentSearchKey);loadContributePage();'>
+                    
+                    <div class=dynamicDiv id="homescreenContribute" onclick='defaultNavigate();resetSearchBar(currentSearchKey);loadContributePage();'>
                         <a id="userContributeAnchor" class='anchorCategory test' href="#ContributePage" >
                             <div style='color:white;'>Contribute
                                 <div id="" style="width : 50px; float:right;">
@@ -950,7 +950,7 @@
                 
                 
             </div>
-                        
+            
             <div class="footerPadding footerFixed" id="businessCategoryFooter">
                 <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
             </div>
@@ -1124,7 +1124,7 @@
                     <tr>
                         <td>
                             <label style='margin-left:10px;'><span style="color:black;">
-                                <span id='sortByDateSearchField' style='color:black'></span></span>    
+                                <span id='sortByDateSearchField' style='color:black'></span></span>
                             </label>
                         </td>
                         <td></td>
@@ -1191,7 +1191,7 @@
                 
                 <br>
                 
-                <div id='navigateTAListResult' class='navigateMenu' style='overflow-x:hidden;'></div> 
+                <div id='navigateTAListResult' class='navigateMenu' style='overflow-x:hidden;'></div>
                 
                 <table border='0' cellspacing='2'>
                     <tr>
@@ -1295,7 +1295,7 @@
                 <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
             </div>
             
-           
+            
             
             <div data-position="fixed" style="background:grey"  data-tap-toggle = "false" align="center" class="toggleButtonDiv">
                 <center>
@@ -1350,7 +1350,7 @@
             
             <br><br>
             
-            <div id='navigateSpotlightPage' class='navigateMenu'></div> 
+            <div id='navigateSpotlightPage' class='navigateMenu'></div>
             
             <div id="spotlightContentArea"></div>
             
@@ -1400,7 +1400,7 @@
                 
                 <br>
                 
-                <div id='navigateUpcomingEventsPage' class='navigateMenu'></div> 
+                <div id='navigateUpcomingEventsPage' class='navigateMenu'></div>
                 
                 <table style='width:100%' border=0>
                     <tr>
@@ -1420,7 +1420,7 @@
                 <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
             </div>
             
-           
+            
             
             <div id="upcomingOnOffDiv" data-position="fixed" style="background:grey"  data-tap-toggle = "false" align="center" class="toggleButtonDiv">
                 <center>
@@ -1484,7 +1484,7 @@
                         </table>
                     </div>
                     
-                    <div id='navigateSubscribePage' class='navigateMenu'></div> 
+                    <div id='navigateSubscribePage' class='navigateMenu'></div>
                     
                     <br>
                     
@@ -1667,7 +1667,7 @@
                     
                     
                     
-                    <div class="contentGrayBg" style="padding:0px;background:#F0EFED"> 
+                    <div class="contentGrayBg" style="padding:0px;background:#F0EFED">
                         
                         <table style="width: 100%;" border="0">
                             <tr>
@@ -1693,9 +1693,9 @@
                         
                         <br><br><br/>
                         
-                    </div> 
+                    </div>
                     
-                </div> 
+                </div>
             </div>
             
             <div class="footerPadding footerFixed">
@@ -1916,81 +1916,81 @@
         
         <!-- ******************************************** Digital Area Home Page ******************************************** -->
         
-       <!-- <div id="digitalAreaHomePage" data-role="page" class="applicationPage" style="overflow-x:hidden;" style='background:#F0EFED;'>
-            <div class="applicationPageContent" style='background:#F0EFED;'>
-                
-                <div  style="padding-top: 0px">
-                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;border:none; padding:0px; margine:0px;">
-                        <tr>
-                            <td style="width:50%;margin-left:30px">
-                                <img id='accRed11'/>
-                            </td>
-                            <td style="width: 50%;" valign="bottom">
-                                <img src="images/header_empoweringYourself.png" class="accEmpowering">
-                                    </td>
-                        </tr>
-                        <tr>
-                            <td style="width:50%; height:25px;padding-left:6px;background-color :#cbcccc" valign='center'>
-                                <img id='accHPD11'>
-                                    </td>
-                            <td style="width: 50%; height:30px; background-color:#cbcccc" align="right">
-                                <img src='images/btn_back.png' class='navigateBackBtn' onclick="backnav('digitalAreaHomePage');resetSearchBar();"/>
-                                <img src='images/btn_navigate.png' class='navigateBtn' onclick='showNavigateDiv("navigateDigitalAreaHomePage");'/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100%; padding: 0px;margin:0px;height:30px;background:#F8991D;" colspan = "2" class="searchTDTAListResult">
-                                <div style="width:95.5%; height:100%; border :none;float:left;">
-                                    <input id="searchDigitalAreaHomePage" type="text" placeholder=" Search" title="Search" class="searchBar" style="text-indent:10px;padding:0px; margine:0px;
-                                        margin-top:0px;margin-right:0px;left:0px;">
-                                        </div>
-                                <div style="width:4.5%; height:100%; border:none; float:right; background:#ff9900;margin-top:0px;margin-right:0px; ">
-                                    <img class="searchIcon" src="images/search.png" style="height:100%; width:30px;float:right;" onclick='pageFlagSet("digitalAreaHomePage");showSearchResult("searchDigitalAreaHomePage","All","All","null");'/>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div id='navigateDigitalAreaHomePage' class='navigateMenu'></div> 
-                
-                <table style="width:100%;">
-                    <tr>
-                        <td style="width: 100%; padding: 0px;" colspan="2">
-                            <br><label style="font-size:24px;padding-left:15px;font-family:AgfaRotisSans;font-weight:bolder;">Select a Digital Area</label><br><br>
-                        </td>
-                    </tr>
-                </table>
-                <div id="digitalAreaHomePageTechnologyArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePageSpotlightArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePageRecommendationArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePagePlaylistsArea" style="background:#F0EFED"></div>
-            </div>
-            
-            <div class="footerFixed" style='background:#F0EFED;padding-left:15px'>
-                <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
-            </div>
-            
-            
-            <div data-position="fixed" style="background:grey" data-tap-toggle="false" align="center" class="toggleButtonDiv">
-                <center>
-                    <table>
-                        <tr>
-                            <td><label style="font-size:17px;font-weight:bold">Online Mode</label></td>
-                            <td>
-                                <fieldset data-role="controlgroup" data-type="horizontal" style="background:grey">
-                                    <input class="abc" type="radio" align="center" name="radio-view17" id="radio-view-a17" value="online">
-                                        <label for="radio-view-a17">On</label>
-                                        <input class="xyz" type="radio"  name="radio-view17" id="radio-view-b17" value="offline">
-                                            <label for="radio-view-b17">Off</label>
-                                            </fieldset>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </div>
-        </div>
-        </div> -->
+        <!-- <div id="digitalAreaHomePage" data-role="page" class="applicationPage" style="overflow-x:hidden;" style='background:#F0EFED;'>
+         <div class="applicationPageContent" style='background:#F0EFED;'>
+         
+         <div  style="padding-top: 0px">
+         <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;border:none; padding:0px; margine:0px;">
+         <tr>
+         <td style="width:50%;margin-left:30px">
+         <img id='accRed11'/>
+         </td>
+         <td style="width: 50%;" valign="bottom">
+         <img src="images/header_empoweringYourself.png" class="accEmpowering">
+         </td>
+         </tr>
+         <tr>
+         <td style="width:50%; height:25px;padding-left:6px;background-color :#cbcccc" valign='center'>
+         <img id='accHPD11'>
+         </td>
+         <td style="width: 50%; height:30px; background-color:#cbcccc" align="right">
+         <img src='images/btn_back.png' class='navigateBackBtn' onclick="backnav('digitalAreaHomePage');resetSearchBar();"/>
+         <img src='images/btn_navigate.png' class='navigateBtn' onclick='showNavigateDiv("navigateDigitalAreaHomePage");'/>
+         </td>
+         </tr>
+         <tr>
+         <td style="width: 100%; padding: 0px;margin:0px;height:30px;background:#F8991D;" colspan = "2" class="searchTDTAListResult">
+         <div style="width:95.5%; height:100%; border :none;float:left;">
+         <input id="searchDigitalAreaHomePage" type="text" placeholder=" Search" title="Search" class="searchBar" style="text-indent:10px;padding:0px; margine:0px;
+         margin-top:0px;margin-right:0px;left:0px;">
+         </div>
+         <div style="width:4.5%; height:100%; border:none; float:right; background:#ff9900;margin-top:0px;margin-right:0px; ">
+         <img class="searchIcon" src="images/search.png" style="height:100%; width:30px;float:right;" onclick='pageFlagSet("digitalAreaHomePage");showSearchResult("searchDigitalAreaHomePage","All","All","null");'/>
+         </div>
+         </td>
+         </tr>
+         </table>
+         </div>
+         
+         <div id='navigateDigitalAreaHomePage' class='navigateMenu'></div>
+         
+         <table style="width:100%;">
+         <tr>
+         <td style="width: 100%; padding: 0px;" colspan="2">
+         <br><label style="font-size:24px;padding-left:15px;font-family:AgfaRotisSans;font-weight:bolder;">Select a Digital Area</label><br><br>
+         </td>
+         </tr>
+         </table>
+         <div id="digitalAreaHomePageTechnologyArea" style="background:#F0EFED"></div>
+         <div id="digitalAreaHomePageSpotlightArea" style="background:#F0EFED"></div>
+         <div id="digitalAreaHomePageRecommendationArea" style="background:#F0EFED"></div>
+         <div id="digitalAreaHomePagePlaylistsArea" style="background:#F0EFED"></div>
+         </div>
+         
+         <div class="footerFixed" style='background:#F0EFED;padding-left:15px'>
+         <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
+         </div>
+         
+         
+         <div data-position="fixed" style="background:grey" data-tap-toggle="false" align="center" class="toggleButtonDiv">
+         <center>
+         <table>
+         <tr>
+         <td><label style="font-size:17px;font-weight:bold">Online Mode</label></td>
+         <td>
+         <fieldset data-role="controlgroup" data-type="horizontal" style="background:grey">
+         <input class="abc" type="radio" align="center" name="radio-view17" id="radio-view-a17" value="online">
+         <label for="radio-view-a17">On</label>
+         <input class="xyz" type="radio"  name="radio-view17" id="radio-view-b17" value="offline">
+         <label for="radio-view-b17">Off</label>
+         </fieldset>
+         </td>
+         </tr>
+         </table>
+         </center>
+         </div>
+         </div>
+         </div> -->
         
         
         <!-- ******************************************** Digital Area Home Page ******************************************** -->
@@ -2216,7 +2216,7 @@
                     </tr>
                 </table>
                 
-               
+                
                 
             </div>
             
@@ -2224,9 +2224,9 @@
                 <label id="itemTitle"></label>
             </div>
             
-
+            
             <div data-role="content" data-theme="d" class="backgdMedia">
-                <br><div id="avPlayer" style="width : 100%; text-align : center;"></div><br> 
+                <br><div id="avPlayer" style="width : 100%; text-align : center;"></div><br>
             </div>
             
             <div class="footerDiv" style="position: fixed">
@@ -2248,7 +2248,7 @@
             <div style="padding-top: 0px">
                 <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border:none; padding:0px; margine:0px;">
                     <tr>
-                        <td style="width:50%;margin-left:30px">          
+                        <td style="width:50%;margin-left:30px">
                             <img id='accRed12'/>
                             
                         </td>
@@ -2256,16 +2256,16 @@
                             <img src="images/header_empoweringYourself.png" class="accEmpowering">
                                 </td>
                     </tr>
-                </table>  
+                </table>
             </div>
             
             <hr style='width:100%;background-color: grey; color: grey; height:1px;'>
             
             <div id='errormsg' style="position:absolute;width:100%;text-align:center;top:46%">You are successfully logged out from application.<br>Please close the application.<br/><br/><strong>Or</strong><br/><br/>
-            <div id='reloginTechTime' onclick='reloginToTechTime();' style='text-align:center;'><img class='detailMediaPageButton' src="images/reloginTechTime.png"></img></div>
+                <div id='reloginTechTime' onclick='reloginToTechTime();' style='text-align:center;'><img class='detailMediaPageButton' src="images/reloginTechTime.png"></img></div>
             </div>
             
-             
+            
             
         </div>
         
@@ -2312,9 +2312,9 @@
                     
                 </div><br/>
                 
-               <!-- <div style="padding-left:2%;width:100%;background:#555555;padding-top:8px;padding-bottom:10px;" id="techWatchPublication" onclick='generateTechWatchPublicationList();'>
-                    <label style='font-size:17px;padding-left:2px;color:orange;font-weight:bolder;'>Select Date:</label><label id='techWatchPubDateLabel' style='font-size:17px;color:white;padding-left:2px;font-family:AgfaRotisSans;font-weight:bolder;'></label><img style='float:right;padding-right:3%' src='images/orange_icon_right1.png' width='20px' height='20px;'/>
-                </div><br/> -->
+                <!-- <div style="padding-left:2%;width:100%;background:#555555;padding-top:8px;padding-bottom:10px;" id="techWatchPublication" onclick='generateTechWatchPublicationList();'>
+                 <label style='font-size:17px;padding-left:2px;color:orange;font-weight:bolder;'>Select Date:</label><label id='techWatchPubDateLabel' style='font-size:17px;color:white;padding-left:2px;font-family:AgfaRotisSans;font-weight:bolder;'></label><img style='float:right;padding-right:3%' src='images/orange_icon_right1.png' width='20px' height='20px;'/>
+                 </div><br/> -->
                 
                 <div id='navigateTechWatch' class='navigateMenu'></div> <!-- navigateMenu DIV -->
                 
@@ -2343,7 +2343,7 @@
                     </table>
                 </center>
             </div>
-            </div>
+        </div>
         </div>
         
         
@@ -2392,7 +2392,7 @@
         
         
         <!-- ******************************************** qnaPage ******************************************** -->
-
+        
         
         <!-- ******************************************** Playlists Page ******************************************** -->
         
@@ -2543,7 +2543,7 @@
                     <hr style='width:100%;background-color:grey;color:grey;height:3px;margin:0px;'>
                     <div style='width:100%;background-color:orange;height:30px;padding-top:6px;'><label style="font-size:16px;font-weight:bold;color:white;">New Playlist Name</label></div><br/>
                     <input id="renamePlaylistNamePlaceholder" class='defaultInputTypeField' type="text" style="width:95%;margin:0 auto;" placeholder="New Name"><br/>
-                    <label id="userPlaylistsRenameOption" style="font-size:16px;padding-left:15px;font-family:AgfaRotisSans;color:black;">Please avoid using special characters.</label><br/>
+                        <label id="userPlaylistsRenameOption" style="font-size:16px;padding-left:15px;font-family:AgfaRotisSans;color:black;">Please avoid using special characters.</label><br/>
                         <table style="width:100%;">
                             <tr>
                                 <td style="witdh:50%;"><img src='images/btn_rename.png' onclick="renamePlaylist();" class='linkeffect'></img></td>
@@ -2660,7 +2660,7 @@
         </div>
         
         <!-- ******************************************** Playlist Item Page ******************************************** -->
-  
+        
         
         <!-- ******************************************** Share Playlists Page ******************************************** -->
         
@@ -2822,7 +2822,7 @@
                         <td style="width:100%;padding:0px;">
                             <br><label id="addToPlaylistHeader" style="font-size:24px;padding-left:15px;font-family:AgfaRotisSans;font-color:black;color:black;">Add to Playlist</label>
                         </td>
-                       
+                        
                     </tr>
                 </table>
                 
@@ -2876,7 +2876,7 @@
                 
                 <div class='linkTransition' id='createNewPlaylistTab' style='height:30px;width:100%;background:orange;text-align:center;color:white;padding-top:5px;font-size:16px;' title='5' onclick="showCreateNewPlaylistForm();"><b>Create New Playlist</b></div>
                 <div id="listOfPlaylists" style="width:100%;background-color:#F0EFED;"></div>
-               
+                
                 <div style='background:#F0EFED;padding-left:15px' class="footerFixed">
                     <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
                 </div>
@@ -2960,9 +2960,9 @@
                 
                 
                 <div id='assistedRecordingSection' style="width:100%;display:none;">
-                   <!-- <div id='assistedRecordingHeader' style="width:100%;padding-left:2%;padding-right:2%;">
-                        <strong>Assisted Recording</strong>
-                    </div> -->
+                    <!-- <div id='assistedRecordingHeader' style="width:100%;padding-left:2%;padding-right:2%;">
+                     <strong>Assisted Recording</strong>
+                     </div> -->
                     <div style="width:100%;">
                         <table style="width:100%;">
                             <tr>
@@ -2979,54 +2979,54 @@
                     <div id='assistedRecordingForm' style="width:100%;">
                         <label id="emailInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Email ID</label>
                         <input id="assistedRecordingEmailInput" class='defaultInputTypeField' type="text" style="width:95%;margin:0 auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" value="Your Email" placeholder="Your Email" readonly>
-                        <label id="nameInputMandatoryField" style="font-size:14px;color:orange;font-weight:bold;padding-left:10px;">*</label><label id="nameInputLabel" style="font-size:14px;color:black;font-weight:bold;">Name</label>
+                            <label id="nameInputMandatoryField" style="font-size:14px;color:orange;font-weight:bold;padding-left:10px;">*</label><label id="nameInputLabel" style="font-size:14px;color:black;font-weight:bold;">Name</label>
                             <input id="assistedRecordingNameInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" placeholder="Enter Name"/>
-                             <label id="levelInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Level</label>
-                                <div id="assistedRecordingLevelInputDiv" style="width:95%;margin:0 auto;border-radius:0px;">
-                                    <select name="select-native-1" id="select-native-1" style="border-radius:0px;" data-corners="false">
-                                        <option value="Select">Select</option>
-                                        <option value="Accenture Leadership">Accenture Leadership</option>
-                                        <option value="Senior Manager">Senior Manager</option>
-                                        <option value="Manager">Manager</option>
-                                        <option value="Associate Manager">Associate Manager</option>
-                                        <option value="Level C">Level C</option>
-                                        <option value="Consultant">Consultant</option>
-                                        <option value="Accenture">Accenture</option>
-                                        <option value="Team Lead">Team Lead</option>
-                                        <option value="MIT">MIT</option>
-                                    </select>
-                                </div>
-                                <label id="areaInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Area</label>
-                                <div id='assistedRecordingAreaInputDiv' style="width:95%;margin:0 auto;">
-                                    <select name="select-native-2" id="select-native-2" data-corners="false">
-                                    </select>
-                                </div>
-                                <label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Topic</label>
-                                <input id="assistedRecordingTopicInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;" placeholder="Topic">
+                            <label id="levelInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Level</label>
+                            <div id="assistedRecordingLevelInputDiv" style="width:95%;margin:0 auto;border-radius:0px;">
+                                <select name="select-native-1" id="select-native-1" style="border-radius:0px;" data-corners="false">
+                                    <option value="Select">Select</option>
+                                    <option value="Accenture Leadership">Accenture Leadership</option>
+                                    <option value="Senior Manager">Senior Manager</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Associate Manager">Associate Manager</option>
+                                    <option value="Level C">Level C</option>
+                                    <option value="Consultant">Consultant</option>
+                                    <option value="Accenture">Accenture</option>
+                                    <option value="Team Lead">Team Lead</option>
+                                    <option value="MIT">MIT</option>
+                                </select>
+                            </div>
+                            <label id="areaInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Area</label>
+                            <div id='assistedRecordingAreaInputDiv' style="width:95%;margin:0 auto;">
+                                <select name="select-native-2" id="select-native-2" data-corners="false">
+                                </select>
+                            </div>
+                            <label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Topic</label>
+                            <input id="assistedRecordingTopicInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;" placeholder="Topic">
                                 <label id="formatInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Format</label>
-                                    <div id='assistedRecordingFormatInputDiv' style="width:95%;margin:0 auto;">
-                                        <select name="select-native-3" id="select-native-3" data-corners="false">
-                                            <option value="Select">Select</option>
-                                            <option value="All">All</option>
-                                            <option value="Audios">Audios</option>
-                                            <option value="Videos">Videos</option>
-                                            <option value="Interviews">Interviews</option>
-                                            <option value="Panel Discussions">Panel Discussions</option>
-                                            <option value="Technology Conferences">Technology Conferences</option>
-                                        </select>
+                                <div id='assistedRecordingFormatInputDiv' style="width:95%;margin:0 auto;">
+                                    <select name="select-native-3" id="select-native-3" data-corners="false">
+                                        <option value="Select">Select</option>
+                                        <option value="All">All</option>
+                                        <option value="Audios">Audios</option>
+                                        <option value="Videos">Videos</option>
+                                        <option value="Interviews">Interviews</option>
+                                        <option value="Panel Discussions">Panel Discussions</option>
+                                        <option value="Technology Conferences">Technology Conferences</option>
+                                    </select>
+                                </div>
+                                
+                                <div style="width:100%;margin:30px auto;display:inline-block;">
+                                    <div style="width:49%;margin:0 auto;float:left;text-align:center;">
+                                        <!--<button id="assistedRecordingCancelRecording" onclick="showRecordingOption('cancel');" type="button">Clear</button>-->
+                                        <img id="assistedRecordingClearRecording" class='detailMediaPageButton' src="images/btn_clear.png" onclick="resetAssistedRecordingForms()"></img>
                                     </div>
-                                    
-                                    <div style="width:100%;margin:30px auto;display:inline-block;">
-                                        <div style="width:49%;margin:0 auto;float:left;text-align:center;">
-                                            <!--<button id="assistedRecordingCancelRecording" onclick="showRecordingOption('cancel');" type="button">Clear</button>-->
-                                            <img id="assistedRecordingClearRecording" class='detailMediaPageButton' src="images/btn_clear.png" onclick="resetAssistedRecordingForms()"></img>
-                                        </div>
-                                        <div style="width:49%;margin:0 auto;float:left;text-align:center;">
-                                            <!-- <button id="assistedRecordingSubmitRecording" type="button">Submit</button> -->
-                                            <img id="assistedRecordingSubmitRecording" class='detailMediaPageButton' src="images/btn_Submit.png" onclick="postRecordingDetails('assisted')"></img>
-                                        </div>
+                                    <div style="width:49%;margin:0 auto;float:left;text-align:center;">
+                                        <!-- <button id="assistedRecordingSubmitRecording" type="button">Submit</button> -->
+                                        <img id="assistedRecordingSubmitRecording" class='detailMediaPageButton' src="images/btn_Submit.png" onclick="postRecordingDetails('assisted')"></img>
                                     </div>
-                                    </div>
+                                </div>
+                                </div>
                 </div>
                 
                 
@@ -3057,230 +3057,230 @@
                     
                     <div id='preRecordedAudiosVideosList' style="width:100%;">
                         
-                       <!-- <div style='width:100%;background-color:#F0EFED;padding-top:5px;border-top:2px solid gray;' class='listItemClick'>
-                            <div style='width:90%;float:left;'><label id='topicNameLabel' style='font-size:16px;color:orange;font-weight:bold;padding-left:2%;padding-right:2%;padding-top:10px;'>SAP Basic Technology</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/icon_video.png' style='height:20px;width:25px;'/></div>
-                            <div style='width:90%;float:left;'><label id='areaNameLabel' style='font-size:16px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>SAP</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/cross_mark.png' style='height:20px;width:20px;margin-top:10px;' onclick='deleteCurrentSession(this);'/></div><br/>
-                            <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Ankit Tanna</label></div>
-                            <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Technology Conferences</label></div><br/>
-                            <div style='width:100%;display:inline-block;'>
-                                <div style='width:50%;float:left;text-align:center;'>
-                                    <img id="previewRecording" src="images/btn_PreviewVideo.png"></img>
-                                </div>
-                                <div style='width:50%;float:left;text-align:center;'>
-                                    <img id="uploadRecording" src="images/btn_upload.png"></img>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div style='width:100%;background-color:#F0EFED;padding-top:5px;border-top:2px solid gray;' class='listItemClick'>
-                            <div style='width:90%;float:left;'><label id='topicNameLabel' style='font-size:16px;color:orange;font-weight:bold;padding-left:2%;padding-right:2%;padding-top:10px;'>SAP Basic Technology</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/icon_video.png' style='height:20px;width:25px;'/></div>
-                            <div style='width:90%;float:left;'><label id='areaNameLabel' style='font-size:16px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>SAP</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/cross_mark.png' style='height:20px;width:20px;margin-top:10px;' onclick='deleteCurrentSession(this);'/></div><br/>
-                            <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Ankit Tanna</label></div>
-                            <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Technology Conferences</label></div><br/>
-                            <div style='width:100%;display:inline-block;'>
-                                <div style='width:50%;float:left;text-align:center;'>
-                                    <img id="previewRecording" src="images/btn_preview.png"></img>
-                                </div>
-                                <div style='width:50%;float:left;text-align:center;'>
-                                    <img id="uploadRecording" src="images/btn_upload.png"></img>
-                                </div>
-                            </div>
-                        </div> -->
+                        <!-- <div style='width:100%;background-color:#F0EFED;padding-top:5px;border-top:2px solid gray;' class='listItemClick'>
+                         <div style='width:90%;float:left;'><label id='topicNameLabel' style='font-size:16px;color:orange;font-weight:bold;padding-left:2%;padding-right:2%;padding-top:10px;'>SAP Basic Technology</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/icon_video.png' style='height:20px;width:25px;'/></div>
+                         <div style='width:90%;float:left;'><label id='areaNameLabel' style='font-size:16px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>SAP</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/cross_mark.png' style='height:20px;width:20px;margin-top:10px;' onclick='deleteCurrentSession(this);'/></div><br/>
+                         <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Ankit Tanna</label></div>
+                         <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Technology Conferences</label></div><br/>
+                         <div style='width:100%;display:inline-block;'>
+                         <div style='width:50%;float:left;text-align:center;'>
+                         <img id="previewRecording" src="images/btn_PreviewVideo.png"></img>
+                         </div>
+                         <div style='width:50%;float:left;text-align:center;'>
+                         <img id="uploadRecording" src="images/btn_upload.png"></img>
+                         </div>
+                         </div>
+                         </div>
+                         
+                         
+                         <div style='width:100%;background-color:#F0EFED;padding-top:5px;border-top:2px solid gray;' class='listItemClick'>
+                         <div style='width:90%;float:left;'><label id='topicNameLabel' style='font-size:16px;color:orange;font-weight:bold;padding-left:2%;padding-right:2%;padding-top:10px;'>SAP Basic Technology</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/icon_video.png' style='height:20px;width:25px;'/></div>
+                         <div style='width:90%;float:left;'><label id='areaNameLabel' style='font-size:16px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>SAP</label></div><div style='width:9%;float:left;text-align:right;'><img src='images/cross_mark.png' style='height:20px;width:20px;margin-top:10px;' onclick='deleteCurrentSession(this);'/></div><br/>
+                         <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Ankit Tanna</label></div>
+                         <div style='width:100%;'><label id='contributorNameLabel' style='font-size:15px;color:orange;font-weight:normal;padding-left:2%;padding-top:10px;'>Technology Conferences</label></div><br/>
+                         <div style='width:100%;display:inline-block;'>
+                         <div style='width:50%;float:left;text-align:center;'>
+                         <img id="previewRecording" src="images/btn_preview.png"></img>
+                         </div>
+                         <div style='width:50%;float:left;text-align:center;'>
+                         <img id="uploadRecording" src="images/btn_upload.png"></img>
+                         </div>
+                         </div>
+                         </div> -->
                     </div>
-
+                    
                 </div>
-
+                
                 <div id='selfRecordingSection' style="width:100%;display:none;">
                     <!-- <div id='selfRecordingHeader' style="width:100%;padding-left:2%;padding-right:2%;">
-                        <strong>Self Recording</strong>
-                    </div> -->
+                     <strong>Self Recording</strong>
+                     </div> -->
                     
                     <div id='selfRecordingFormSection' style="width:100%;">
-                    <div style="width:100%;">
-                        <table style="width:100%;">
-                            <tr>
-                                <td style="padding-left:5px;"><label id="assistedRecordingTab" style="font-size:14px;color:orange;font-weight:normal" onclick="showRecordingOption('assisted');">Assisted Recording</label><label>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</label><label id="selfRecordingTab" style="font-size:14px;font-weight:bolder;color:black" onclick="showRecordingOption('self');">Submit Video/Audio</label></td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    
-                    
-                    <div id='selfRecordingRecordSection' style="width:100%;">
-                        <div id='selfRecordingDescription' style="width:100%;padding-left:2%;padding-right:2%;margin-top:8px;">
-                            <p>You can record or submit any of the pre-recorded Video/Audio files.</p>
+                        <div style="width:100%;">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="padding-left:5px;"><label id="assistedRecordingTab" style="font-size:14px;color:orange;font-weight:normal" onclick="showRecordingOption('assisted');">Assisted Recording</label><label>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</label><label id="selfRecordingTab" style="font-size:14px;font-weight:bolder;color:black" onclick="showRecordingOption('self');">Submit Video/Audio</label></td>
+                                </tr>
+                            </table>
                         </div>
-                        <br/>
-                        <img id="proceedToVideoRecording" class='detailMediaPageButton' src="images/btn_ProceedToVideoRecording.png" style="display:block;margin:0 auto;" onclick="recordVideo();"></img>
-                        <br/><br/>
-                        <img id="proceedToAudioRecording" class='detailMediaPageButton' src="images/btn_ProceedToAudioRecording.png" style="display:block;margin:0 auto;" onclick="recordAudio();"></img>
-                        <br/><br/>
-                        <img id="proceedToPrerecordedContents" class='detailMediaPageButton' src="images/btn_SubmitPreRecordAudiosVideo.png" style="display:block;margin:0 auto;" onclick="loadPreRecordedContentSection();loadPreRecordedContentList();"></img><br/>
-                    </div>
                         
-                    <div id='selfRecordingForm' style="width:100%;">
-                        <div id='selfRecordingDescription' style="width:100%;padding-left:2%;padding-right:2%;margin-top:8px;">
-                            <p>Add details of your recorded session.</p>
+                        
+                        
+                        <div id='selfRecordingRecordSection' style="width:100%;">
+                            <div id='selfRecordingDescription' style="width:100%;padding-left:2%;padding-right:2%;margin-top:8px;">
+                                <p>You can record or submit any of the pre-recorded Video/Audio files.</p>
+                            </div>
+                            <br/>
+                            <img id="proceedToVideoRecording" class='detailMediaPageButton' src="images/btn_ProceedToVideoRecording.png" style="display:block;margin:0 auto;" onclick="recordVideo();"></img>
+                            <br/><br/>
+                            <img id="proceedToAudioRecording" class='detailMediaPageButton' src="images/btn_ProceedToAudioRecording.png" style="display:block;margin:0 auto;" onclick="recordAudio();"></img>
+                            <br/><br/>
+                            <img id="proceedToPrerecordedContents" class='detailMediaPageButton' src="images/btn_SubmitPreRecordAudiosVideo.png" style="display:block;margin:0 auto;" onclick="loadPreRecordedContentSection();loadPreRecordedContentList();"></img><br/>
                         </div>
-                        <label id="emailInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Email ID</label>
-                        <input id="selfRecordingEmailInput" class='defaultInputTypeField' type="text" style="width:95%;margin:0 auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" placeholder="Your Email" readonly>
-                            <label id="nameInputMandatoryField" style="font-size:14px;color:orange;font-weight:bold;padding-left:10px;">*</label><label id="nameInputLabel" style="font-size:14px;color:black;font-weight:bold;">Name</label>
-                            <input id="selfRecordingNameInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" placeholder="Enter Name">
-                            <label id="levelInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Level</label>
-                                <div id="selfRecordingLevelInputDiv" style="width:95%;margin:0 auto;">
-                                    <select name="select-native-4" id="select-native-4" style="border-radius:0px;" data-corners="false">
-                                        <option value="Select">Select</option>
-                                        <option value="Accenture Leadership">Accenture Leadership</option>
-                                        <option value="Senior Manager">Senior Manager</option>
-                                        <option value="Manager">Manager</option>
-                                        <option value="Associate Manager">Associate Manager</option>
-                                        <option value="Level C">Level C</option>
-                                        <option value="Consultant">Consultant</option>
-                                        <option value="Accenture">Accenture</option>
-                                        <option value="Team Lead">Team Lead</option>
-                                        <option value="MIT">MIT</option>
-                                    </select>
-                                </div>
-                                
-                                <label id="areaInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Area</label>
-                                <div id="selfRecordingAreaInputDiv" style="width:95%;margin:0 auto;">
-                                    <select name="select-native-5" id="select-native-5" data-corners="false">
-                                    </select>
-                                </div>
-                                
-                                <label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Topic</label>
-                                <input id="selfRecordingTopicInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;" placeholder="Topic">
-                                <!--<label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">File</label><br/>
-                                <div style="width:95%;margin:0 auto;display:inline-block;">
-                                    <div style="width:58%;float:left;padding-left:15px;">
-                                    <input id="selfRecordingFileInput" class='defaultInputTypeField' type="text" style="width:100%;margin:8px auto;border-radius:0px;" placeholder="File" readonly>
-                                    </div>
-                                    <div style="width:38%;float:right;"><img id="selfRecordingBrowseFile" src="images/btn_browse.png"></img></div>
-                                </div> -->
-                               <!-- <div style="width:100%;display:inline-block;">
-                                    <div style="width:50%;float:left;text-align:center;margin:0 auto;">
-                                        <img id="selfRecordingRecordAudio" src="images/btn_RecordAnAudio.png" style="display:block;margin:0 auto;" onclick="recordAudio()"></img>
-                                        <img id="selfRecordingPreviewAudio" style="display:none;margin:0 auto;" src="images/btn_PreviewAudio.png" onclick="previewRecordedAudio();"></img>
-                                    </div>
-                                    <div style="width:50%;float:left;text-align:center;margin:0 auto;">
-                                        <img id="selfRecordingRecordVideo" src="images/btn_RecordAVideo.png" style="display:block;margin:0 auto;" onclick="recordVideo()"></img>
-                                        <img id="selfRecordingPreviewVideo" style="display:none;margin:0 auto;" src="images/btn_PreviewVideo.png" onclick="previewRecordedVideo();"></img>
-                                    </div> 
-                                    
-                                </div> -->
-                                    <!-- <audio id="contributeAudioPreviewPlayer" src='' type="audio/wav" controls style="width:100%;display:none;">
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                    
-                                    <video id="contributeVideoPreviewPlayer" style="width:100%;display:none;" src='' controls>
-                                        Your browser does not support the video element.
-                                    </video> -->
-                                    
-                                <label id="formatInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Format</label>
-                                    <div id="selfRecordingFormatInputDiv" style="width:95%;margin:0 auto;">
-                                        <select name="select-native-6" id="select-native-6" data-corners="false">
+                        
+                        <div id='selfRecordingForm' style="width:100%;">
+                            <div id='selfRecordingDescription' style="width:100%;padding-left:2%;padding-right:2%;margin-top:8px;">
+                                <p>Add details of your recorded session.</p>
+                            </div>
+                            <label id="emailInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Email ID</label>
+                            <input id="selfRecordingEmailInput" class='defaultInputTypeField' type="text" style="width:95%;margin:0 auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" placeholder="Your Email" readonly>
+                                <label id="nameInputMandatoryField" style="font-size:14px;color:orange;font-weight:bold;padding-left:10px;">*</label><label id="nameInputLabel" style="font-size:14px;color:black;font-weight:bold;">Name</label>
+                                <input id="selfRecordingNameInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;margin-top:8px;margin-bottom:8px;" placeholder="Enter Name">
+                                    <label id="levelInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Level</label>
+                                    <div id="selfRecordingLevelInputDiv" style="width:95%;margin:0 auto;">
+                                        <select name="select-native-4" id="select-native-4" style="border-radius:0px;" data-corners="false">
                                             <option value="Select">Select</option>
-                                            <option value="All">All</option>
-                                            <option value="Audios">Audios</option>
-                                            <option value="Videos">Videos</option>
-                                            <option value="Interviews">Interviews</option>
-                                            <option value="Panel Discussions">Panel Discussions</option>
-                                            <option value="Technology Conferences">Technology Conferences</option>
+                                            <option value="Accenture Leadership">Accenture Leadership</option>
+                                            <option value="Senior Manager">Senior Manager</option>
+                                            <option value="Manager">Manager</option>
+                                            <option value="Associate Manager">Associate Manager</option>
+                                            <option value="Level C">Level C</option>
+                                            <option value="Consultant">Consultant</option>
+                                            <option value="Accenture">Accenture</option>
+                                            <option value="Team Lead">Team Lead</option>
+                                            <option value="MIT">MIT</option>
                                         </select>
                                     </div>
-                                    <div style="width:100%;margin:30px auto;display:inline-block;">
-                                        <div style="width:49%;margin:0 auto;float:left;text-align:center;">
-                                            <!--<button id="assistedRecordingCancelRecording" onclick="showRecordingOption('cancel');" type="button">Clear</button>-->
-                                            <img id="selfRecordingClearRecording" class='detailMediaPageButton' src="images/btn_clear.png" onclick="resetSelfRecordingForms()"></img>
-                                        </div>
-                                        <div style="width:49%;margin:0 auto;float:left;text-align:center;">
-                                            <!-- <button id="assistedRecordingSubmitRecording" type="button">Submit</button> -->
-                                            <img id="selfRecordingSubmitRecording" class='detailMediaPageButton' src="images/btn_SubmitForReview.png" style="display:none;margin:0 auto;" onclick="addRecordedSessionDetailsToJSON();"></img>
-                                            <img id="selfRecordingSaveRecording" class='detailMediaPageButton' src="images/btn_Save.png" style="display:none;margin:0 auto;" onclick="addRecordedSessionDetailsToJSON();"></img>
-                                        </div>
+                                    
+                                    <label id="areaInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Area</label>
+                                    <div id="selfRecordingAreaInputDiv" style="width:95%;margin:0 auto;">
+                                        <select name="select-native-5" id="select-native-5" data-corners="false">
+                                        </select>
                                     </div>
                                     
-                                    <div id="offlineMessageDisplayContribute" style="width:100%;margin:5px auto;display:table-cell;">
-                                        <label style="font-size:14px;color:black;font-weight:normal;padding-left:10px;display:table-cell;">You are currently Offline. Please go Online and select Pre-Recorded Audio/Video to upload your session.</label>
-                                    </div>
-                                    </div>
+                                    <label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Topic</label>
+                                    <input id="selfRecordingTopicInput" class='defaultInputTypeField' type="text" style="width:95%;margin:8px auto;border-radius:0px;" placeholder="Topic">
+                                        <!--<label id="topicInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">File</label><br/>
+                                         <div style="width:95%;margin:0 auto;display:inline-block;">
+                                         <div style="width:58%;float:left;padding-left:15px;">
+                                         <input id="selfRecordingFileInput" class='defaultInputTypeField' type="text" style="width:100%;margin:8px auto;border-radius:0px;" placeholder="File" readonly>
+                                         </div>
+                                         <div style="width:38%;float:right;"><img id="selfRecordingBrowseFile" src="images/btn_browse.png"></img></div>
+                                         </div> -->
+                                        <!-- <div style="width:100%;display:inline-block;">
+                                         <div style="width:50%;float:left;text-align:center;margin:0 auto;">
+                                         <img id="selfRecordingRecordAudio" src="images/btn_RecordAnAudio.png" style="display:block;margin:0 auto;" onclick="recordAudio()"></img>
+                                         <img id="selfRecordingPreviewAudio" style="display:none;margin:0 auto;" src="images/btn_PreviewAudio.png" onclick="previewRecordedAudio();"></img>
+                                         </div>
+                                         <div style="width:50%;float:left;text-align:center;margin:0 auto;">
+                                         <img id="selfRecordingRecordVideo" src="images/btn_RecordAVideo.png" style="display:block;margin:0 auto;" onclick="recordVideo()"></img>
+                                         <img id="selfRecordingPreviewVideo" style="display:none;margin:0 auto;" src="images/btn_PreviewVideo.png" onclick="previewRecordedVideo();"></img>
+                                         </div>
+                                         
+                                         </div> -->
+                                        <!-- <audio id="contributeAudioPreviewPlayer" src='' type="audio/wav" controls style="width:100%;display:none;">
+                                         Your browser does not support the audio element.
+                                         </audio>
+                                         
+                                         <video id="contributeVideoPreviewPlayer" style="width:100%;display:none;" src='' controls>
+                                         Your browser does not support the video element.
+                                         </video> -->
+                                        
+                                        <label id="formatInputLabel" style="font-size:14px;color:black;font-weight:bold;padding-left:10px;">Format</label>
+                                        <div id="selfRecordingFormatInputDiv" style="width:95%;margin:0 auto;">
+                                            <select name="select-native-6" id="select-native-6" data-corners="false">
+                                                <option value="Select">Select</option>
+                                                <option value="All">All</option>
+                                                <option value="Audios">Audios</option>
+                                                <option value="Videos">Videos</option>
+                                                <option value="Interviews">Interviews</option>
+                                                <option value="Panel Discussions">Panel Discussions</option>
+                                                <option value="Technology Conferences">Technology Conferences</option>
+                                            </select>
+                                        </div>
+                                        <div style="width:100%;margin:30px auto;display:inline-block;">
+                                            <div style="width:49%;margin:0 auto;float:left;text-align:center;">
+                                                <!--<button id="assistedRecordingCancelRecording" onclick="showRecordingOption('cancel');" type="button">Clear</button>-->
+                                                <img id="selfRecordingClearRecording" class='detailMediaPageButton' src="images/btn_clear.png" onclick="resetSelfRecordingForms()"></img>
+                                            </div>
+                                            <div style="width:49%;margin:0 auto;float:left;text-align:center;">
+                                                <!-- <button id="assistedRecordingSubmitRecording" type="button">Submit</button> -->
+                                                <img id="selfRecordingSubmitRecording" class='detailMediaPageButton' src="images/btn_SubmitForReview.png" style="display:none;margin:0 auto;" onclick="addRecordedSessionDetailsToJSON();"></img>
+                                                <img id="selfRecordingSaveRecording" class='detailMediaPageButton' src="images/btn_Save.png" style="display:none;margin:0 auto;" onclick="addRecordedSessionDetailsToJSON();"></img>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="offlineMessageDisplayContribute" style="width:100%;margin:5px auto;display:table-cell;">
+                                            <label style="font-size:14px;color:black;font-weight:normal;padding-left:10px;display:table-cell;">You are currently Offline. Please go Online and select Pre-Recorded Audio/Video to upload your session.</label>
+                                        </div>
+                                        </div>
+                    </div>
+                    
+                    
                 </div>
-                   
+                <div class="footerPadding">
+                    <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
+                </div>
+                
+                
+                <div data-position="fixed" style="background:grey"  data-tap-toggle = "false" align="center" class="toggleButtonDiv">
+                    <center>
+                        <table>
+                            <tr>
+                                <td><label style="font-size:17px;font-weight:bold">Online Mode</label></td>
+                                <td>
+                                    <fieldset data-role="controlgroup" data-type="horizontal" style="background:grey">
+                                        <input class="abc" type="radio" align="center" name="radio-view16" id="radio-view-a16" value="online">
+                                            <label for="radio-view-a16">On</label>
+                                            <input class="xyz" type="radio"  name="radio-view16" id="radio-view-b16"   value="offline">
+                                                <label for="radio-view-b16">Off</label>
+                                                </fieldset>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+                
+                
+                
+                
                 
             </div>
-            <div class="footerPadding">
-                <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
-            </div>
+            
+            <!-- ******************************************** Contribute - Page ******************************************** -->
             
             
-            <div data-position="fixed" style="background:grey"  data-tap-toggle = "false" align="center" class="toggleButtonDiv">
-                <center>
-                    <table>
+            
+            
+            <!-- ******************************************** Page - categoryItem******************************************** -->
+            
+            <div id="categoryItem" data-role="page" class="applicationPage">
+                
+                <div data-role="header" class="header" style="position: fixed; top: 0px; width: 100%;z-index: 1">
+                    <table style="width: 100%;z-index: 1;" border="0">
                         <tr>
-                            <td><label style="font-size:17px;font-weight:bold">Online Mode</label></td>
-                            <td>
-                                <fieldset data-role="controlgroup" data-type="horizontal" style="background:grey">
-                                    <input class="abc" type="radio" align="center" name="radio-view16" id="radio-view-a16" value="online">
-                                        <label for="radio-view-a16">On</label>
-                                        <input class="xyz" type="radio"  name="radio-view16" id="radio-view-b16"   value="offline">
-                                            <label for="radio-view-b16">Off</label>
-                                            </fieldset>
-                            </td>
+                            <td id="imgBack" style="width: 20%;"><img src="images/back.png" class="backBtnStyle"></td>
+                            <td style="width: 50%;vertical-align: bottom;padding-bottom: 9px; height : 50px;" align="left"><h1 class="headerLabel" style="margin : 0px; padding : 0px;">Tech Time</h1></td>
+                            <td style="width: 30%;vertical-align: bottom;margin : 0px; padding : 0px;"><label id="lblUserName1" class="labelLoginName" style="padding-bottom:13px;"></label></td>
                         </tr>
                     </table>
-                </center>
-            </div>
-            
-            
-            
-            
-            
-        </div>
-        
-        <!-- ******************************************** Contribute - Page ******************************************** -->
-        
-       
-   
-            
-        <!-- ******************************************** Page - categoryItem******************************************** -->
-        
-        <div id="categoryItem" data-role="page" class="applicationPage">
-            
-            <div data-role="header" class="header" style="position: fixed; top: 0px; width: 100%;z-index: 1">
-                <table style="width: 100%;z-index: 1;" border="0">
-                    <tr>
-                        <td id="imgBack" style="width: 20%;"><img src="images/back.png" class="backBtnStyle"></td>
-                        <td style="width: 50%;vertical-align: bottom;padding-bottom: 9px; height : 50px;" align="left"><h1 class="headerLabel" style="margin : 0px; padding : 0px;">Tech Time</h1></td>
-                        <td style="width: 30%;vertical-align: bottom;margin : 0px; padding : 0px;"><label id="lblUserName1" class="labelLoginName" style="padding-bottom:13px;"></label></td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div id="labelHeading" class="backgd"></div>
-            <div data-role="content">
-                <br><div id="contentBCP" class="backgd"></div>
-            </div>
-            
-            <div class="footerDiv" style="position: fixed">
-                <div data-role="footer" class="footer">
-                    <div class="btnRefLog">
-                        <div id="download"></div>
-                        <span style="float: left; padding-left: 5px;">
-                            <a href="" data-corners="false" data-mini="true" data-inline="true"
-                                data-role="button" id="downloadFile" class="btn btnRefLog">Download</a>
-                            <img id="imgDownloadProgress" src="css/images/ajax-loader.gif"
-                            width="23" height="23" style="position : fixed; bottom : 10px; left : 100px;"/> 
-                        </span>
-                        <a id="btnRefreshItems" data-corners="false" data-mini="true" data-inline="true"
-                            data-role="button" class="btn btnRefLog">Refresh</a>
-                        <a id="logout2" data-corners="false" data-mini="true" data-inline="true" data-role="button"
-                            class="btn btnRefLog"><span>Logout</span></a> <br>
+                </div>
+                
+                <div id="labelHeading" class="backgd"></div>
+                <div data-role="content">
+                    <br><div id="contentBCP" class="backgd"></div>
+                </div>
+                
+                <div class="footerDiv" style="position: fixed">
+                    <div data-role="footer" class="footer">
+                        <div class="btnRefLog">
+                            <div id="download"></div>
+                            <span style="float: left; padding-left: 5px;">
+                                <a href="" data-corners="false" data-mini="true" data-inline="true"
+                                    data-role="button" id="downloadFile" class="btn btnRefLog">Download</a>
+                                <img id="imgDownloadProgress" src="css/images/ajax-loader.gif"
+                                width="23" height="23" style="position : fixed; bottom : 10px; left : 100px;"/>
+                            </span>
+                            <a id="btnRefreshItems" data-corners="false" data-mini="true" data-inline="true"
+                                data-role="button" class="btn btnRefLog">Refresh</a>
+                            <a id="logout2" data-corners="false" data-mini="true" data-inline="true" data-role="button"
+                                class="btn btnRefLog"><span>Logout</span></a> <br>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-  
-        
-    </body>
+            
+            
+            </body>
 </html>
