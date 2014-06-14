@@ -2,7 +2,7 @@
 
 // -------------------------- Current App Version  -------------------------- //
 
-var currentAppVersion = 3.2;
+var currentAppVersion = 3.4;
 
 // -------------------------- Current App Version  -------------------------- //
 
