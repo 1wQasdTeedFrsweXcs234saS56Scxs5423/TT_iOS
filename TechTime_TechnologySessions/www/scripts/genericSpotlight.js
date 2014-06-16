@@ -29,8 +29,7 @@ function loadSpotlightGeneral(xml) {
                              var saImage = $(this).find('special_ads').children('image').text();
                              var saURL = $(this).find('special_ads').children('url').text();
                              var saText = $(this).find('special_ads').children('text').text();
-                            
-                             
+
                              $(this).find('audio').each(function () {
                                                         var audioLength = $(this).attr('length');
                                                         });
@@ -1332,8 +1331,7 @@ function spotlightDataTypes(elementId,type,countNum)
     
 }
 
-
-    function downloadSpotlightThumbnails(thumb, actual)
+function downloadSpotlightThumbnails(thumb, actual)
 {
     
     var spotlightThumbUrl = thumb;
@@ -1374,11 +1372,5 @@ function spotlightDataTypes(elementId,type,countNum)
                                }
                                );
         
-        
         }
-    
-    
 }
-
-
-

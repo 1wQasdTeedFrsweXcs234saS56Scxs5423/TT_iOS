@@ -68,19 +68,6 @@ $(document).ready(function() {
                                                  
                                                  window.localStorage.setItem("status", "online");
                                                  
-                                                 if(jsonData.offlineSubscriptionAction.length == 1)
-                                                 {
-                                                     if(typeof(jsonData.offlineSubscriptionAction[0]) != 'undefined')
-                                                     {
-                                                        postJSONData(jsonData.offlineSubscriptionAction[0], "subscribedOffline");
-                                                     }
-                                                 
-                                                    
-                                                 } else if(jsonData.offlineSubscriptionAction.length == 0)
-                                                 {
-                                                    parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
-                                                 }
-                                                 
                                                  } else {
                                                  
                                                  $('.abc').attr('checked',false);

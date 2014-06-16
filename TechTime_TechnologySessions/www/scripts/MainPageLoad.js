@@ -51,7 +51,6 @@ function createJsonFormat()
     jsonData.pendingDownloads = new Array();
     
     jsonData.offlineCommentsPosted = new Array();
-    jsonData.offlineSubscriptionAction = new Array();
     
     jsonData.downloadedSpotLightItems = new Array();
     
@@ -1651,20 +1650,6 @@ function getAudioVideoItem(xml)
                                         });
                                  
                                  postOfflineComments();
-                             }
-                             
-                             
-                             if(data.offlineSubscriptionAction.length == 1)
-                             {
-                                 $.each(data.offlineSubscriptionAction, function(key, oldItem){
-                                        jsonData.offlineSubscriptionAction[0] = oldItem;
-                                        });
-                             
-                                if(typeof(jsonData.offlineSubscriptionAction[0]) != 'undefined')
-                                {
-                                    postJSONData(jsonData.offlineSubscriptionAction[0], "subscribedOffline");
-                                }
-                             
                              }
                              
                              

@@ -2372,12 +2372,7 @@ function postJSONData(localJSONData, postMode)
                if(postMode != 'subscribedOffline')
                {
                     jAlert('Thank you for your Subscription to Tech Time.', 'Tech Time');
-               } else if(postMode == 'subscribedOffline')
-               {
-                    jAlert('Your Tech Time subscriptions have been updated.', 'Tech Time');
-                    parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
                }
-                jsonData.offlineSubscriptionAction = [];
                 getFileSystemRefForWriting(jsonData);
                }else if(postMode == 'logout'){
                jAlert('Logged Out Successfully.', 'Tech Time');
@@ -2400,7 +2395,6 @@ function postJSONData(localJSONData, postMode)
         if(postMode == 'logout'){
                         
         }else{
-            jsonData.offlineSubscriptionAction[0] = localJSONData;
             getFileSystemRefForWriting(jsonData);
             //jAlert('To \"Subscribe\" or \"Unsubscribe"\, please go online.', 'Tech Time');
             jAlert('You are currently Offline. Your subscriptions will be updated once you are Online or internet connection is available.', 'Tech Time');
