@@ -2384,8 +2384,8 @@ function postJSONData(localJSONData, postMode)
                
                },
                error: function(xhr, textStatus, error){
-               parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
-               //jAlert('Could not subscribe you to the selected Areas. Please try again.', 'Tech Time');
+               //parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
+               jAlert('Could not subscribe you to the selected Areas. Please try again.', 'Tech Time');
                console.log('In Failure'+JSON.stringify(xhr));
                }
                
