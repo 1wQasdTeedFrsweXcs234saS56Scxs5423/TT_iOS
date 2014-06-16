@@ -4089,36 +4089,9 @@ function showTechWatchContent(itemId, itemIndex)
 function showInProgress()
 {
    
-    //entries = [];
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, errorFileSystem);
     gotFS(fileSystem);
- /*   var dirReader = fileSystem.root.createReader();
-    
-    //alert(JSON.stringify(dirReader));
-    
-    dirReader.readEntries(function(results){
-                          var i = 0;
-                          for(i = 0;i<results.length;i++)
-                          {
-                          if(results[i].isFile && results[i].name != "data.json")
-                          {
-                          var fileName = results[i].name.split(".");
-                          entries.push(fileName[0]);
-                          //alert(fileName[0]);
-                          }
-                          
-                          }
-                          
-                          jsonData.listOfFiles = entries;
-                          //alert(jsonData.listOfFiles.length + " " + jsonData.listOfFiles);
-                          }); */
-    
-     //getFileNamesInDirectory();
-    
-    
-    
-   // startSync();
-    //alert("entries.length " + entries.length);
+ 
     generateUserDownloadsJson();
     
     $('#detailPageArea').html('');
@@ -4231,36 +4204,4 @@ function contactUsReset()
     $('#commentTextArea').val('Enter Your Comments Here');
 }
 
-/*
-
-function streamVideoBitrate(bitrate)
-{
-    
-    var videoURL = "http://techtime.accenture.com/hls-vod/vid2_";
-    
-    if(bitrate == "144")
-    {
-        videoURL = videoURL + "150kbps.f4v.m3u8";
-    } else if(bitrate == "240")
-    {
-        videoURL = videoURL + "200kbps.f4v.m3u8";
-    } else if(bitrate == "360")
-    {
-        videoURL = videoURL + "500kbps.f4v.m3u8";
-    } else if(bitrate == "480")
-    {
-        videoURL = videoURL + "700kbps.f4v.m3u8";
-    } else if(bitrate == "720")
-    {
-        videoURL = videoURL + "1000kbps.f4v.m3u8";
-    } else if(bitrate == "1080")
-    {
-        videoURL = videoURL + "1500kbps.f4v.m3u8";
-    }
-    
-    $('#multibitrateVideoPlayer').attr('src', videoURL);
-    
-    document.getElementById('multibitrateVideoPlayer').play();
-}
-*/
 

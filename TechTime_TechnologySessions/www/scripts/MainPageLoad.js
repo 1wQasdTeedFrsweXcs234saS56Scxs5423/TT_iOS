@@ -63,6 +63,8 @@ function createJsonFormat()
     
     var dd = new Date();
     d = dd;
+    
+    
 }
 
 
@@ -319,6 +321,18 @@ function getAudioVideoItem(xml)
     var dd = new Date();
     d = dd;
     
+    var numberOfItems = $(xml).find('item').length;
+    var itemCounter = 0;
+    console.log("----------> " + numberOfItems);
+    
+    var h = new Object();
+    h['one'] = 1;
+    h['two'] = 2;
+    h['three'] = 3;
+    h[0] = 1;
+    
+    
+    
     $(xml).find('item').each(function(){
                              
                              try{
@@ -462,6 +476,10 @@ function getAudioVideoItem(xml)
                                                      {
                                                      jsonData.technologySessions.push(tempMedia);
                                                      }
+                                                     
+                                                     itemCounter = itemCounter + 1;
+                                                     
+                                                     console.log(itemCounter + ' ' + numberOfItems + ' ' + (itemCounter/numberOfItems)*100);
                                                      
                                                      var str = JSON.stringify(scategory);
                                                      
