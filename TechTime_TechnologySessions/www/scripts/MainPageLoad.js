@@ -50,6 +50,9 @@ function createJsonFormat()
     jsonData.loggedUserName = '';
     jsonData.pendingDownloads = new Array();
     
+    // CHANGE: Lookup
+    jsonData.lookUpItemsList = new Array();
+    
     jsonData.offlineCommentsPosted = new Array();
     
     jsonData.downloadedSpotLightItems = new Array();
@@ -325,14 +328,6 @@ function getAudioVideoItem(xml)
     var itemCounter = 0;
     console.log("----------> " + numberOfItems);
     
-    var h = new Object();
-    h['one'] = 1;
-    h['two'] = 2;
-    h['three'] = 3;
-    h[0] = 1;
-    
-    
-    
     $(xml).find('item').each(function(){
                              
                              try{
@@ -453,7 +448,6 @@ function getAudioVideoItem(xml)
                                                      
                                                      //TODO: Change TS
                                                      if(sFormat == "Audios"){
-                                                     
                                                      jsonData.technologySessions.push(tempMedia);
                                                      
                                                      }
@@ -476,6 +470,10 @@ function getAudioVideoItem(xml)
                                                      {
                                                      jsonData.technologySessions.push(tempMedia);
                                                      }
+                                                     
+                                                     
+                                                     // CHANGE: Lookup
+                                                     jsonData.lookUpItemsList[sguid] = tempMedia;
                                                      
                                                      itemCounter = itemCounter + 1;
                                                      
@@ -559,6 +557,7 @@ function getAudioVideoItem(xml)
                                                     // alert("AV "+txt);
                                                      }
                                                      });
+                             
                              
                              loadEventsRss();
                              
@@ -660,7 +659,7 @@ function getAudioVideoItem(xml)
                                                       
                                                       
                                                       jsonData.events.push(tempMedia);
-                                                      
+                                                      jsonData.lookUpItemsList[sguid] = tempMedia;
                                                       
                                                       
                                                       var str = JSON.stringify(scategory);
@@ -814,7 +813,7 @@ function getAudioVideoItem(xml)
                                                       tempMedia.selLanguage = lang;
                                                       
                                                       jsonData.documents.push(tempMedia);
-                                                      
+                                                      jsonData.lookUpItemsList[sguid] = tempMedia;
                                                       
                                                       var str = JSON.stringify(scategory);
                                                       

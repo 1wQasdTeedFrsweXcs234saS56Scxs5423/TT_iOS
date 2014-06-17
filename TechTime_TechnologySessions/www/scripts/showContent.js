@@ -570,38 +570,13 @@ function refreshList()
 }
 
 
-function gotFileEntry(fileEntry) {
-    fileEntry.file(gotFile, fail);
-}
-
-function gotFile(file){
-    var d1 = new Date();
-    isActualExist = 'true';
-}
-function fail(evt) {
-    var d1 = new Date();
-    isActualExist = 'false';
-}
-
-var ddd = new Date();
-var isActualExist ='';
 var currElementId = '';
 var currElementtype = '';
 var currElementcountNum = '';
-function nullHandler(catstr)
-{
-    var str = catstr;
-    return str;
-}
-function UrlExists(url) {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status;
-}
 
+// Earlier 1400 Now 400 LOC
 function detailPageView(elementId,type,countNum, itemCount)
-{
+{   
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, errorFileSystem);
     
     var newlastPageOpen1 = $.mobile.activePage.attr('id');    
@@ -624,52 +599,105 @@ function detailPageView(elementId,type,countNum, itemCount)
     var strHTMLDetail = '';
     var strHTML = '';
     
-    if(type == 'Technology Conferences' || type == 'TechnologyConferences'){
+    var fileNameAudio = '';
+    var fileNameVideo = '';
+    var fileNamePresentation = '';
+    var fileNameTranscript = '';
+    
+    var typeThumbIcon = '';
+    
+    if(type == 'Technology Conferences' || type == 'TechnologyConferences')
+    {
+        fileNameAudio = 'TA' + elementId;
+        fileNameVideo = 'TV' + elementId;
+        fileNamePresentation = 'TP' + elementId;
+        fileNameTranscript = 'TT' + elementId;
         
-        $.each(jsonData.techConf, function(key, confItem) {
+        typeThumbIcon = 'images/icon_techConf.png';
+    } else if(type == 'Audios')
+    {
+        fileNameAudio = 'AA' + elementId;
+        fileNameVideo = 'AV' + elementId;
+        fileNamePresentation = 'AP' + elementId;
+        fileNameTranscript = 'AT' + elementId;
+        
+        typeThumbIcon = 'images/icon_video.png';
+    } else if(type == 'Videos')
+    {
+        fileNameAudio = 'VA' + elementId;
+        fileNameVideo = 'VV' + elementId;
+        fileNamePresentation = 'VP' + elementId;
+        fileNameTranscript = 'VT' + elementId;
+        
+        typeThumbIcon = 'images/icon_video.png';
+    } else if(type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'technologySessions')
+    {
+        fileNameAudio = 'VA' + elementId;
+        fileNameVideo = 'VV' + elementId;
+        fileNamePresentation = 'VP' + elementId;
+        fileNameTranscript = 'VT' + elementId;
+        
+        typeThumbIcon = 'images/icon_video.png';
+    } else if(type == 'Panel Discussions' || type == 'PanelDiscussions' || type == 'panelDiscussions')
+    {
+        fileNameAudio = 'PA' + elementId;
+        fileNameVideo = 'PV' + elementId;
+        fileNamePresentation = 'PP' + elementId;
+        fileNameTranscript = 'PT' + elementId;
+        
+        typeThumbIcon = 'images/icon_panelDiscussion.png';
+    } else if(type == 'Interviews')
+    {
+        fileNameAudio = 'IA' + elementId;
+        fileNameVideo = 'IV' + elementId;
+        fileNamePresentation = 'IP' + elementId;
+        fileNameTranscript = 'IT' + elementId;
+        
+        typeThumbIcon = 'images/icon_interview.png';
+    }
+
+    
+    if(type == 'Technology Conferences' || type == 'TechnologyConferences' || type == 'Audios' || type == 'Videos' || type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'technologySessions' || type == 'Panel Discussions' || type == 'PanelDiscussions' || type == 'panelDiscussions' || type == 'Interviews')
+    {
+               var detailPageItemContent = jsonData.lookUpItemsList[elementId];
+               if(detailPageItemContent.itemId == elementId){
                
-               var tempAudio = confItem;
-               if(tempAudio.itemId == elementId){
+               var cId= detailPageItemContent.itemId;
+               var aURL = detailPageItemContent.audioUrl;
+               var vURL = detailPageItemContent.videoUrl;
+               var pURL = detailPageItemContent.presentationUrl;
+               var tURL = detailPageItemContent.transcriptUrl;
                
-               
-               var cId= confItem.itemId;
-               var aURL = confItem.audioUrl;
-               var vURL = confItem.videoUrl;
-               var pURL = confItem.presentationUrl;
-               var tURL = confItem.transcriptUrl;
-               
-               var titleE = JSON.stringify(confItem.title);
-               var author = confItem.author;
-               var date = confItem.publishedDate;
-               var downloadFlag = confItem.isDownloadedAudio;
+               var titleE = JSON.stringify(detailPageItemContent.title);
+               var author = detailPageItemContent.author;
+               var date = detailPageItemContent.publishedDate;
             
                var actualLocal = '';
-               isActualExist = '';
                              
-               if(isOnline && confItem.actualLocal == '')
+               if(isOnline && detailPageItemContent.actualLocal == '')
                {
-               actualLocal = confItem.actual;
+               actualLocal = detailPageItemContent.actual;
                }
-               else if(isOnline && confItem.actualLocal != '')
+               else if(isOnline && detailPageItemContent.actualLocal != '')
                {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +confItem.itemId+"actual.png";
+               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
                }
-               else if(!isOnline && confItem.actualLocal == '')
+               else if(!isOnline && detailPageItemContent.actualLocal == '')
                {
                actualLocal = 'images/TechTime-AppIcon.png';
                }
-               else if(!isOnline && confItem.actualLocal != '')
+               else if(!isOnline && detailPageItemContent.actualLocal != '')
                {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +confItem.itemId+"actual.png";
+               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
                }
                else
                {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +confItem.itemId+"actual.png";
+               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
                }
                strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
                if(vURL != ""){
-               if(entries.indexOf("TV"+cId) != -1){
-               strHTMLDetail = strHTMLDetail + "<img id='TV"+cId+"' title='"+confItem.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
+               if(entries.indexOf(fileNameVideo) != -1){
+               strHTMLDetail = strHTMLDetail + "<img id='"+fileNameVideo+"' title='"+detailPageItemContent.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
                
                }else{
                var getstatus = window.localStorage.getItem("status");
@@ -684,7 +712,7 @@ function detailPageView(elementId,type,countNum, itemCount)
                }
                }else if(vURL == "" && aURL != "")
                {
-               strHTMLDetail = strHTMLDetail + "<div id='audioStreamer'><img id='TV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/></div>";
+               strHTMLDetail = strHTMLDetail + "<div id='audioStreamer'><img id='"+fileNameVideo+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/></div>";
                
                var getstatus = window.localStorage.getItem("status");
                if(getstatus =="offline")
@@ -702,25 +730,25 @@ function detailPageView(elementId,type,countNum, itemCount)
                
                if(aURL != ""){
                
-               if(entries.indexOf("TA"+cId) != -1){
+               if(entries.indexOf(fileNameAudio) != -1){
                
-               strHTMLDetail = strHTMLDetail + "<div id='TA"+cId+"' title='"+confItem.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameAudio+"' title='"+detailPageItemContent.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                }else{
                
-               strHTMLDetail = strHTMLDetail + "<div id='TA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameAudio+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                }
                }
                
                if(pURL != ""){
                
-               if(entries.indexOf("TP"+cId) != -1){
+               if(entries.indexOf(fileNamePresentation) != -1){
                
-               strHTMLDetail = strHTMLDetail + "<div id='TP"+cId+"' title= '"+confItem.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNamePresentation+"' title= '"+detailPageItemContent.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                }else{
                
-               strHTMLDetail = strHTMLDetail + "<div id='TP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNamePresentation+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }
@@ -728,14 +756,14 @@ function detailPageView(elementId,type,countNum, itemCount)
                
                if(tURL != ""){
                
-               if(entries.indexOf("TT"+cId) != -1){
+               if(entries.indexOf(fileNameTranscript) != -1){
                
-               strHTMLDetail = strHTMLDetail + "<div id='TT"+cId+"' title= '"+confItem.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameTranscript+"' title= '"+detailPageItemContent.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }else{
                
-               strHTMLDetail = strHTMLDetail + "<div id='TT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameTranscript+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }
@@ -743,36 +771,36 @@ function detailPageView(elementId,type,countNum, itemCount)
                
                if(vURL != ""){
                
-               if(entries.indexOf("TV"+cId) != -1){
+               if(entries.indexOf(fileNameVideo) != -1){
                
-               strHTMLDetail = strHTMLDetail + "<div id='TV"+cId+"' title= '"+confItem.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)'  style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameVideo+"' title= '"+detailPageItemContent.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)'  style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }else{
                
-               strHTMLDetail = strHTMLDetail + "<div id='TV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+fileNameVideo+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }
                
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemTV"+cId+"' data-playlistItemId='TV"+cId+"' data-playlistItemTitle='"+confItem.title+"' data-playlistItemDate='"+confItem.publishedDate+"' data-playlistItemAuthor='"+confItem.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+confItem.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist();'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='playlistItem"+fileNameVideo+"' data-playlistItemId='"+fileNameVideo+"' data-playlistItemTitle='"+detailPageItemContent.title+"' data-playlistItemDate='"+detailPageItemContent.publishedDate+"' data-playlistItemAuthor='"+detailPageItemContent.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+detailPageItemContent.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist();'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
                }
                
-               if(confItem.qna != ""){
+               if(detailPageItemContent.qna != ""){
                
                strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+confItem.title+"' title='"+confItem.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div></a><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+detailPageItemContent.title+"' title='"+detailPageItemContent.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div></a><br>";
                
                }
 
                strHTMLDetail = strHTMLDetail + "</td></tr>";
                
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_techConf.png' style='height:20px; width:20px;border:none;padding:0px;margin-right:10px'/>";
+               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='"+typeThumbIcon+"' style='height:20px; width:20px;border:none;padding:0px;margin-right:10px'/>";
                
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+confItem.title+"</label><br>";
+               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+detailPageItemContent.title+"</label><br>";
                
-               $.each(confItem.author, function(key, tempAuthor) {
+               $.each(detailPageItemContent.author, function(key, tempAuthor) {
                       strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
                       strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
                       
@@ -780,8 +808,8 @@ function detailPageView(elementId,type,countNum, itemCount)
                
                
                
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+confItem.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+confItem.description+"</label>";
+               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+detailPageItemContent.publishedDate+"</label><br><br><br>";
+               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+detailPageItemContent.description+"</label>";
                
                strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
                
@@ -796,942 +824,12 @@ function detailPageView(elementId,type,countNum, itemCount)
                strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:0.5px;'>";
                
                }
-               });
-        
+               
     }
-    
-    if(type == 'Audios'){
-        
-        $.each(jsonData.technologySessions, function(key, itemAudio) {
-               
-               var tempAudio = itemAudio;
-            
-               if(itemAudio.itemId == elementId){
-               
-               var cId= itemAudio.itemId;
-               var aURL = itemAudio.audioUrl;
-               var vURL = itemAudio.videoUrl;
-               var pURL = itemAudio.presentationUrl;
-               var tURL = itemAudio.transcriptUrl;
-               
-               var titleE = JSON.stringify(itemAudio.title);
-               var author = itemAudio.author;
-               var date = itemAudio.publishedDate;
-               var downloadFlag = itemAudio.isDownloadedAudio;
-               
-               var actualLocal = '';
-               isActualExist = '';
-               if(isOnline && itemAudio.actualLocal == '')
-               {
-               actualLocal = itemAudio.actual;
-               }
-               else if(isOnline && itemAudio.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemAudio.itemId+"actual.png";
-               }
-               else if(!isOnline && itemAudio.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemAudio.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemAudio.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemAudio.itemId+"actual.png";
-               }
-            
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
-               if(vURL != ""){
-               
-               if(itemAudio.isDownloadedVideo == "true"){
-               
-               strHTMLDetail = strHTMLDetail + "<img id='AV"+cId+"' title='"+itemAudio.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
-               
-               }else{
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<video id='videoStream' style='border:none; width:150px; height:100px; margin:20px 20px;' poster='"+actualLocal+"' controls><source src='"+vURL+"' type='video/mp4'>Your browser does not support the video tag.</video>";
-               }
-               
-               }
-               }else if(vURL == "" && aURL != "")
-               {
-               
-               strHTMLDetail = strHTMLDetail + "<div id='audioStreamer'><img id='IV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/></div>";
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<audio id='audioPlayer' style='width:150px; height:20px;margin:0px 20px 0px 20px;' controls><source src='"+aURL+"' type='audio/mp3'>Your browser does not support the video tag.</audio>";
-               }
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "</td><td style='width : 50%;vertical-align: top'><br>";
-               
-               if(aURL != ""){
-               
-               if(entries.indexOf("AA"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AA"+cId+"' title='"+itemAudio.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               }
-               }
-               
-               if(pURL != ""){
-               
-               if(entries.indexOf("AP"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AP"+cId+"' title= '"+itemAudio.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               }else{
-               strHTMLDetail = strHTMLDetail + "<div id='AP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               }
-               }
-               
-               if(tURL != ""){
-               
-               if(entries.indexOf("AT"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AT"+cId+"' title= '"+itemAudio.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("AV"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AV"+cId+"' title= '"+itemAudio.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)'  style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='AV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemAV"+cId+"' data-playlistItemId='AV"+cId+"' data-playlistItemTitle='"+itemAudio.title+"' data-playlistItemDate='"+date+"' data-playlistItemAuthor='"+author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+itemAudio.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist();'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
-               }
-               
-               if(itemAudio.qna != ""){
-               
-               strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
-               
-               strHTMLDetail = strHTMLDetail + "<div id='"+itemAudio.title+"' title='"+itemAudio.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div></a><br>";
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_audio.png' style='height:20px; width:20px;border:none;padding:0px;margin-right:10px'/>";
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemAudio.title+"</label><br>";
-               
-               $.each(itemAudio.author, function(key, tempAuthor) {
-                      strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
-                      strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
-                      
-                      });
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemAudio.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemAudio.description+"</label>";
-               
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
-
-               strHTML = strHTML + "<div style='width: 100%; height: 20px;background-color:white;border:none'>";
-               strHTML = strHTML + "<table style='width: 100%;'><tr>";
-               strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
-               strHTML = strHTML + "<td id='nextBtn'  style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
-               
-               strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:0.5px;'>";
-               
-               }
-               });
-        
-    }
-
-    
-    if(type == 'Videos'){
-        
-        $.each(jsonData.technologySessions, function(key, itemVideo) {
-               
-               if(itemVideo.itemId == elementId){
-               var cId= itemVideo.itemId;
-               
-               var aURL = itemVideo.audioUrl;
-               var vURL = itemVideo.videoUrl;
-               var pURL = itemVideo.presentationUrl;
-               var tURL = itemVideo.transcriptUrl;
-               
-               var titleE = JSON.stringify(itemVideo.title);
-               var actualLocal = '';
-               
-               if(isOnline && itemVideo.actualLocal == '')
-               {
-               actualLocal = itemVideo.actual;
-               }
-               else if(isOnline && itemVideo.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemVideo.itemId+"actual.png";
-               }
-               else if(!isOnline && itemVideo.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemVideo.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemVideo.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemVideo.itemId+"actual.png";
-               }
-               
-               
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
-               
-               if(vURL != ""){
-               
-               if(itemVideo.isDownloadedVideo == "true"){
-               
-               
-               strHTMLDetail = strHTMLDetail + "<img id='VV"+cId+"' title='"+itemVideo.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
-               
-               }else{
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<video id='videoStream' style='border:none; width:150px; height:100px; margin:20px 20px;' poster='"+actualLocal+"' controls><source src='"+vURL+"' type='video/mp4'>Your browser does not support the video tag.</video>";
-               }
-               
-               }
-               }else if(vURL == "" && aURL != "")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='IV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/>";
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<audio id='audioPlayer' style='border:none; width:150px; height:100px; margin:20px 20px;' controls><source src='"+aURL+"' type='audio/mp3'>Your browser does not support the video tag.</audio>";
-               }
-               
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "</td><td style='width : 50%;vertical-align: top'><br>";
-               
-               if(aURL != ""){
-               
-               if(entries.indexOf("VA"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VA"+cId+"' title='"+itemVideo.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               if(pURL != ""){
-               if(entries.indexOf("VP"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VP"+cId+"' title= '"+itemVideo.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               if(tURL != ""){
-               
-               if(entries.indexOf("VT"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VT"+cId+"' title= '"+itemVideo.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+", 4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("VV"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VV"+cId+"' title= '"+itemVideo.localPathVideo+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               
-               
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemVV"+cId+"' data-playlistItemId='VV"+cId+"' data-playlistItemTitle='"+itemVideo.title+"' data-playlistItemDate='"+itemVideo.publishedDate+"' data-playlistItemAuthor='"+itemVideo.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+itemVideo.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist()'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
-               }
-               
-               
-               if(itemVideo.qna != ""){
-               
-               strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
-               
-               strHTMLDetail = strHTMLDetail + "<div id='"+itemVideo.title+"'  title='"+itemVideo.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div></a><br>";
-               
-               }
-               
-               
-            
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_video.png' style='height:20px;width:25px;border:none;padding:0px;margin-right:10px'/>";
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemVideo.title+"</label><br>";
-               
-               $.each(itemVideo.author, function(key, tempAuthor) {
-                      authornamefromid = tempAuthor;
-                      strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
-                      strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
-                      
-                      });
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemVideo.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemVideo.description+"</label>";
-               
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
-               
-               strHTML = strHTML + "<div style='background-color: white; width: 100%; height: 30px'>";
-               strHTML = strHTML + "<table style='width: 100%;'><tr>";
-               
-               strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
-               strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
-               strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
-               
-               }
-               });
-        
-        
-        
-    }
-    
-    if(type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'technologySessions'){
-        
-        $.each(jsonData.technologySessions, function(key, itemTechnologySessions) {
-               
-               if(itemTechnologySessions.itemId == elementId){
-               var cId= itemTechnologySessions.itemId;
-               
-               var aURL = itemTechnologySessions.audioUrl;
-               var vURL = itemTechnologySessions.videoUrl;
-               var pURL = itemTechnologySessions.presentationUrl;
-               var tURL = itemTechnologySessions.transcriptUrl;
-               
-               var titleE = JSON.stringify(itemTechnologySessions.title);
-               var actualLocal = '';
-               
-               if(isOnline && itemTechnologySessions.actualLocal == '')
-               {
-               actualLocal = itemTechnologySessions.actual;
-               }
-               else if(isOnline && itemTechnologySessions.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemTechnologySessions.itemId+"actual.png";
-               }
-               else if(!isOnline && itemTechnologySessions.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemTechnologySessions.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemTechnologySessions.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemTechnologySessions.itemId+"actual.png";
-               }
-               
-               
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
-               if(vURL != ""){
-               
-               if((entries.indexOf("VV"+cId) != -1) || (entries.indexOf("AV"+cId) != -1)){
-               
-               
-               strHTMLDetail = strHTMLDetail + "<img id='VV"+cId+"' title='"+itemTechnologySessions.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
-               
-               }else{
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<video id='videoStream' style='border:none; width:150px; height:100px; margin:20px 20px;' poster='"+actualLocal+"' controls><source src='"+vURL+"' type='video/mp4'>Your browser does not support the video tag.</video>";
-               }
-               
-               }
-               }else if(vURL == "" && aURL != "")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='IV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/>";
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<audio id='audioPlayer' style='border:none; width:150px; height:100px; margin:20px 20px;' controls><source src='"+aURL+"' type='audio/mp3'>Your browser does not support the video tag.</audio>";
-               }
-               
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "</td><td style='width : 50%;vertical-align: top'><br>";
-               
-               if(aURL != ""){
-               
-               if((entries.indexOf("VA"+cId) != -1) || (entries.indexOf("AA"+cId) != -1)){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VA"+cId+"' title='"+itemTechnologySessions.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               if(pURL != ""){
-               if((entries.indexOf("VP"+cId) != -1) || (entries.indexOf("AP"+cId) != -1)){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VP"+cId+"' title= '"+itemTechnologySessions.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               if(tURL != ""){
-               
-               if((entries.indexOf("VT"+cId) != -1) || (entries.indexOf("AT"+cId) != -1)){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VT"+cId+"' title= '"+itemTechnologySessions.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               if(vURL != ""){
-               
-               if((entries.indexOf("VV"+cId) != -1) || (entries.indexOf("AV"+cId) != -1)){
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red'  id='VV"+cId+"' title= '"+itemTechnologySessions.localPathVideo+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div class='btn.btn-red' id='VV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               
-               
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemVV"+cId+"' data-playlistItemId='VV"+cId+"' data-playlistItemTitle='"+itemTechnologySessions.title+"' data-playlistItemDate='"+itemTechnologySessions.publishedDate+"' data-playlistItemAuthor='"+itemTechnologySessions.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+itemTechnologySessions.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist()'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
-               }
-               
-               
-               if(itemTechnologySessions.qna != ""){
-               
-               strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
-               
-               strHTMLDetail = strHTMLDetail + "<div id='"+itemTechnologySessions.title+"'  title='"+itemTechnologySessions.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div></a><br>";
-               
-               }
-               
-               
-               
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_video.png' style='height:20px;width:25px;border:none;padding:0px;margin-right:10px'/>";
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemTechnologySessions.title+"</label><br>";
-               
-               $.each(itemTechnologySessions.author, function(key, tempAuthor) {
-                      authornamefromid = tempAuthor;
-                      strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
-                      strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
-                      
-                      });
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemTechnologySessions.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemTechnologySessions.description+"</label>";
-               
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
-               
-               strHTML = strHTML + "<div style='background-color: white; width: 100%; height: 30px'>";
-               strHTML = strHTML + "<table style='width: 100%;'><tr>";
-               
-               strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
-               strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
-               strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
-               
-               }
-               });
-        
-    }
-    
-    if(type == 'contributor'){
-        
-        $.each(jsonData.contributor, function(key, itemContributor) {
-               
-               if(itemContributor.itemId == elementId){
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               strHTMLDetail = strHTMLDetail + "<img id='videoImg' src='"+itemContributor.actual+"' style='border:none; height:150px; width:150px; margin:20px 20px;'/><br><br></td>";
-               strHTMLDetail = strHTMLDetail + "<td style='width : 50%'><br>";
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img id='videoThumb' src='' style='height:25px; width : 25px; border: none; '/>";
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemContributor.title+"</label><br>";
-               
-               if(itemContributor.email != "")
-               {
-               strHTMLDetail = strHTMLDetail + "<label id='emailAuthor' style='font-size: 14px;font-family: AgfaRotisSans;'>"+itemContributor.email+"</label><br><br>";
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoAuthor' style='font-size: 14px;font-family: AgfaRotisSans;color:black'>"+itemContributor.contributor+"</label><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemContributor.date+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemContributor.description+"</label>";
-               
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table></div>";
-               
-               
-               }
-               
-               });
-        
-        
-    }
-    
-    if(type == 'Panel Discussions' || type == 'PanelDiscussions'){
-        
-        
-        $.each(jsonData.panelDiscussions, function(key, itemPanelDiscussions) {
-               
-               if(itemPanelDiscussions.itemId == elementId){
-               
-               
-               var cId= itemPanelDiscussions.itemId;
-               
-               var aURL = itemPanelDiscussions.audioUrl;
-               var vURL = itemPanelDiscussions.videoUrl;
-               var pURL = itemPanelDiscussions.presentationUrl;
-               var tURL = itemPanelDiscussions.transcriptUrl;
-               
-               
-               var titleE = JSON.stringify(itemPanelDiscussions.title);
-               
-               var actualLocal = '';
-               if(isOnline && itemPanelDiscussions.actualLocal == '')
-               {
-               actualLocal = itemPanelDiscussions.actual;
-               }
-               else if(isOnline && itemPanelDiscussions.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemPanelDiscussions.itemId+"actual.png";
-               }
-               else if(!isOnline && itemPanelDiscussions.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemPanelDiscussions.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemPanelDiscussions.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemPanelDiscussions.itemId+"actual.png";
-               }
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("PV"+cId) != -1){
-               
-               strHTMLDetail += "<img id='PV"+cId+"' title='"+itemPanelDiscussions.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; height:100px; width:150px; margin:20px 20px;'/><br><br>";
-               
-               
-               }else{
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<video id='videoStream' style='border:none; width:150px; height:100px; margin:20px 20px;' poster='"+actualLocal+"' controls><source src='"+vURL+"' type='video/mp4'>Your browser does not support the video tag.</video>";
-               }
-               }
-               }else if(vURL == "" && aURL != "")
-               {
-               
-               strHTMLDetail = strHTMLDetail + "<img id='IV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/>";
-               
-               
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<audio id='audioPlayer' style='border:none; width:150px; height:100px; margin:20px 20px;' controls><source src='"+aURL+"' type='audio/mp3'>Your browser does not support the video tag.</audio>";
-               }
-               
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<td style='width : 50%'><br>";
-               
-               
-               if(aURL != ""){
-               
-               if(entries.indexOf("PA"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PA"+cId+"' title='"+itemPanelDiscussions.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               if(pURL != ""){
-               
-               if(entries.indexOf("PP"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PP"+cId+"' title= '"+itemPanelDiscussions.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               }
-               
-               if(tURL != ""){
-               
-               if(entries.indexOf("PT"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PT"+cId+"' title= '"+itemPanelDiscussions.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("PV"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PV"+cId+"' title= '"+itemPanelDiscussions.localPathVideo+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='PV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemPV"+cId+"' data-playlistItemId='PV"+cId+"' data-playlistItemTitle='"+itemPanelDiscussions.title+"' data-playlistItemDate='"+itemPanelDiscussions.publishedDate+"' data-playlistItemAuthor='"+itemPanelDiscussions.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+itemPanelDiscussions.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist()'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
-               }
-               
-               
-               if(itemPanelDiscussions.qna != ""){
-               
-               strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
-               
-               strHTMLDetail = strHTMLDetail + "<div id='"+itemPanelDiscussions.title+"' title='"+itemPanelDiscussions.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div></a><br>";
-               
-               }
-               
-               
-               
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_panelDiscussion.png' style='height:20px;width:20px;border:none;padding:0px;margin-right:10px'/>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemPanelDiscussions.title+"</label><br>";
-               
-               $.each(itemPanelDiscussions.author, function(key, tempAuthor) {
-                      authornamefromid = tempAuthor;
-                      strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
-                      strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
-                      
-                      });
-               
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemPanelDiscussions.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemPanelDiscussions.description+"</label>";
-               
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
-               
-               
-               strHTML = strHTML + "<div style='background-color: white; width: 100%; height: 30px'>";
-               strHTML = strHTML + "<table style='width: 100%;'><tr>";
-               
-               {
-               strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
-               strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
-               }
-               
-               strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
-               
-               }
-               
-               });
-    
-        
-    }
-    
-    if(type == 'Interviews'){
-            
-        $.each(jsonData.interviews, function(key, itemInterviews) {
-               
-               if(itemInterviews.itemId == elementId){
-               var cId= itemInterviews.itemId;
-               
-               var aURL = itemInterviews.audioUrl;
-               var vURL = itemInterviews.videoUrl;
-               var pURL = itemInterviews.presentationUrl;
-               var tURL = itemInterviews.transcriptUrl;
-               var titleE = JSON.stringify(itemInterviews.title);
-               var actualLocal = '';
-               if(isOnline && itemInterviews.actualLocal == '')
-               {
-               actualLocal = itemInterviews.actual;
-               }
-               else if(isOnline && itemInterviews.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemInterviews.itemId+"actual.png";
-               }
-               else if(!isOnline && itemInterviews.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemInterviews.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemInterviews.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemInterviews.itemId+"actual.png";
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("IV"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<img id='IV"+cId+"' title='"+itemInterviews.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2)' src='"+actualLocal+"' style='border:none; height:100px; width:150px; margin:20px 20px;'/><br><br>";
-               
-               }else{
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<video id='videoStream' style='border:none; width:150px; height:100px; margin:20px 20px;' poster='"+actualLocal+"' controls><source src='"+vURL+"' type='video/mp4'>Your browser does not support the video tag.</video>";
-             
-               }
-               
-               
-               }
-               
-               }else if(vURL == "" && aURL != "")
-               {
-               
-               strHTMLDetail = strHTMLDetail + "<img id='IV"+cId+"' title='"+vURL+"' src='"+actualLocal+"' onclick='showAudioStreaming("+cId+")' style='border:none; height:100px; width:150px; margin:20px 20px;'/>";
-               
-               var getstatus = window.localStorage.getItem("status");
-               if(getstatus =="offline")
-               {
-               strHTMLDetail = strHTMLDetail + "<img id='videoStreamImg' style='border:none; width:150px; height:100px; margin:20px 20px;' src='"+actualLocal+"'></image>";
-               }
-               else
-               {
-               strHTMLDetail = strHTMLDetail + "<audio id='audioPlayer' style='border:none; width:150px; height:100px; margin:20px 20px;' controls><source src='"+aURL+"' type='audio/mp3'>Your browser does not support the video tag.</audio>";
-               }
-               }
-               strHTMLDetail = strHTMLDetail + "<td style='width : 50%'><br>";
-               if(aURL != ""){
-               
-               if(entries.indexOf("IA"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IA"+cId+"' title='"+itemInterviews.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IA"+cId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               
-               if(pURL != ""){
-               
-               
-               if(entries.indexOf("IP"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IP"+cId+"' title= '"+itemInterviews.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IP"+cId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               }
-               }
-               if(tURL != ""){
-               
-               if(entries.indexOf("IT"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IT"+cId+"' title= '"+itemInterviews.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IT"+cId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               }
-               }
-               
-               
-               if(vURL != ""){
-               
-               if(entries.indexOf("IV"+cId) != -1){
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IV"+cId+"' title= '"+itemInterviews.localPathVideo+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               
-               
-               }else{
-               
-               strHTMLDetail = strHTMLDetail + "<div id='IV"+cId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
-               }
-               
-               strHTMLDetail = strHTMLDetail + "<div id='playlistItemIV"+cId+"' data-playlistItemId='IV"+cId+"' data-playlistItemTitle='"+itemInterviews.title+"' data-playlistItemDate='"+itemInterviews.publishedDate+"' data-playlistItemAuthor='"+itemInterviews.author+"' data-playlistItemUrl='"+vURL+"' data-playlistItemThumb='"+itemInterviews.thumb+"' style='width:100px;height:40px;z-index:100;' onclick='getAddToPlaylistItemDetails(this);showAddToPlaylist()'><img class='detailMediaPageButton' src='images/btn_addToPlaylist.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;'/></div><br>";
-               }
-               
-               if(itemInterviews.qna != ""){
-               
-               strHTMLDetail = strHTMLDetail + "<a data-transition='slide' style='text-decoration:none;font-style:normal;' href='#qnaPage'>";
-               
-               strHTMLDetail = strHTMLDetail + "<div id='"+itemInterviews.title+"' title='"+itemInterviews.qna+"' onclick= 'showQnA(this)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewQA.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div></a><br>";
-               
-               }
-               
-               strHTMLDetail = strHTMLDetail + "</td></tr>";
-               strHTMLDetail = strHTMLDetail + "<tr><td style='width : 100%' colspan='2'><img src='images/icon_interview.png' style='height:20px;width:20px;border:none;padding:0px;margin-right:10px;'/>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoTitle' style='font-size: 24px;font-family: AgfaRotisSans;padding-top : 0px;'>"+itemInterviews.title+"</label><br>";
-               
-               $.each(itemInterviews.author, function(key, tempAuthor) {
-                      authornamefromid = tempAuthor;
-                      strHTMLDetail = strHTMLDetail + "<a id='"+tempAuthor+"' data-transition='slide' style='text-decoration:none;font-style:normal;' onclick='showAuthorDetailPage(this.id)'  >";
-                      strHTMLDetail = strHTMLDetail + "<label style='font-size: 14px;font-family: AgfaRotisSans;color:orange'>"+tempAuthor+"</label></a><br>";
-                      
-                      });
-               strHTMLDetail = strHTMLDetail + "<label id='videoDate' style='font-size: 14px;'>"+itemInterviews.publishedDate+"</label><br><br><br>";
-               strHTMLDetail = strHTMLDetail + "<label id='videoDescription' style='font-size: 14px;'>"+itemInterviews.description+"</label>";
-               strHTMLDetail = strHTMLDetail + "<br><br></td></tr></table>";
-               strHTML = strHTML + "<div style='background-color: white; width: 100%; height: 30px'>";
-               strHTML = strHTML + "<table style='width: 100%;'><tr>";
-               
-               strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
-               strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
-               
-               strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
-               }
-               
-               });
-        
-        
-    }
-    
     
     if(type == 'documents' || type == 'Documents'){
         
-        $.each(jsonData.documents, function(key, documentItem) {
-               
-               if(documentItem.itemId == elementId){
-            
+                var documentItem = jsonData.lookUpItemsList[elementId];
                var  cId= documentItem.itemId;
                var dURL = documentItem.pdf;
                var lURL = documentItem.localPath;
@@ -1799,9 +897,6 @@ function detailPageView(elementId,type,countNum, itemCount)
                strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
                strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
                
-               }
-               });
-        
         
     }
     
@@ -1836,9 +931,9 @@ function detailPageView(elementId,type,countNum, itemCount)
                
                });
    
-        $.each(jsonData.events, function(key, eventItem) {
-                  if(eventItem.itemId == elementId){
-                    var cId= eventItem.itemId;
+
+               var eventItem = jsonData.lookUpItemsList[elementId];
+               var cId= eventItem.itemId;
                var eURL = eventItem.icsfile;
                
                var actualLocal = '';
@@ -1907,10 +1002,6 @@ function detailPageView(elementId,type,countNum, itemCount)
                strHTML = strHTML + "<td id='prevBtn' style='float: left; padding-left: 3%; padding-top: 7px; vertical-align: middle' onclick='showpreItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='100' src='images/btn_previous.svg'></img></td>";
                strHTML = strHTML + "<td id='nextBtn' style='float: right; padding-right: 3%; padding-top: 7px; vertical-align: middle' onclick='showNextItem("+elementId+","+itemCount+")'><img class='prevNextButton' width='60px' src='images/btn_next.svg'></img></td>";
                strHTML = strHTML + "</tr></table></div></div><hr style='width:100%;background-color: grey; color: grey; height:1px;'>";
-               
-               }
-               });
-        
     }
     
     document.getElementById('spotItemContent').style.display = "none";
@@ -2055,8 +1146,6 @@ function showSubscribeContent()
     
     $.each(jsonData.category, function(key, item) {
            
-           if(item.categoryname.toLowerCase()!='digital'){
-           
            xmlArr += '<table style="background:#F0EFED;">';
            
            if(item.subscribe == "yes"){
@@ -2086,7 +1175,6 @@ function showSubscribeContent()
            atleastOneAssetTypeChecked = 'true';
            }
            
-           }
            });
     
     
@@ -4203,5 +3291,3 @@ function contactUsReset()
     $('#commentTextArea').html('');
     $('#commentTextArea').val('Enter Your Comments Here');
 }
-
-
