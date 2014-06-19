@@ -1,6 +1,5 @@
 var eventsFlag = false;
 var mediaFlag = false;
-var recommendationFlag = false;
 
 var currD = new Date();
 var currM = 0;
@@ -2313,6 +2312,23 @@ function showmoreresultTAlist(variable){
 }
 
 
+/* SWIPE LEFT RIGHT FEATURE */
+
+$(document).ready(function(){
+                  $('#detailPageArea').on('swipeleft', swipeleftHandler);
+                  $('#detailPageArea').on('swiperight', swiperightHandler);
+                  
+                  });
+
+function swipeleftHandler()
+{
+    showNextItem(currElementId,currElementcountNum);
+}
+
+function swiperightHandler()
+{
+    showpreItem(currElementId, currElementcountNum);
+}
 
 function showpreItem(elementId, countItem)
 {
@@ -3278,10 +3294,7 @@ function pageFlagSet(currentPage)
     } else if(currentPage == "contributePage")
     {
         searchFromContributePage = true;
-    } else if(currentPage == "digitalAreaHomePage")
-    {
-        searchFromDigitalPage = true;
-    }
+    } 
     
 }
 

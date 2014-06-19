@@ -119,7 +119,6 @@ function readRSSFileJSON(file) {
             document.getElementById("lblUserName").innerHTML = (jsonData.loggedUserName).replace(/\_/g,'.');
             lastPageOpen = window.localStorage.getItem("currentPage");
             
-            loadDigitalTab();
             
             if(lastPageOpen == "" || lastPageOpen == null)
             {

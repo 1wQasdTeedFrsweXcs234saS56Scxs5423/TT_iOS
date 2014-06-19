@@ -33,7 +33,6 @@ var backFlag = false;
 var spotLightFlag = false;
 var playlistItemsPageFlag = false;
 var searchFromMediaPage = false;
-var searchFromRecommendationMediaPage = false;
 var searchFromEventsPage = false;
 var searchFromSpotlightPage = false;
 var searchFromUpcomingEventsPage = false;
@@ -52,7 +51,6 @@ var searchFromContributePage = false;
 var searchFromPlaylistItemsPage = false;
 var searchFromSharePlaylistsPage = false;
 var searchFromAddToPlaylistPage = false;
-var searchFromDigitalPage = false;
 
 var rootFolderName = '';
 var entries = [];
@@ -68,7 +66,6 @@ function onBodyLoad()
     document.addEventListener("orientationchange", doOnOrientationChange);
     deviceDetection();
     doOnOrientationChange();
-   // generateTechWatchShowCaseArticle();
 }
 
 function readMoreData(urlToOpen)
@@ -91,12 +88,13 @@ function readMoreData(urlToOpen)
 function onDeviceReady() {
     
     // Main Account ID
-     window.GA.trackerWithTrackingId("UA-41889841-1");
+//     window.GA.trackerWithTrackingId("UA-41889841-1");
     // Testing Account ID
-     //window.GA.trackerWithTrackingId("UA-48298549-1");
+    window.GA.trackerWithTrackingId("UA-48298549-1");
     window.GA.trackView("/TechTimeApp-IOS");
     
     document.addEventListener("backbutton", backKeyDown, false);
+    
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, errorFileSystem);
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS1, errorFileSystem);
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFSDownloadMain, errorFileSystem);
@@ -331,6 +329,7 @@ function checkConnection() {
 
 
 function loadApplicationState(state){
+    
     var dd = new Date();
     createJsonFormat();
 	if(state){
@@ -340,6 +339,7 @@ function loadApplicationState(state){
 	}else {
         loadDataforOfflineMode();
 	}
+    
 	setApplicationState(state);
 }
 
@@ -479,6 +479,7 @@ function errorFileSystem(evt) {
 
 
 function resumeOnline(){
+    
     $.mobile.fixedToolbars.show(true);
     var pendingDWArray = [];
 	isOnline = true;
@@ -486,6 +487,7 @@ function resumeOnline(){
 }
 
 function takeAppOffline(){
+    
     networkState = navigator.network.connection.type;
     if ((networkState != 'unknown') && (networkState != 'No network connection') && (networkState != 'none')) {
     }
@@ -563,5 +565,4 @@ function resetSearchFlags()
      searchFromPlaylistItemsPage = false;
      searchFromSharePlaylistsPage = false;
      searchFromAddToPlaylistPage = false;
-     searchFromDigitalPage = false;
 }

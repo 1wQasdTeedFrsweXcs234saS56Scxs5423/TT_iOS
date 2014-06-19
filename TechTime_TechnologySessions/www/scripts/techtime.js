@@ -286,7 +286,6 @@ function loadDataforOfflineMode()
 {
     var userName = window.localStorage.getItem("userName");
 	getFileSystemRefForReading(true, null);
-
 }
 
 var isDownloadOn = false;

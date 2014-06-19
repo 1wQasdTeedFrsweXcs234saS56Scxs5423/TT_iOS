@@ -644,11 +644,6 @@ function deleteDocument()
     
 }
 
-function updateListAfterDelete(changeIsDownloade,mediaTypetoDelete) {
-    
-}
-
-
 function openIcsFile(icsUrl){
     
     var root = this;

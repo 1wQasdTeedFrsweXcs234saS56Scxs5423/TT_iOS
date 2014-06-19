@@ -60,9 +60,6 @@ function createJsonFormat()
     jsonData.listOfFiles = new Array();
     
     jsonData.playlists = new Array();
-    jsonData.recommendations = new Array();
-    
-   // jsonData.digitalAreas = new Array();
     
     var dd = new Date();
     d = dd;
@@ -133,12 +130,6 @@ function subscribeTA(xml)
                              var asset_type =   $(this).find('asset_type').text();
                              var scategoryname =   $(this).find('categoryname').text();
                              
-                            /* if(jsonData.digitalAreas.indexOf(scategoryid) != -1 && jsonData.digitalAreas.length != 0 && jsonData.digitalAreas.length > 0)
-                             {
-                                $('#digitalAreaHomePageTab').css('display', 'block');
-                                //window.localStorage.setItem("displayDigitalTab", true);
-                             } */
-                             
                              
                              if((scategoryid != "") && (flag == "1")){
                              subscribeCategoryId.push(scategoryid);
@@ -176,7 +167,6 @@ function subscribeTA(xml)
     }
     
     loadtechnologyAreaListUrl();
-   // loadrecoEngineData();
 }
 
 
@@ -1237,7 +1227,6 @@ function getAudioVideoItem(xml)
                              var dd = new Date();
                              d = dd;
                              
-                            // jsonData.digitalAreas = $(xml).find('digitalAreas').text().split('|');
                              
                              newAppVersion = $(xml).find('iosAppVersion').text();
                              var customUpdateMessage = $(xml).find('updateMessage').text();
@@ -1339,12 +1328,6 @@ function getAudioVideoItem(xml)
                                     displayRecoEngine();
                                  }
                              
-                             } else if(recommendationFlag)
-                             {
-                             $.mobile.changePage("#businessCategory", {
-                                                 transition: "none"
-                                                 });
-                             displayRecoEngine();
                              } else if (searchFromMainPage) {
                                 $.mobile.changePage("#searchResultPage");
                              } else {
@@ -1490,14 +1473,7 @@ function getAudioVideoItem(xml)
                                          eleNum = window.localStorage.getItem("detailPagecountNumSpot");
                                          
                                          spotlightDataTypes(eleId, eleType, eleNum);
-                             } else if(searchFromRecommendationMediaPage){
-                                        eleId = window.localStorage.getItem("detailPageelementIdReco");
-                                        eleType = window.localStorage.getItem("detailPagetypeReco");
-                                        eleNum = window.localStorage.getItem("detailPagecountNumReco");
-                             
-                                            recoEngineDetailPageView(eleId, eleType, eleNum);
-                             
-                                        }else {
+                             } else {
                                          var eleId = window.localStorage.getItem("detailPageelementId");
                                          var eleType = window.localStorage.getItem("detailPagetype");
                                          var eleNum = window.localStorage.getItem("detailPagecountNum");
@@ -1586,17 +1562,13 @@ function getAudioVideoItem(xml)
                                  } else if(searchFromAddToPlaylistPage)
                                  {
                                     $.mobile.changePage("#addToPlaylistPage");
-                                 } else if(searchFromRecommendationMediaPage)
-                                {
-                                    $.mobile.changePage("#detailMediaPage");
-                                } else {
+                                 } else {
                                      $(".navigateBackBtn").hide();
                                      $.mobile.changePage("#businessCategory");
                                         displayRecoEngine();
                              
                                     // Reset Flags @ home page
                                     searchFromMediaPage = false;
-                                    searchFromRecommendationMediaPage = false;
                                     searchFromEventsPage = false;
                                     searchFromSpotlightPage = false;
                                     searchFromUpcomingEventsPage = false;

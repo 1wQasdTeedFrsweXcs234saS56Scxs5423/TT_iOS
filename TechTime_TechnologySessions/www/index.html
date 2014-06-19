@@ -37,10 +37,8 @@
                         <script type="text/javascript" src="scripts/playlist.js"></script> 
                         <script type="text/javascript" src="scripts/genericSpotlight.js"></script>
                         <script type="text/javascript" src="scripts/showContent.js"></script>
-                      <!--  <script type="text/javascript" src="scripts/recommendation.js"></script> -->
                         <script type="text/javascript" src="scripts/listing.js"></script>
                         <script type="text/javascript" src="scripts/download_CB.js"></script>
-                       <!-- <script type="text/javascript" src="scripts/digital.js"></script> -->
                         <script type="text/javascript" src="plugins/ChildBrowser.js"></script>
                         <script type="text/javascript" charset="utf-8" src="plugins/video.js"></script>
                         <script type="text/javascript" src="plugins/drop-down-menu.js"></script>
@@ -473,7 +471,7 @@
                                 
                                 $(".mainMenuListContent").hide();
                                 
-                                var allNavigateDiv = ["navigateDiv","navigateBusinessCategory","navigateDetailMediaPage", "navigateTechWatch","navigateDetailAuthor","navigateSpotlightPage","navigateUpcomingEventsPage","navigateSubscribePage","navigateAboutTectTimePage","navigateContactUsPage","navigateFaqPage","navigateTAListResult","navigateResultPage","navigatePlaylistsPage", "navigatePlaylistItemPage", "navigatePlaylistsPage", "navigateAddToPlaylistPage", "navigateSharePlaylistsPage", "navigateContributePage", "navigateDigitalAreaHomePage"];
+                                var allNavigateDiv = ["navigateDiv","navigateBusinessCategory","navigateDetailMediaPage", "navigateTechWatch","navigateDetailAuthor","navigateSpotlightPage","navigateUpcomingEventsPage","navigateSubscribePage","navigateAboutTectTimePage","navigateContactUsPage","navigateFaqPage","navigateTAListResult","navigateResultPage","navigatePlaylistsPage", "navigatePlaylistItemPage", "navigatePlaylistsPage", "navigateAddToPlaylistPage", "navigateSharePlaylistsPage", "navigateContributePage"];
                                 
                                 currNavigateDivContent = document.getElementById(currNavigateDiv).innerHTML;                                           
                                 $.each(allNavigateDiv, function(key, tempAuthor) {
@@ -802,17 +800,6 @@
                         
                         <div data-role="content" class="backgd"></div>
                     </div>
-                    
-                   <!-- <div class=dynamicDiv id="digitalAreaHomePageTab" style='display:none;'>
-                        <a id="digitalAreaHomePage" class='anchorCategory test' href="#digitalAreaHomePage" onclick='defaultNavigate();loadDigitalContents();'>
-                            <div style='color:white;'>Digital
-                                <div id="digitalAreaHomePageArrow" style="width:50px;float:right;" onclick=''>
-                                    <img src='images/icon_whiteRight.png' style='float:right;height:20px;width:20px;padding-right:15px;'/>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    
                     
                     <div class=dynamicDiv>
                         <a id="techWatchPage" class='anchorCategory test' href="#techwatchPage" onclick='showTechWatchContent(currentTechWatchItemId, currentTechWatchItemIndex);'>
@@ -1906,95 +1893,6 @@
             </div>
             
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        <!-- ******************************************** Digital Area Home Page ******************************************** -->
-        
-       <!-- <div id="digitalAreaHomePage" data-role="page" class="applicationPage" style="overflow-x:hidden;" style='background:#F0EFED;'>
-            <div class="applicationPageContent" style='background:#F0EFED;'>
-                
-                <div  style="padding-top: 0px">
-                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;border:none; padding:0px; margine:0px;">
-                        <tr>
-                            <td style="width:50%;margin-left:30px">
-                                <img id='accRed11'/>
-                            </td>
-                            <td style="width: 50%;" valign="bottom">
-                                <img src="images/header_empoweringYourself.png" class="accEmpowering">
-                                    </td>
-                        </tr>
-                        <tr>
-                            <td style="width:50%; height:25px;padding-left:6px;background-color :#cbcccc" valign='center'>
-                                <img id='accHPD11'>
-                                    </td>
-                            <td style="width: 50%; height:30px; background-color:#cbcccc" align="right">
-                                <img src='images/btn_back.png' class='navigateBackBtn' onclick="backnav('digitalAreaHomePage');resetSearchBar();"/>
-                                <img src='images/btn_navigate.png' class='navigateBtn' onclick='showNavigateDiv("navigateDigitalAreaHomePage");'/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100%; padding: 0px;margin:0px;height:30px;background:#F8991D;" colspan = "2" class="searchTDTAListResult">
-                                <div style="width:95.5%; height:100%; border :none;float:left;">
-                                    <input id="searchDigitalAreaHomePage" type="text" placeholder=" Search" title="Search" class="searchBar" style="text-indent:10px;padding:0px; margine:0px;
-                                        margin-top:0px;margin-right:0px;left:0px;">
-                                        </div>
-                                <div style="width:4.5%; height:100%; border:none; float:right; background:#ff9900;margin-top:0px;margin-right:0px; ">
-                                    <img class="searchIcon" src="images/search.png" style="height:100%; width:30px;float:right;" onclick='pageFlagSet("digitalAreaHomePage");showSearchResult("searchDigitalAreaHomePage","All","All","null");'/>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div id='navigateDigitalAreaHomePage' class='navigateMenu'></div> 
-                
-                <table style="width:100%;">
-                    <tr>
-                        <td style="width: 100%; padding: 0px;" colspan="2">
-                            <br><label style="font-size:24px;padding-left:15px;font-family:AgfaRotisSans;font-weight:bolder;">Select a Digital Area</label><br><br>
-                        </td>
-                    </tr>
-                </table>
-                <div id="digitalAreaHomePageTechnologyArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePageSpotlightArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePageRecommendationArea" style="background:#F0EFED"></div>
-                <div id="digitalAreaHomePagePlaylistsArea" style="background:#F0EFED"></div>
-            </div>
-            
-            <div class="footerFixed" style='background:#F0EFED;padding-left:15px'>
-                <br/><label style="font-size: 12px;">&copy; 2014 Accenture. All Rights Reserved.</label>
-            </div>
-            
-            
-            <div data-position="fixed" style="background:grey" data-tap-toggle="false" align="center" class="toggleButtonDiv">
-                <center>
-                    <table>
-                        <tr>
-                            <td><label style="font-size:17px;font-weight:bold">Online Mode</label></td>
-                            <td>
-                                <fieldset data-role="controlgroup" data-type="horizontal" style="background:grey">
-                                    <input class="abc" type="radio" align="center" name="radio-view17" id="radio-view-a17" value="online">
-                                        <label for="radio-view-a17">On</label>
-                                        <input class="xyz" type="radio"  name="radio-view17" id="radio-view-b17" value="offline">
-                                            <label for="radio-view-b17">Off</label>
-                                            </fieldset>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </div>
-        </div>
-        </div> -->
-        
-        
-        <!-- ******************************************** Digital Area Home Page ******************************************** -->
-        
         
         
         <!-- ******************************************** detailMediaPage - Page ******************************************** -->
