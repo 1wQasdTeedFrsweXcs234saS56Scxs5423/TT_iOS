@@ -68,6 +68,8 @@ $(document).ready(function() {
                                                  
                                                  window.localStorage.setItem("status", "online");
                                                  
+                                                 parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
+                                                 
                                                  } else {
                                                  
                                                  $('.abc').attr('checked',false);
@@ -143,7 +145,6 @@ $(document).ready(function() {
                   $('#imgBack').on('click', function() {
                                    
                                    $.mobile.changePage("#businessCategory");
-                                   displayRecoEngine();
                                    });
                   
                   $('#TAListResult').on('click', function() {

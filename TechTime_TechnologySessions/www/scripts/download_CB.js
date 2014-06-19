@@ -681,7 +681,7 @@ function downloadTechWatchImages(techWatchImage, downloadIndex)
 var thumbTestVar = 0;
 var actualTestVar = 0;
 
-function downloadThumbImages(thumbId,imageName,imageLink,mediaType)
+/* function downloadThumbImages(thumbId,imageName,imageLink,mediaType)
 {
     var url = '';
     url = imageLink;
@@ -720,7 +720,7 @@ function downloadThumbImages(thumbId,imageName,imageLink,mediaType)
                                   );
         }
     }
-}
+} */
 
 
 /* function changePath(elementId,imageType,typeMedia,localPath)
@@ -1861,89 +1861,6 @@ function CheckAllDownloads()
            finaldwn.push(tempOBJ);
            }
            });
-    
-    
-    $.each(jsonData.recommendations, function(key, recItem) {
-           
-           var recFormatType = recItem.formatType.substr(0,1).toUpperCase();
-           
-           var fileAudio='';
-           var filePresentation='';
-           var fileTranscript='';
-           var fileVideo='';
-           
-           
-           if(recItem.audio.substr(recItem.audio.lastIndexOf("."),recItem.audio.length)==".mp3")
-           {
-           fileAudio=recFormatType+"A"+recItem.cid;
-           if (entries.indexOf(fileAudio) != -1) {
-           
-           var tempOBJ = new Object();
-           
-           tempOBJ.id = recItem.cid;
-           tempOBJ.val = "1";
-           tempOBJ.title = recItem.title;
-           tempOBJ.path = globalPathNew + "/" + fileAudio + ".mp3";
-           tempOBJ.ddate = recItem.date;
-           
-           finaldwn.push(tempOBJ);
-           }
-           }
-           
-           if(recItem.video.substr(recItem.video.lastIndexOf("."),recItem.video.length)==".mp4")
-           {
-           fileVideo=recFormatType+"V"+recItem.cid;
-           if (entries.indexOf(fileVideo) != -1) {
-           
-           var tempOBJ = new Object();
-           
-           tempOBJ.id = recItem.cid;
-           tempOBJ.val = "2";
-           tempOBJ.title = recItem.title;
-           tempOBJ.path = globalPathNew + "/" + fileAudio + ".mp4";
-           tempOBJ.ddate = recItem.date;
-           
-           finaldwn.push(tempOBJ);
-           }
-           }
-           
-           if(recItem.presentation.substr(recItem.presentation.lastIndexOf("."),recItem.presentation.length)==".pdf")
-           {
-           filePresentation=recFormatType+"P"+recItem.cid;
-           if (entries.indexOf(filePresentation) != -1) {
-           
-           var tempOBJ = new Object();
-           
-           tempOBJ.id = recItem.cid;
-           tempOBJ.val = "3";
-           tempOBJ.title = recItem.title;
-           tempOBJ.path = globalPathNew + "/" + fileAudio + ".pdf";
-           tempOBJ.ddate = recItem.date;
-           
-           finaldwn.push(tempOBJ);
-           }
-           }
-           
-           
-           if(recItem.transcript.substr(recItem.transcript.lastIndexOf("."),recItem.transcript.length)==".pdf")
-           {
-           fileTranscript=recFormatType+"T"+recItem.cid;
-           if (entries.indexOf(fileTranscript) != -1) {
-           
-           var tempOBJ = new Object();
-           
-           tempOBJ.id = recItem.cid;
-           tempOBJ.val = "4";
-           tempOBJ.title = recItem.title;
-           tempOBJ.path = globalPathNew + "/" + fileTranscript + ".pdf";
-           tempOBJ.ddate = recItem.date;
-           
-           finaldwn.push(tempOBJ);
-           }
-           }
-           
-           });
-    
     
     finaldwn.sort(function(a, b){
                   var dateA1=new Date(a.ddate), dateB1=new Date(b.ddate);

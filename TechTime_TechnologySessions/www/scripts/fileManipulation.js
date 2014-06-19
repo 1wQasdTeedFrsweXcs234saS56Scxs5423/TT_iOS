@@ -124,7 +124,6 @@ function readRSSFileJSON(file) {
             {
                 lastPageOpen = 'businessCategory';
                 $.mobile.changePage("#businessCategory");
-                displayRecoEngine();
             }
             
             if(lastPageOpen=='aboutTectTimePage')
@@ -184,7 +183,6 @@ function readRSSFileJSON(file) {
                 if(sptFlag == "false" && evtFlag == "false" && mdFlag == "false")
                 {
                     $.mobile.changePage("#businessCategory");
-                    displayRecoEngine();
                 }
                 if(evtFlag == "true")
                 {
@@ -272,7 +270,6 @@ function readRSSFileJSON(file) {
             else
             {
                 $.mobile.changePage("#businessCategory");
-                displayRecoEngine();
                 
             }
             

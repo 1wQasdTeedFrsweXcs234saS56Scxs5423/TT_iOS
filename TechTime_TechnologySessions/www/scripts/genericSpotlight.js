@@ -117,12 +117,12 @@ function loadSpotlightGeneral(xml) {
                              
                              if(tempMediaSpot.formattype == 'contributor')
                              {
-                                downloadThumbImages(tempMediaSpot.contributorId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
-                                downloadThumbImages(tempMediaSpot.contributorId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
+                              //  downloadThumbImages(tempMediaSpot.contributorId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
+                               // downloadThumbImages(tempMediaSpot.contributorId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
                              } else
                              {
-                                downloadThumbImages(tempMediaSpot.itemId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
-                                downloadThumbImages(tempMediaSpot.itemId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
+                               // downloadThumbImages(tempMediaSpot.itemId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
+                               // downloadThumbImages(tempMediaSpot.itemId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
                              }
                              
                              

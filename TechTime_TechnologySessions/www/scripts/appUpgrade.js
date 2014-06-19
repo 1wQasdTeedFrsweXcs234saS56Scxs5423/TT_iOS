@@ -67,7 +67,6 @@ function warnUserForUpgrade(upgradeCheckboxElement)
                                  if(isDataLoaded == true)
                                  {
                                         $.mobile.changePage('#businessCategory');
-                                        displayRecoEngine();
 
                                  } else if(isDataLoaded == false)
                                  {
@@ -109,7 +108,6 @@ function cancelUpgrade()
     if(isDataLoaded == true)
     {
             $.mobile.changePage('#businessCategory');
-            displayRecoEngine();
 
     } else if(isDataLoaded == false)
     {
