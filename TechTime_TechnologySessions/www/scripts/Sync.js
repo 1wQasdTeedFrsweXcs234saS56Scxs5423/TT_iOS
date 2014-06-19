@@ -1,5 +1,3 @@
-
-
 function startSync()
 {
     var finaldwn = new Array();
@@ -98,7 +96,6 @@ function startSync()
            
            
            });
-    
     
     $.each(jsonData.technologySessions, function(key, CheckDownload) {
            
@@ -670,12 +667,5 @@ function syncWithFolder(changeFilePath)
                }
                });
     }
-    
-    
-    
     getFileSystemRefForWriting(jsonData);
-    
-    
 }
-
-

@@ -1231,13 +1231,3 @@ function updateUploadStatusInJSON(itemIndex)
 }
 
 // ---------------------------------- Update Upload Status in JSON ---------------------------------- //
-
-// ---------------------------------- File Compression ---------------------------------- //
-
-function compressRecordedSessionFile(filePath)
-{
-    
-}
-
-
-// ---------------------------------- File Compression ---------------------------------- //

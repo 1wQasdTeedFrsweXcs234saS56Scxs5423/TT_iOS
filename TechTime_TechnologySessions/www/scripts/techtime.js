@@ -394,5 +394,3 @@ function confirmDeleteFile() {
     }
     
 }
-
-
