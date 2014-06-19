@@ -112,7 +112,6 @@ function readRSSFileJSON(file) {
         {
         }
         
-        
         if(toShowCategories) {
             createJsonFormatOffline(obj);
             showCategoriesListsagar(obj);
@@ -290,7 +289,10 @@ function readRSSFileJSON(file) {
             }
         }
 		
+        loadDigitalTab();
 	};
+    
+    
     
 	reader.readAsText(file);
 }

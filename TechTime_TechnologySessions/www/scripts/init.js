@@ -51,6 +51,7 @@ var searchFromContributePage = false;
 var searchFromPlaylistItemsPage = false;
 var searchFromSharePlaylistsPage = false;
 var searchFromAddToPlaylistPage = false;
+var searchFromDigitalPage = false;
 
 var rootFolderName = '';
 var entries = [];
@@ -565,4 +566,5 @@ function resetSearchFlags()
      searchFromPlaylistItemsPage = false;
      searchFromSharePlaylistsPage = false;
      searchFromAddToPlaylistPage = false;
+     searchFromDigitalPage = false;
 }

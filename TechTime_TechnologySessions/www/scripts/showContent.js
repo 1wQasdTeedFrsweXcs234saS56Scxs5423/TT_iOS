@@ -3294,7 +3294,10 @@ function pageFlagSet(currentPage)
     } else if(currentPage == "contributePage")
     {
         searchFromContributePage = true;
-    } 
+    } else if(currentPage == "digitalAreaHomePage")
+    {
+        searchFromDigitalPage = true;
+    }
     
 }
 

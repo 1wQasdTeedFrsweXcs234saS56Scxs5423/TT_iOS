@@ -60,6 +60,9 @@ function createJsonFormat()
     jsonData.listOfFiles = new Array();
     
     jsonData.playlists = new Array();
+    jsonData.recommendations = new Array();
+    
+    jsonData.digitalAreas = new Array();
     
     var dd = new Date();
     d = dd;
@@ -129,6 +132,12 @@ function subscribeTA(xml)
                              var scategoryid = $(this).find('categoryid').text();
                              var asset_type =   $(this).find('asset_type').text();
                              var scategoryname =   $(this).find('categoryname').text();
+                             
+                             if(jsonData.digitalAreas.indexOf(scategoryid) != -1 && jsonData.digitalAreas.length != 0 && jsonData.digitalAreas.length > 0)
+                             {
+                                $('#digitalAreaHomePageTab').css('display', 'block');
+                                //window.localStorage.setItem("displayDigitalTab", true);
+                             }
                              
                              
                              if((scategoryid != "") && (flag == "1")){
@@ -1195,8 +1204,8 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTimeRss()
                              {
-                              var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
-                              // var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
+                             // var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
+                               var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
                              
                              $.ajax({
                                     type : "GET",
@@ -1214,6 +1223,7 @@ function getAudioVideoItem(xml)
                              var dd = new Date();
                              d = dd;
                              
+                             jsonData.digitalAreas = $(xml).find('digitalAreas').text().split('|');
                              
                              newAppVersion = $(xml).find('iosAppVersion').text();
                              var customUpdateMessage = $(xml).find('updateMessage').text();
@@ -1279,7 +1289,12 @@ function getAudioVideoItem(xml)
                              var sptFlagGlobal = window.localStorage.getItem("spotLightFlag");
                              stopPlayingMedia();
                              
-                             if (pageIdnew == "detailMediaPage") {
+                             if(pageIdnew == "digitalAreaHomePage")
+                             {
+                                    $.mobile.changePage("#businessCategory");
+                                    loadDigitalTab();
+                             
+                             } else if (pageIdnew == "detailMediaPage") {
                              if (eventsFlag) {
                                  var eveMnt = window.localStorage.getItem("eventmonth");
                                  var eveCnt = window.localStorage.getItem("eventcount");
@@ -1443,7 +1458,9 @@ function getAudioVideoItem(xml)
                                          
                                          detailPageView(eleId, eleType, eleNum);
                                      }
-                                 } else if (searchFromEventsPage)
+                                } else if(searchFromDigitalPage){
+                                    $.mobile.changePage("#digitalAreaHomePage");
+                                }else if (searchFromEventsPage)
                                  {
                                      var upeveID = window.localStorage.getItem("eventitemId");
                                      UpcomingEventsDetail(upeveID);
