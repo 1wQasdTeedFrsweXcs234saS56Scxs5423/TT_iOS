@@ -2314,7 +2314,7 @@ function showmoreresultTAlist(variable){
 
 /* SWIPE LEFT RIGHT FEATURE */
 
-$(document).ready(function(){
+/* $(document).ready(function(){
                   $('#detailPageArea').on('swipeleft', swipeleftHandler);
                   $('#detailPageArea').on('swiperight', swiperightHandler);
                   
@@ -2328,8 +2328,8 @@ function swipeleftHandler()
 function swiperightHandler()
 {
     showpreItem(currElementId, currElementcountNum);
-}
-
+} */ 
+ 
 function showpreItem(elementId, countItem)
 {
     var prevId = '';
