@@ -1268,17 +1268,7 @@ function getAudioVideoItem(xml)
                              
                              }
                              
-                             }
-                             
-                             
-                             function startThumbnailDownload()
-                             {
-                             var dataTemp = jsonData;
-                             dataTemp = jsonData;
-                             compareAndUpdateJSON1(dataTemp);
-                             
-                             }
-                             
+                             }     
                              
                              function backnav(pageId)
                              {
@@ -1612,10 +1602,10 @@ function getAudioVideoItem(xml)
                                     });
                              
                              
-                             if(isOnline)
-                             {
-                             generateUserDownloadsJson();
-                             }
+                                 if(isOnline)
+                                 {
+                                 generateUserDownloadsJson();
+                                 }
                              
                              }
                              

@@ -270,6 +270,7 @@ function readRSSFileJSON(file) {
             else
             {
                 $.mobile.changePage("#businessCategory");
+
                 
             }
             
@@ -281,7 +282,7 @@ function readRSSFileJSON(file) {
                 compareAndUpdateJSON1(obj);
                 
             }else {
-                startThumbnailDownload();
+                compareAndUpdateJSON1(jsonData);
                 
                 if(!toShowCategories) {
                     getFileSystemRefForWriting(dataToWrite);
