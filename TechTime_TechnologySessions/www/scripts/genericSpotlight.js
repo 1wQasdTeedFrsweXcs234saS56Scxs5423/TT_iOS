@@ -246,10 +246,10 @@ var SpotLightContentFlag = false;
 function showSpotLightContent()
 {
        
-        spotLightFlag = true;
-        playlistItemsPageFlag = false;
-        eventsFlag = false;
-        mediaFlag = false;
+    spotLightFlag = true;
+    playlistItemsPageFlag = false;
+    eventsFlag = false;
+    mediaFlag = false;
     window.localStorage.setItem("eventFlag", eventsFlag);
     window.localStorage.setItem("spotLightFlag", spotLightFlag);
     window.localStorage.setItem("mediaFlag",mediaFlag);
@@ -1129,12 +1129,12 @@ function spotlightDataTypes(elementId,type,countNum)
                if (aURL != "") {
                
                
-               if (itemType.isDownloadedAudio == "true") {
+               if(entries.indexOf(cAId) != -1) {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cAId+"' title='"+itemType.localPathAudio+"' onclick='downloadFileAudioMain(this,"+itemType.isDownloadedAudio+","+titleE+",1, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cAId+"' title='"+itemType.localPathAudio+"' onclick='downloadFileAudioMain(this,true,"+titleE+",1, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                } else {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cAId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,"+itemType.isDownloadedAudio+","+titleE+",1, true)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cAId+"' title='"+aURL+"' onclick='downloadFileAudioMain(this,false,"+titleE+",1, true)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadAudio.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                }
                }
@@ -1142,14 +1142,14 @@ function spotlightDataTypes(elementId,type,countNum)
                
                if (pURL != "") {
                
-               if (itemType.isDownloadedPresentation == 'true') {
+               if (entries.indexOf(cPId) != -1) {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cPId+"' title= '"+itemType.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,"+itemType.isDownloadedPresentation+","+titleE+",3, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cPId+"' title= '"+itemType.localPathPresentation+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",3, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
             
                
                } else {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cPId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,"+itemType.isDownloadedPresentation+","+titleE+",3, true)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cPId+"' title= '"+pURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",3, true)' style='border:none;width:100px;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadPresentation.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                }
@@ -1157,15 +1157,15 @@ function spotlightDataTypes(elementId,type,countNum)
                
                if (tURL != "") {
                
-               if (itemType.isDownloadedTranscript == 'true') {
+               if (entries.indexOf(cTId) != -1) {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cTId+"' title= '"+itemType.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,"+itemType.isDownloadedTranscript+","+titleE+",4, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cTId+"' title= '"+itemType.localPathTranscript+"' onclick= 'downloadFileAudioMain(this,true,"+titleE+",4, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                             
                } else {
                
             
-               strHTMLDetail = strHTMLDetail + "<div id='"+cTId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,"+itemType.isDownloadedTranscript+","+titleE+",4, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cTId+"' title= '"+tURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",4, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadTranscript.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
             
                
                }
@@ -1175,15 +1175,15 @@ function spotlightDataTypes(elementId,type,countNum)
                if (vURL != "") {
                
                
-               if (itemType.isDownloadedVideo == "true" || itemType.isDownloadedVideo == true) {
+               if (entries.indexOf(cVId) != -1) {
                
-                strHTMLDetail = strHTMLDetail + "<div id='"+cVId+"' title= '"+itemType.localPathVideo+"' onclick='downloadFileAudioMain(this,"+itemType.isDownloadedVideo+","+titleE+",2, true)'  style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+                strHTMLDetail = strHTMLDetail + "<div id='"+cVId+"' title= '"+itemType.localPathVideo+"' onclick='downloadFileAudioMain(this,true,"+titleE+",2, true)'  style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_viewVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
                
                
                
                } else {
                
-               strHTMLDetail = strHTMLDetail + "<div id='"+cVId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,"+itemType.isDownloadedVideo+","+titleE+",2, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
+               strHTMLDetail = strHTMLDetail + "<div id='"+cVId+"' title= '"+vURL+"' onclick= 'downloadFileAudioMain(this,false,"+titleE+",2, true)' style='border:none;width:100px;;height:40px;z-index:100;'><img class='detailMediaPageButton' src='images/btn_downloadVideo.png' height='100%' width='100%' style='margin-top:0px;margin-right:0px;' /></div><br>";
               
                
                }

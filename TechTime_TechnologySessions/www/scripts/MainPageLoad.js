@@ -49,6 +49,7 @@ function createJsonFormat()
     jsonData.faq = new Array();
     jsonData.loggedUserName = '';
     jsonData.pendingDownloads = new Array();
+    jsonData.imagesToDownload = new Array();
     
     // CHANGE: Lookup
     jsonData.lookUpItemsList = new Array();
@@ -1204,8 +1205,8 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTimeRss()
                              {
-                             // var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
-                               var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
+                              var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
+                               // var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
                              
                              $.ajax({
                                     type : "GET",
@@ -1862,73 +1863,78 @@ function loadShowCaseArticleTechWatch()
                             
                              
 
-
-
-
                              function downloadThumbImagesOnLogin()
                              {
                              $.each(jsonData.documents, function(key, oldItem) {
+                                        if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
+                                        {
+                                             
+                                            var imageToDownloadThumb = new Object();
+                                            imageToDownloadThumb.itemId = oldItem.itemId;
+                                            imageToDownloadThumb.url = oldItem.thumb;
+                                            imageToDownloadThumb.type = 'thumb';
+                                            
+                                            jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                        }
                                     
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
-                                    {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                        if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
+                                        {
+                                             
+                                            var imageToDownloadActual = new Object();
+                                            imageToDownloadActual.itemId = oldItem.itemId;
+                                            imageToDownloadActual.url = oldItem.actual;
+                                            imageToDownloadActual.type = 'actual';
+                                            
+                                            jsonData.imagesToDownload.push(imageToDownloadActual);
+                                        }
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
-                                    }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
-                                    {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownload);
-                                    }
                                     });
                              
                              $.each(jsonData.spotLight, function(key, oldItem){
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     
                                     });
                              
+                             
                              $.each(jsonData.panelDiscussions, function(key, oldItem) {
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
                              
@@ -1936,105 +1942,122 @@ function loadShowCaseArticleTechWatch()
                                     
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
                              
                              $.each(jsonData.techConf, function(key, oldItem) {
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
+                             
+                             
                              $.each(jsonData.technologySessions, function(key, oldItem) {
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
+                             
+                             
                              $.each(jsonData.contributor, function(key, oldItem) {
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
+                             
                              $.each(jsonData.events, function(key, oldItem) {
                                     if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.thumb;
-                                    imageToDownload.type = 'thumb';
+                                     
+                                    var imageToDownloadThumb = new Object();
+                                    imageToDownloadThumb.itemId = oldItem.itemId;
+                                    imageToDownloadThumb.url = oldItem.thumb;
+                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
                                     }
                                     if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
                                     {
-                                    var imageToDownload = new Object();
-                                    imageToDownload.itemId = oldItem.itemId;
-                                    imageToDownload.url = oldItem.actual;
-                                    imageToDownload.type = 'actual';
+                                     
+                                    var imageToDownloadActual = new Object();
+                                    imageToDownloadActual.itemId = oldItem.itemId;
+                                    imageToDownloadActual.url = oldItem.actual;
+                                    imageToDownloadActual.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    jsonData.imagesToDownload.push(imageToDownloadActual);
                                     }
                                     });
+                             
+                             console.log(thumbCounter);
                              
                              if(jsonData.imagesToDownload.length != 0 && jsonData.imagesToDownload.length > 0)
                              {
@@ -2046,7 +2069,7 @@ function loadShowCaseArticleTechWatch()
                              var downloadAllRequiredImagesLength;
                              
                              function downloadAllRequiredImages()
-                             {   
+                             {
                              downloadAllRequiredImagesLength = jsonData.imagesToDownload.length;
                              
                              var imageItemId = jsonData.imagesToDownload[downloadAllRequiredImagesCounter].itemId;
@@ -2055,10 +2078,10 @@ function loadShowCaseArticleTechWatch()
                              
                              if(imageItemType == 'thumb')
                              {
-                             downloadThumbImages(imageItemId, imageItemType, imageItemUrl, 'Interviews');   
+                             downloadThumbImages(imageItemId, imageItemType, imageItemUrl, 'Interviews');
                              } else if(imageItemType == 'actual')
                              {
-                             downloadThumbImages(imageItemId, imageItemType, imageItemUrl, 'Interviews');   
+                             downloadThumbImages(imageItemId, imageItemType, imageItemUrl, 'Interviews');
                              }
                              
                              }
@@ -2089,25 +2112,25 @@ function loadShowCaseArticleTechWatch()
                                                    url,
                                                    filePath,
                                                    function(entry){
-                                                       downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
-                                                       if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
-                                                       {
-                                                       downloadAllRequiredImages();
-                                                       }
-                                                   
+                                                   refreshFileSystem();
+                                                   downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
+                                                   if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
+                                                   {
+                                                   downloadAllRequiredImages();
+                                                   }
                                                    },
                                                    function(error) {
                                                    
-                                                       downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
-                                                       
-                                                       if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
-                                                       {
-                                                       downloadAllRequiredImages();
-                                                       }
+                                                   downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
+                                                   
+                                                   if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
+                                                   {
+                                                   downloadAllRequiredImages();
+                                                   }
                                                    }
                                                    );
                              }
                              }
                              }
-                             
-                             
+
+

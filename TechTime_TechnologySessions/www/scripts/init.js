@@ -452,6 +452,10 @@ function getContributeDirectoryEntry(entry)
 function getImagesDirectoryEntry(entry)
 {
     var imagesDirectory = entry.createReader();
+    
+    downloadedActuals = [];
+    downloadedThumbe = [];
+    
     imagesDirectory.readEntries(function(results){
                                 var i=0;
                                 for(i=0;i<results.length;i++)
