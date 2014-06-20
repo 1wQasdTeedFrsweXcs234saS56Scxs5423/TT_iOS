@@ -43,6 +43,9 @@ function loadSubscribedDigitalAreas()
            });
     
     $('#digitalAreaHomePageTechnologyArea').html(digitalTechnologyAreaHTML);
+    
+    openDigitalTechnologyAreaTab();
+    
     areaCounter = 0;
 }
 var areaCounter = 0;
@@ -63,3 +66,10 @@ function generateDigitalTechnologyAreaHTML(areaId)
 }
 
 // -------------------------- Load Subscribed Technology Areas under Digital ------------------------ //
+
+
+function openDigitalTechnologyAreaTab()
+{
+    $('#digitalTechAreaArrow').html("<img src='images/icon_whiteDown.png' style='float:right;height:15px;width:15px;padding-right:15px;'/>");
+    $('#digitalAreaHomePageTechnologyArea').css('display', 'block');
+}

@@ -434,6 +434,20 @@
                                         $('#'+el+'1').show('slow');
                                         $('#'+el+ 'Arrow').html("<img src='images/icon_whiteDown.png' style='float:right;height:20px; width:20px;padding-right:15px;'/>");
                                     }
+                                } else if(el == "digitalAreas")
+                                {
+                                    var elementDigitalAreas = $('#digitalAreaHomePageTechnologyArea').is(':visible');
+                                    
+                                    if(elementDigitalAreas)
+                                    {
+                                        $('#digitalTechAreaArrow').html("<img src='images/icon_whiteRight.png' style='float:right;height:15px;width:15px;padding-right:15px;'/>");
+                                        $('#digitalAreaHomePageTechnologyArea').css('display', 'none');
+                                    } else if(!elementDigitalAreas)
+                                    {
+                                        $('#digitalTechAreaArrow').html("<img src='images/icon_whiteDown.png' style='float:right;height:15px;width:15px;padding-right:15px;'/>");
+                                        $('#digitalAreaHomePageTechnologyArea').css('display', 'block');
+                                    }
+                                    
                                 }
                             }
                             
@@ -1948,13 +1962,23 @@
                 
                 <div id='navigateDigitalAreaHomePage' class='navigateMenu'></div> 
                 
-                <table style="width:100%;">
+                <!-- <table style="width:100%;">
                     <tr>
                         <td style="width: 100%; padding: 0px;" colspan="2">
                             <br><label style="font-size:24px;padding-left:15px;font-family:AgfaRotisSans;font-weight:bolder;">Select a Digital Area</label><br><br>
                         </td>
                     </tr>
-                </table>
+                </table> -->
+                
+                <div class=dynamicDiv style="margin-top:7px;">
+                    <a id="digitalTechArea" class='anchorCategory test' onclick='homeScreenMenus("digitalAreas");'>
+                        <div style='color:white;'>Digital Areas
+                            <div id="digitalTechAreaArrow" style="width:50px;float:right;">
+                                <img src='images/icon_whiteDown.png' style='float:right;height:17px;width:17px;padding-right:15px;'/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <div id="digitalAreaHomePageTechnologyArea" style="background:#F0EFED"></div>
                 <div id="digitalAreaHomePageSpotlightArea" style="background:#F0EFED"></div>
                 <div id="digitalAreaHomePageRecommendationArea" style="background:#F0EFED"></div>
