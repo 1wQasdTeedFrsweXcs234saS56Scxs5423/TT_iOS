@@ -522,8 +522,26 @@ function getList()
 {   
 	var strHTMLCategory = "";
     $('#TAcontentArea').empty('');
+    var showDigitalTab = false;
     
     document.getElementById('noSubscribeDiv').style.display = "none";
+    
+    $.each(jsonData.category, function(key, item){
+               if((jsonData.digitalAreas.indexOf(item.categoryid) != -1) && (item.subscribe == "yes") && (jsonData.digitalAreas.length != 0) && (jsonData.digitalAreas.length > 0))
+               {
+                    showDigitalTab = true;
+               }
+           });
+    
+    if(showDigitalTab)
+    {
+        strHTMLCategory = strHTMLCategory + "<div id='digitalAreaHomePageTab' class=dynamicDivList><li><a class='anchorCategory' data-transition='slide' href='#digitalAreaHomePage' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);'>";
+        strHTMLCategory = strHTMLCategory+ "<div style='color:white;'>Digital<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:12px;' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);'/>";
+        strHTMLCategory = strHTMLCategory+ "</div></a></li></div>";
+    } else if(!showDigitalTab)
+    {
+        strHTMLCategory = "";
+    }
     
     if(noSubscribe == "true"){
         
