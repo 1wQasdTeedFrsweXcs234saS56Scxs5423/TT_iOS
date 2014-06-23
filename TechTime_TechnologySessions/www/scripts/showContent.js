@@ -1046,6 +1046,9 @@ function detailPageView(elementId,type,countNum, itemCount)
     strHTML = '';
     $('video').bind('play', stopStreaming);
     
+    
+    Microsoft.Translator.Widget.Translate('en', 'es', null, null, null, null, 2000);
+    
 }
 
 
@@ -2332,11 +2335,12 @@ function showmoreresultTAlist(variable){
 
 /* SWIPE LEFT RIGHT FEATURE */
 
-/* $(document).ready(function(){
+ $(document).ready(function(){
                   $('#detailPageArea').on('swipeleft', swipeleftHandler);
                   $('#detailPageArea').on('swiperight', swiperightHandler);
                   
                   });
+
 
 function swipeleftHandler()
 {
@@ -2346,7 +2350,7 @@ function swipeleftHandler()
 function swiperightHandler()
 {
     showpreItem(currElementId, currElementcountNum);
-} */ 
+} 
  
 function showpreItem(elementId, countItem)
 {
