@@ -1303,6 +1303,7 @@ function getAudioVideoItem(xml)
                              function backPage(pageIdnew) {
                              var sptFlagGlobal = window.localStorage.getItem("spotLightFlag");
                              stopPlayingMedia();
+                             $(".mainMenuListContent").hide();
                              
                              if(pageIdnew == "digitalAreaHomePage")
                              {
@@ -1346,10 +1347,16 @@ function getAudioVideoItem(xml)
                              }
                              } else if (pageIdnew == 'TAListResult' || pageIdnew == 'UpcomingEventsPage' || pageIdnew == 'aboutTectTimePage' || pageIdnew == 'contactUsPage' || pageIdnew == 'faqPage') {
                              
-                                    
-                                             defaultNavigate();
-                                             $(".navigateBackBtn").hide();
-                                             $.mobile.changePage("#businessCategory");
+                                    if(isFromDigitalHomePage)
+                                    {
+                                        $.mobile.changePage('#digitalAreaHomePage');
+                                    } else
+                                    {
+                                         defaultNavigate();
+                                         $(".navigateBackBtn").hide();
+                                         $.mobile.changePage("#businessCategory");
+                                    }
+                             
                                                                      
                              } else if (pageIdnew == 'subscribePage') {
                                      defaultNavigate();

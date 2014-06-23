@@ -535,8 +535,8 @@ function getList()
     
     if(showDigitalTab)
     {
-        strHTMLCategory = strHTMLCategory + "<div id='digitalAreaHomePageTab' class=dynamicDivList><li><a class='anchorCategory' data-transition='slide' href='#digitalAreaHomePage' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);'>";
-        strHTMLCategory = strHTMLCategory+ "<div style='color:white;'>Digital<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:12px;' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);'/>";
+        strHTMLCategory = strHTMLCategory + "<div id='digitalAreaHomePageTab' class=dynamicDivList><li><a class='anchorCategory' data-transition='slide' href='#digitalAreaHomePage' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);isFromDigitalHomePage = false;'>";
+        strHTMLCategory = strHTMLCategory+ "<div style='color:white;'>Digital<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:12px;' onclick='loadDigitalContents();resetSearchBar(currentSearchKey);isFromDigitalHomePage = false;'/>";
         strHTMLCategory = strHTMLCategory+ "</div></a></li></div>";
     } else if(!showDigitalTab)
     {
@@ -549,8 +549,8 @@ function getList()
                
                if(item.subscribe == "yes" && jsonData.digitalAreas.indexOf(item.categoryid) == -1){
                
-               strHTMLCategory = strHTMLCategory + "<div class=dynamicDivList><li><a id="+ item.categoryname+" class='anchorCategory' data-transition='slide' href='#TAListResult' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);'>";
-               strHTMLCategory = strHTMLCategory+ "<div style='color:white;'> "+item.categoryname+"<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:12px;' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);'/>";
+               strHTMLCategory = strHTMLCategory + "<div class=dynamicDivList><li><a id="+ item.categoryname+" class='anchorCategory' data-transition='slide' href='#TAListResult' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);isFromDigitalHomePage = false;'>";
+               strHTMLCategory = strHTMLCategory+ "<div style='color:white;'> "+item.categoryname+"<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:12px;' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");isFromDigitalHomePage = false;resetSearchBar(currentSearchKey);'/>";
                strHTMLCategory = strHTMLCategory+ "</div></a></li></div>";
                }
                });

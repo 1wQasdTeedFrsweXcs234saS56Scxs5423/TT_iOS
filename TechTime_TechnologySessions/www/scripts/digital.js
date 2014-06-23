@@ -23,8 +23,6 @@ function loadDigitalTab()
 
 function loadDigitalContents()
 {
-    isFromDigitalHomePage = true;
-    
     // Loads Digital TA's under Digital Tab
     loadSubscribedDigitalAreas();
 }
@@ -56,8 +54,8 @@ function generateDigitalTechnologyAreaHTML(areaId)
            
            if(item.subscribe == "yes" && item.categoryid == areaId){
            areaCounter = areaCounter + 1;
-           strHTMLCategory = strHTMLCategory + "<div class='dynamicDivList'><a id="+ item.categoryname+" class='anchorCategory' href='#TAListResult' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);'>";
-           strHTMLCategory = strHTMLCategory+ "<div style='color:white;'> "+item.categoryname+"<img src='images/icon_whiteRight.png' style='float:right;height:15px; width:15px;padding-right:12px;' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);'/>";
+           strHTMLCategory = strHTMLCategory + "<div class='dynamicDivList'><a id="+ item.categoryname+" class='anchorCategory' href='#TAListResult' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);isFromDigitalHomePage = true;'>";
+           strHTMLCategory = strHTMLCategory+ "<div style='color:white;'> "+item.categoryname+"<img src='images/icon_whiteRight.png' style='float:right;height:15px; width:15px;padding-right:12px;' onclick='showTAListResult("+JSON.stringify(item.categoryname)+" , "+JSON.stringify(item.categoryid)+");resetSearchBar(currentSearchKey);isFromDigitalHomePage = true;'/>";
            strHTMLCategory = strHTMLCategory+ "</div></a></div>";
            }
            });
