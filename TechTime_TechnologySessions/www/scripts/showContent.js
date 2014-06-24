@@ -3115,9 +3115,6 @@ function switchDownloadsDiv(type)
 function pageFlagSet(currentPage)
 {
      
-     
-  
-    
     if(currentPage == "businessCategory")
     {
         searchFromMainPage = true;

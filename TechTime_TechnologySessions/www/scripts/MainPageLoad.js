@@ -1270,7 +1270,7 @@ function getAudioVideoItem(xml)
                                  showUpcomingEventList(eveMnt, eveCnt, currMonthName);
                                  
                                  $.mobile.changePage("#UpcomingEventsPage");
-                             } else if (mediaFlag) {
+                             } else if (mediaFlag || searchFromDigitalPage) {
                                  if (!spotLightFlag) {
                                      var catName = window.localStorage.getItem("currentCategoryOff");
                                      var catId = window.localStorage.getItem("currentCategoryIdOff");
