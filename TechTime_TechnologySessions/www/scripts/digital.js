@@ -23,6 +23,7 @@ function loadDigitalTab()
 
 function loadDigitalContents()
 {
+    defaultNavigate();
     // Loads Digital TA's under Digital Tab
     loadSubscribedDigitalAreas();
 }
