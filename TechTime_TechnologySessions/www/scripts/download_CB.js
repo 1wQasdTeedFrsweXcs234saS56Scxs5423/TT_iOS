@@ -570,13 +570,16 @@ function downloadFileDocMain(elementId,elementTitle,isDownloadedFlag,elementAudi
                              downloadList.splice(index,1);
                              }
                              findNextDownloadItem(name);
-                                                          
-                             if(currElementId != '' && currElementId != '' && currElementId != ''){
-                             detailPageView(currElementId,currElementtype,currElementcountNum);
+                            
+                             if(currElementId != '' && currElementId != ''){
+                             var eleNum = window.localStorage.getItem("detailPagecountNum");
+                             var eleCnt = window.localStorage.getItem("detailPageitemCount");
+                             
+                             detailPageView(currElementId,currElementtype,eleNum, eleCnt);
                              }
                              
-                             deleteProgress(name,elementTitle,isDownloadedFlag,elementAudio,val,filePath);
                              
+                             deleteProgress(name,elementTitle,isDownloadedFlag,elementAudio,val,filePath);
                              
                              },
                              function(error) {

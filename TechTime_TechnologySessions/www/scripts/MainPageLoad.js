@@ -63,20 +63,13 @@ function createJsonFormat()
     
     jsonData.digitalAreas = new Array();
     jsonData.digitalAreasItems = new Array();
-    
-    var dd = new Date();
-    d = dd;
-    
-    
+
 }
 
 
 
 function getSubscribeRss()
 {
-    var dd = new Date();
-    d = dd;
-    
     var uName = document.getElementById("lblUserName").innerHTML;
     uName = uName.replace(/\./g, '_');
     jsonData.loggedUserName = uName;
@@ -122,8 +115,6 @@ function subscribeTA(xml)
     subscribeCatList = "";
     subscribeCategoryId = new Array();
     subscribeCategoryId = [];
-    var dd = new Date();
-    d = dd;
     var flag = 0;
     
     newAppVersion = $(xml).find('item').attr('availableAppVersion');
@@ -199,8 +190,6 @@ function displayTAList(xml)
 {
     mainCategoryList = new Array();
     mainCategoryList = [];
-    var dd = new Date();
-    d = dd;
     
     $(xml).find('item').each(function(){
                              var toPrint = $(this).find('parentcategoryid').text();
@@ -306,10 +295,6 @@ function displayTAList(xml)
 }
 
 function loadAudioVideoURL() {
-    
-    var dd = new Date();
-    d = dd;
-    
     $.ajax({
            type : "GET",
            url : rssUrl,
@@ -323,9 +308,6 @@ function loadAudioVideoURL() {
 
 function getAudioVideoItem(xml)
 {
-    var dd = new Date();
-    d = dd;
-    
     $(xml).find('item').each(function(){
                              
                              try{
@@ -584,8 +566,6 @@ function getAudioVideoItem(xml)
                              
                              function getEventItem(xml)
                              {
-                             var dd = new Date();
-                             d = dd;
                              var monthArr = ["January","February","March","April","May","June","July","August","September","October","November","December"];
                              
                              $(xml).find('item').each(function() {
@@ -737,9 +717,6 @@ function getAudioVideoItem(xml)
                              
                              function getDocumentItem(xml)
                              {
-                             var dd = new Date();
-                             d = dd;
-                             
                              $(xml).find('item').each(function() {
                                                       
                                                       try{
@@ -925,9 +902,6 @@ function getAudioVideoItem(xml)
                              
                              function loadContributorData(xml)
                              {
-                             var dd = new Date();
-                             d = dd;
-                             
                              $(xml).find('item').each(function(){
                                                       
                                                       try{
@@ -982,10 +956,6 @@ function getAudioVideoItem(xml)
                              {
                              
                              var techWatchRss = "https://techtime.stage2.accenture.com/mobile-tech-watch";
-                            
-                             var dd = new Date();
-                             d = dd;
-                             
                              $.ajax({
                                     type : "GET",
                                     url : techWatchRss,
@@ -1122,20 +1092,6 @@ function getAudioVideoItem(xml)
                                                                     }
                                                                     
                                                                     });
-                             //console.log("*TECHWATCH* " + JSON.stringify(jsonData.techWatchMultiple));
-                             
-                             // alert("NO OF TW ARTICLES " + jsonData.techWatchMultiple.length);
-                             
-                             
-                             if(jsonData.techWatchMultiple.length == 100)
-                             {
-                             var dd = new Date();
-                             // alert('********* TECHWATCH END LOAD :'+(dd.getTime()-d.getTime())/1000);
-                             d = dd;
-                             }
-                             
-                             
-                             
                              }
                              
                              
@@ -1173,8 +1129,6 @@ function getAudioVideoItem(xml)
                              
                              function loadFaq(xml)
                              {
-                             var dd = new Date();
-                             d = dd;
                              
                              $(xml).find('item').each(function(){
                                                       
@@ -1235,9 +1189,6 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTime(xml)
                              {
-                             var dd = new Date();
-                             d = dd;
-                             
                              jsonData.digitalAreas = $(xml).find('digitalAreas').text().split('|');
                              
                              newAppVersion = $(xml).find('iosAppVersion').text();
@@ -1704,8 +1655,6 @@ function getAudioVideoItem(xml)
                              jsonData = data;
                              changeDownloadLogoutColor();
                              strHTMLCategory = '';
-                             var dd = new Date();
-                             d = dd;
                              }
                              }
                              

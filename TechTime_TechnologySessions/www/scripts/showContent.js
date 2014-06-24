@@ -592,7 +592,7 @@ var currElementtype = '';
 var currElementcountNum = '';
 
 // Earlier 1400 Now 400 LOC
-function detailPageView(elementId,type,countNum, itemCount)
+function detailPageView(elementId,type,countNum,itemCount)
 {   
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, errorFileSystem);
     
@@ -844,6 +844,7 @@ function detailPageView(elementId,type,countNum, itemCount)
                
     }
     
+    
     if(type == 'documents' || type == 'Documents'){
         
                 var documentItem = jsonData.lookUpItemsList[elementId];
@@ -1045,9 +1046,6 @@ function detailPageView(elementId,type,countNum, itemCount)
     strHTMLDetail = '';
     strHTML = '';
     $('video').bind('play', stopStreaming);
-    
-    
-    Microsoft.Translator.Widget.Translate('en', 'es', null, null, null, null, 2000);
     
 }
 
@@ -1808,21 +1806,6 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     
     if(tempMedia == 'D'){
         
-        $.each(jsonData.documents, function(key, documentItem) {
-               
-               if(documentItem.itemId == itemId){
-               
-               if(tempDocument == 'D'){
-               
-               documentItem.isDownloaded = flag;
-               documentItem.localPath = tempfilePath;
-               documentItem.downloadedDateD = new Date();
-               
-               
-               }
-               }
-               });
-
         $.each(jsonData.spotLight, function (key, documentItemSpot) {
                    if (documentItemSpot.itemId == itemId) {
                        if (tempDocument == 'D') {
@@ -1840,34 +1823,6 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     }
     
     if(tempMedia == 'A'){
-        
-        $.each(jsonData.audio, function(key, audioItem) {
-               
-               if(audioItem.itemId == itemId){
-               
-               if(tempDocument == 'A'){
-               audioItem.localPathAudio = tempfilePath;
-               audioItem.isDownloadedAudio = flag;
-               audioItem.downloadedDateA = new Date();
-               }
-               
-               if(tempDocument == 'V'){
-               audioItem.localPathVideo = tempfilePath;
-               audioItem.isDownloadedVideo = flag;
-               audioItem.downloadedDateV = new Date();
-               }
-               if(tempDocument == 'T'){
-               audioItem.localPathTranscript = tempfilePath;
-               audioItem.isDownloadedTranscript = flag;
-               audioItem.downloadedDateT = new Date();
-               }
-               if(tempDocument == 'P'){
-               audioItem.localPathPresentation = tempfilePath;
-               audioItem.isDownloadedPresentation = flag;
-               audioItem.downloadedDateP = new Date();
-               }
-               }
-               });
         
         $.each(jsonData.spotLight, function (key, audioItemSpot) {
                
@@ -1912,34 +1867,7 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     }
     
     if(tempMedia == 'V'){
-        $.each(jsonData.video, function(key, videoItem) {
                
-               if(videoItem.itemId == itemId){
-               
-               if(tempDocument == 'A'){
-               videoItem.localPathAudio = tempfilePath;
-               videoItem.isDownloadedAudio = flag;
-               videoItem.downloadedDateA = new Date();
-               }
-               if(tempDocument == 'V'){
-               videoItem.localPathVideo = tempfilePath;
-               videoItem.isDownloadedVideo = flag;
-               videoItem.downloadedDateV = new Date();
-               
-               }
-               if(tempDocument == 'T'){
-               videoItem.localPathTranscript = tempfilePath;
-               videoItem.isDownloadedTranscript = flag;
-               videoItem.downloadedDateT = new Date();
-               }
-               if(tempDocument == 'P'){
-               videoItem.localPathPresentation = tempfilePath;
-               videoItem.isDownloadedPresentation = flag;
-               videoItem.downloadedDateP = new Date();
-               }
-               }
-               });
-        
         $.each(jsonData.spotLight, function (key, videoItemSpot) {
                
                if (videoItemSpot.itemId == itemId) {
@@ -1982,34 +1910,7 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     }
     
     if(tempMedia == 'I'){
-        
-        $.each(jsonData.interviews, function(key, interviewItem) {
-               
-               if(interviewItem.itemId == itemId){
-               
-               if(tempDocument == 'A'){
-               interviewItem.localPathAudio = tempfilePath;
-               interviewItem.isDownloadedAudio = flag;
-               interviewItem.downloadedDateA = new Date();
-               }
-               if(tempDocument == 'V'){
-               interviewItem.localPathVideo = tempfilePath;
-               interviewItem.isDownloadedVideo = flag;
-               interviewItem.downloadedDateV = new Date();
-               }
-               if(tempDocument == 'T'){
-               interviewItem.localPathTranscript = tempfilePath;
-               interviewItem.isDownloadedTranscript = flag;
-               interviewItem.downloadedDateT = new Date();
-               }
-               if(tempDocument == 'P'){
-               interviewItem.localPathPresentation = tempfilePath;
-               interviewItem.isDownloadedPresentation = flag;
-               interviewItem.downloadedDateP = new Date();
-               }
-               }
-               });
-        
+                
         $.each(jsonData.spotLight, function (key, interviewItemSpot) {
                
                if (interviewItemSpot.itemId == itemId) {
@@ -2052,37 +1953,7 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     
     
     if(tempMedia == 'P'){
-        
-        $.each(jsonData.panelDiscussions, function(key, panelDiscussionsItem) {
-               
-               if(panelDiscussionsItem.itemId == itemId){
-               
-               if(tempDocument == 'A'){
-               panelDiscussionsItem.localPathAudio = tempfilePath;
-               panelDiscussionsItem.isDownloadedAudio = flag;
-               panelDiscussionsItem.downloadedDateA = new Date();
-               
-               }
-               
-               if(tempDocument == 'V'){
-               panelDiscussionsItem.localPathVideo = tempfilePath;
-               panelDiscussionsItem.isDownloadedVideo = flag;
-               panelDiscussionsItem.downloadedDateV = new Date();
-               }
-               if(tempDocument == 'T'){
-               panelDiscussionsItem.localPathTranscript = tempfilePath;
-               panelDiscussionsItem.isDownloadedTranscript = flag;
-               panelDiscussionsItem.downloadedDateT = new Date();
-               }
-               if(tempDocument == 'P'){
-               panelDiscussionsItem.localPathPresentation = tempfilePath;
-               panelDiscussionsItem.isDownloadedPresentation = flag;
-               panelDiscussionsItem.downloadedDateP = new Date();
-               }
-               }
-               });
-        
-        $.each(jsonData.spotLight, function (key, panelDiscussionsItemSpot) {
+                $.each(jsonData.spotLight, function (key, panelDiscussionsItemSpot) {
                
                if (panelDiscussionsItemSpot.itemId == itemId) {
                
@@ -2126,34 +1997,6 @@ function changeIsdownloadStatus(tempfilePath, itemId, type)
     
     
     if(tempMedia == 'T'){
-        $.each(jsonData.techConf, function(key, ConfItem) {
-               
-               if(ConfItem.itemId == itemId){
-               
-               if(tempDocument == 'A'){
-               ConfItem.localPathAudio = tempfilePath;
-               ConfItem.isDownloadedAudio = flag;
-               ConfItem.downloadedDateA = new Date();
-               }
-               
-               if(tempDocument == 'V'){
-               ConfItem.localPathVideo = tempfilePath;
-               ConfItem.isDownloadedVideo = flag;
-               ConfItem.downloadedDateV = new Date();
-               }
-               if(tempDocument == 'T'){
-               ConfItem.localPathTranscript = tempfilePath;
-               ConfItem.isDownloadedTranscript = flag;
-               ConfItem.downloadedDateT = new Date();
-               }
-               if(tempDocument == 'P'){
-               ConfItem.localPathPresentation = tempfilePath;
-               ConfItem.isDownloadedPresentation = flag;
-               ConfItem.downloadedDateP = new Date();
-               }
-               }
-               });
-        
         $.each(jsonData.spotLight, function (key, ConfItemSpot) {
                
                if (ConfItemSpot.itemId == itemId) {

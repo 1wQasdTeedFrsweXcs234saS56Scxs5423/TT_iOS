@@ -1,22 +1,9 @@
 var len;
-var mediaID;
-
-var deviceDetails = '';
-
-var index1 = 0;
-var nextItemId;
 var userName = "";
-
-var d = new Date();
-
-var downloadFilesCount = 0;
-var actualDownloadedCount= 0 ;
-
 var categories = new Array();
 var categoryItemsList = new Array();
 
 var isOnline = false;
-var platform;
 
 var sPath;
 
@@ -53,7 +40,6 @@ var searchFromSharePlaylistsPage = false;
 var searchFromAddToPlaylistPage = false;
 var searchFromDigitalPage = false;
 
-var rootFolderName = '';
 var entries = [];
 var downloadedThumbs = [];
 var downloadedActuals = [];
@@ -99,8 +85,6 @@ function onDeviceReady() {
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, errorFileSystem);
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS1, errorFileSystem);
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFSDownloadMain, errorFileSystem);
-    
-    deviceDetails = device.platform;
     deviceUuid = deviceUDID;
   
     checkConnection();
@@ -345,8 +329,6 @@ function loadApplicationState(state){
 }
 
 function gotFS(fileSystem) {
-    rootFolderName = fileSystem.root.name;
-    
     var dirReader = fileSystem.root.createReader();
     
     
