@@ -2027,7 +2027,6 @@ function loadShowCaseArticleTechWatch()
                                     }
                                     });
                              
-                             console.log(thumbCounter);
                              
                              if(jsonData.imagesToDownload.length != 0 && jsonData.imagesToDownload.length > 0)
                              {

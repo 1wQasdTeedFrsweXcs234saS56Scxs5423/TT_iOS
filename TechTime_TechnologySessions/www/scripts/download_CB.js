@@ -219,7 +219,7 @@ function downloadFileAudioMainYes(elementId,elementTitle,isDownloadedFlag,elemen
     currDownload = '';
     currDownload = name;
     
-    filePath = globalPathNew + "/" +name+ ".mp3";
+    filePath = globalPathNew+name+ ".mp3";
     
     if(isDownloadedFlag){
         playMedia(filePath, name, 'audio');
@@ -317,7 +317,7 @@ function downloadFileVideoMain(elementId,elementTitle,isDownloadedFlag,elementAu
     currDownload = '';
     currDownload = name;
     
-    filePath = globalPathNew + "/" +name+ ".mp4";
+    filePath = globalPathNew+name+".mp4";
     
     if(isDownloadedFlag){
         playMedia(filePath, name,'video');
@@ -440,7 +440,7 @@ function onvideoError(e)
 }
 
 
-function playMedia(filePath, name,mediaType)
+function playMedia(filePath,name,mediaType)
 {
     document.getElementById('avPlayer').innerHTML = "";
     
@@ -1216,6 +1216,7 @@ function readDownloadedList(finaldwn)
                    }
            }
            
+
            dwnload += "<a id="+dItemId+" title="+fpSend+" onclick='downloadItemClick(this)' data-transition='slide' style='text-decoration:none;font-style:normal;color:black;display:block;background : #F0EFED'>";
            dwnload = dwnload + "<div class='listItemClick'><table border=0 style='width:100%;margin:0px;padding:0px;margin-top: 5px;margin-bottom: 5px;border:none;' cellpadding='0' cellspacing='0'>";
            dwnload = dwnload + "<tr><td id='"+dItemId+"' style='margin:0px;padding:0px;width:25%;height:100px;' rowspan='2' >";
@@ -1241,13 +1242,13 @@ function downloadItemClick(element)
     var tPath = '';
     if(type=="A")
     {
-        tPath = globalPathNew + "/" +url;
+        tPath = globalPathNew+url;
         playMedia(tPath, dItemId,'audio');
         
     }
     else if(type=="V")
     {
-        tPath = globalPathNew + "/" +url;
+        tPath = globalPathNew+url;
         playMedia(tPath, dItemId,'video');
     }
     else
@@ -1781,7 +1782,7 @@ function CheckAllDownloads()
     
     $.each(jsonData.technologySessions, function(key, CheckDownload) {
            
-           if ((entries.indexOf("AA"+CheckDownload.itemId) != -1) || (entries.indexOf("VA"+CheckDownload.itemId) != -1)) {
+           if (entries.indexOf("AA"+CheckDownload.itemId) != -1) {
            var tempOBJ = new Object();
            tempOBJ.id = CheckDownload.itemId;
            tempOBJ.val = "1";
@@ -1799,7 +1800,7 @@ function CheckAllDownloads()
            finaldwn.push(tempOBJ);
            }
            
-           if ((entries.indexOf("AV"+CheckDownload.itemId) != -1) || (entries.indexOf("VV"+CheckDownload.itemId) != -1)) {
+           if (entries.indexOf("AV"+CheckDownload.itemId) != -1) {
            var tempOBJ = new Object();
            tempOBJ.id = CheckDownload.itemId;
            tempOBJ.val = "2";
@@ -1814,7 +1815,7 @@ function CheckAllDownloads()
            finaldwn.push(tempOBJ);
            }
            
-           if ((entries.indexOf("AP"+CheckDownload.itemId) != -1) || (entries.indexOf("VP"+CheckDownload.itemId) != -1)) {
+           if (entries.indexOf("AP"+CheckDownload.itemId) != -1) {
            var tempOBJ = new Object();
            tempOBJ.id = CheckDownload.itemId;
            tempOBJ.val = "3";
@@ -1828,7 +1829,7 @@ function CheckAllDownloads()
            
            finaldwn.push(tempOBJ);
            }
-           if ((entries.indexOf("AT"+CheckDownload.itemId) != -1) || (entries.indexOf("VT"+CheckDownload.itemId) != -1)) {
+           if(entries.indexOf("AT"+CheckDownload.itemId) != -1) {
            var tempOBJ = new Object();
            tempOBJ.id = CheckDownload.itemId;
            tempOBJ.val = "4";
@@ -1836,6 +1837,72 @@ function CheckAllDownloads()
            var lastInstance = CheckDownload.localPathTranscript.lastIndexOf("/");
            var createPath = CheckDownload.localPathTranscript.substr(0,lastInstance);
            createPath = createPath + "/AT" + CheckDownload.itemId + ".pdf";
+           
+           tempOBJ.path = createPath;
+           tempOBJ.ddate = CheckDownload.downloadedDateT;
+           
+           finaldwn.push(tempOBJ);
+           }
+           });
+    
+    
+    $.each(jsonData.technologySessions, function(key, CheckDownload) {
+           
+           if (entries.indexOf("VA"+CheckDownload.itemId) != -1) {
+           var tempOBJ = new Object();
+           tempOBJ.id = CheckDownload.itemId;
+           tempOBJ.val = "1";
+           tempOBJ.title = CheckDownload.title;
+           
+           var lastInstance = CheckDownload.localPathTranscript.lastIndexOf("/");
+           var createPath = CheckDownload.localPathTranscript.substr(0,lastInstance);
+           createPath = createPath + "/VA" + CheckDownload.itemId + ".mp3";
+           
+           tempOBJ.path = createPath;
+           
+           tempOBJ.path = createPath;
+           tempOBJ.ddate = CheckDownload.downloadedDateA;
+           
+           finaldwn.push(tempOBJ);
+           }
+           
+           if (entries.indexOf("VV"+CheckDownload.itemId) != -1) {
+           var tempOBJ = new Object();
+           tempOBJ.id = CheckDownload.itemId;
+           tempOBJ.val = "2";
+           tempOBJ.title = CheckDownload.title;
+           
+           var lastInstance = CheckDownload.localPathTranscript.lastIndexOf("/");
+           var createPath = CheckDownload.localPathTranscript.substr(0,lastInstance);
+           createPath = createPath + "/VV" + CheckDownload.itemId + ".mp4";
+           
+           tempOBJ.path = createPath;
+           tempOBJ.ddate = CheckDownload.downloadedDateV;
+           finaldwn.push(tempOBJ);
+           }
+           
+           if (entries.indexOf("VP"+CheckDownload.itemId) != -1) {
+           var tempOBJ = new Object();
+           tempOBJ.id = CheckDownload.itemId;
+           tempOBJ.val = "3";
+           tempOBJ.title = CheckDownload.title;
+           var lastInstance = CheckDownload.localPathTranscript.lastIndexOf("/");
+           var createPath = CheckDownload.localPathTranscript.substr(0,lastInstance);
+           createPath = createPath + "/VP" + CheckDownload.itemId + ".pdf";
+           
+           tempOBJ.path = createPath;
+           tempOBJ.ddate = CheckDownload.downloadedDateP;
+           
+           finaldwn.push(tempOBJ);
+           }
+           if(entries.indexOf("VT"+CheckDownload.itemId) != -1) {
+           var tempOBJ = new Object();
+           tempOBJ.id = CheckDownload.itemId;
+           tempOBJ.val = "4";
+           tempOBJ.title = CheckDownload.title;
+           var lastInstance = CheckDownload.localPathTranscript.lastIndexOf("/");
+           var createPath = CheckDownload.localPathTranscript.substr(0,lastInstance);
+           createPath = createPath + "/VT" + CheckDownload.itemId + ".pdf";
            
            tempOBJ.path = createPath;
            tempOBJ.ddate = CheckDownload.downloadedDateT;
