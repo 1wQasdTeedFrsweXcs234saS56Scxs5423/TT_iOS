@@ -68,7 +68,7 @@ $(document).ready(function() {
                                                  
                                                  window.localStorage.setItem("status", "online");
                                                  
-                                                 parent.window.location.href = "https://techtime.stage2.accenture.com/mobile/index.php";
+                                                 parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
                                                  
                                                  } else {
                                                  
@@ -98,7 +98,7 @@ $(document).ready(function() {
                                                  document.getElementById('showProgressBar').innerHTML = " ";
                                                  }
                                                  
-                                                 if($('#playlistItemPlayer').attr('src').indexOf('techtime.stage2.accenture') != -1)
+                                                 if($('#playlistItemPlayer').attr('src').indexOf('techtime.accenture') != -1)
                                                  {
                                                  displayPlaylistItems(currentOpenPlaylist);
                                                  //  $('#playlistItemPlayer').attr('src', '');
@@ -200,7 +200,7 @@ function reloginToTechTime()
     $('.abc').attr('checked',true);
     $('.xyz').attr('checked',false);
     usrToggle = true;
-    parent.window.location.href = "https://techtime.stage2.accenture.com/mobile/index.php";
+    parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
     window.localStorage.setItem("status", "online");
 }
 

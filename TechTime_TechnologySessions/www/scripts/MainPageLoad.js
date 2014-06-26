@@ -14,9 +14,9 @@ var isSubscribeDocument = "no";
 var isSubscribePodcast = "no";
 var isSubscribeEvent = "no";
 
-var rssUrl = "https://techtime.stage2.accenture.com/techno-areas/1+2/audio-video-listing-view";
-var documentRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/documents-listing-view";
-var eventsRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/events-listing-view";
+var rssUrl = "https://techtime.accenture.com/techno-areas/1+2/audio-video-listing-view";
+var documentRss = "https://techtime.accenture.com/techno-areas/1+2/documents-listing-view";
+var eventsRss = "https://techtime.accenture.com/techno-areas/1+2/events-listing-view";
 
 var selectedCategoryId='';
 var selectedCategoryName='';
@@ -74,7 +74,7 @@ function getSubscribeRss()
     uName = uName.replace(/\./g, '_');
     jsonData.loggedUserName = uName;
     
-   var subscribeRss = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/uid=";
+   var subscribeRss = "https://techtime.accenture.com/techtimemobile/subscribe-service/uid=";
   //  subscribeRss = "http://localhost:8888/spotlight/subscriptions.xml";
     subscribeRss = subscribeRss + uName;
     $.ajax({
@@ -87,10 +87,10 @@ function getSubscribeRss()
            }
            });
     
-    
-    updateUserVersion("iOS", uName, "3.5.0 on "+dd);
     loadTechWatchMultipleUrl();
     loadPlaylistsData();
+    
+    updateUserVersion("iOS", uName, "3.5.0 on "+dd);
 }
 
 
@@ -159,10 +159,10 @@ function subscribeTA(xml)
         eventsRss = "";
         documentRss = "";
         
-        rssUrl = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
-       // rssUrl = "https://techtime.stage2.accenture.com/technologySession.xml";
-        eventsRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
-        documentRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
+        rssUrl = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
+       // rssUrl = "https://techtime.accenture.com/technologySession.xml";
+        eventsRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
+        documentRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
     }
     
     loadtechnologyAreaListUrl();
@@ -171,7 +171,7 @@ function subscribeTA(xml)
 
 function loadtechnologyAreaListUrl() {
     
-    var technologyAreaListUrl = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/all";
+    var technologyAreaListUrl = "https://techtime.accenture.com/techtimemobile/subscribe-service/all";
     
 	$.ajax({
            type:"GET",
@@ -320,17 +320,19 @@ function getAudioVideoItem(xml)
                              
                              var sguid = $(this).find('contentid').text();
                              
-                             /* var categoryIdArray = scategory.split('|');
-                             
-                             for(i=0;i<categoryIdArray.length;i++)
+                            var categoryIdArray = scategory.split('|');
+                            
+                             for(var i=0;i<categoryIdArray.length;i++)
                              {
-                                    categoryIdArray[i] = categoryIdArray[i].split('-')[1];
-                                    if(jsonData.digitalAreas.indexOf(categoryIdArray[i]) != -1)
+                                    var categoryIdNumber = categoryIdArray[i].split('-')[1];
+                                    console.log(categoryIdArray[i] + ' ' + jsonData.digitalAreas.indexOf(categoryIdNumber));
+                             
+                                    if(jsonData.digitalAreas.indexOf(categoryIdNumber) != -1)
                                     {
                                         jsonData.digitalAreasItems.push(sguid);
-                                        alert(jsonData.digitalAreasItems.length);
                                     }
-                             } */
+                             } 
+                            
                              
                              var sTitle = $(this).find('title').text();
                              sTitle = sTitle.replace(/'/g,'');
@@ -545,7 +547,6 @@ function getAudioVideoItem(xml)
                                                      }
                                                      });
                              
-                             
                              loadEventsRss();
                              
                              }
@@ -593,6 +594,21 @@ function getAudioVideoItem(xml)
                                                       var sActual = $(this).find('actual').text();
                                                       
                                                       var etime = $(this).find('etime').text();
+                                                      
+                                                      
+                                                      var categoryIdArray = scategory.split('|');
+                                                      
+                                                      for(var i=0;i<categoryIdArray.length;i++)
+                                                      {
+                                                      var categoryIdNumber = categoryIdArray[i].split('-')[1];
+                                                      
+                                                      if(jsonData.digitalAreas.indexOf(categoryIdNumber) != -1)
+                                                      {
+                                                      jsonData.digitalAreasItems.push(sguid);
+                                                      }
+                                                      } 
+
+                                                      
                                                       
                                                       $(this).find('thumb').each(function() {
                                                                                  thumbLength = $(this).attr('length');
@@ -739,6 +755,20 @@ function getAudioVideoItem(xml)
                                                       
                                                       var spdf = $(this).find('document_pdf').text();
                                                       
+                                                      var categoryIdArray = scategory.split('|');
+                                                      
+                                                      for(var i=0;i<categoryIdArray.length;i++)
+                                                      {
+                                                      var categoryIdNumber = categoryIdArray[i].split('-')[1];
+                                                      
+                                                      if(jsonData.digitalAreas.indexOf(categoryIdNumber) != -1)
+                                                      {
+                                                      jsonData.digitalAreasItems.push(sguid);
+                                                      }
+                                                      }
+                                                      
+
+                                                      
                                                       $(this).find('thumb').each(function() {
                                                                                  spdfLength = $(this).attr('length');
                                                                                  });
@@ -849,6 +879,10 @@ function getAudioVideoItem(xml)
                                                       }
                                                       });
                              
+                             var myUniqueArray = uniqueFileList(jsonData.digitalAreasItems);
+                             
+                             jsonData.digitalAreasItems = myUniqueArray;
+                             
                              loadContributorRss();
                              
                              isDataLoaded = true;
@@ -879,7 +913,7 @@ function getAudioVideoItem(xml)
                              }
                              
                              function loadContributorRss() {
-                             var contributorRss = "https://techtime.stage2.accenture.com/mobile-contributor-listing.xml";
+                             var contributorRss = "https://techtime.accenture.com/mobile-contributor-listing.xml";
                              $.ajax({
                                     type : "GET",
                                     url : contributorRss,
@@ -955,7 +989,7 @@ function getAudioVideoItem(xml)
                              function loadTechWatchMultipleUrl()
                              {
                              
-                             var techWatchRss = "https://techtime.stage2.accenture.com/mobile-tech-watch";
+                             var techWatchRss = "https://techtime.accenture.com/mobile-tech-watch";
                              $.ajax({
                                     type : "GET",
                                     url : techWatchRss,
@@ -1097,7 +1131,7 @@ function getAudioVideoItem(xml)
                              
                              function loadSpotlightUrl()
                              {
-                             var spotlightRss = "https://techtime.stage2.accenture.com/mobile-spotlight-feeds.xml";
+                             var spotlightRss = "https://techtime.accenture.com/mobile-spotlight-feeds.xml";
                              
                              $.ajax({
                                     type : "GET",
@@ -1114,7 +1148,7 @@ function getAudioVideoItem(xml)
                              
                              function loadFaqRss()
                              {
-                             var faqRss = "https://techtime.stage2.accenture.com/mobile-faq-rss/faq.xml";
+                             var faqRss = "https://techtime.accenture.com/mobile-faq-rss/faq.xml";
                              $.ajax({
                                     type : "GET",
                                     url : faqRss,
@@ -1173,7 +1207,7 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTimeRss()
                              {
-                               var aboutTechTimeRss = "https://techtime.stage2.accenture.com/mobile-about-us/aboutus.xml";
+                               var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
                               // var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
                              
                              $.ajax({
@@ -1270,8 +1304,8 @@ function getAudioVideoItem(xml)
                                  showUpcomingEventList(eveMnt, eveCnt, currMonthName);
                                  
                                  $.mobile.changePage("#UpcomingEventsPage");
-                             } else if (mediaFlag || searchFromDigitalPage) {
-                                 if (!spotLightFlag) {
+                             } else if (mediaFlag) {
+                                 if(!spotLightFlag && !searchFlag){
                                      var catName = window.localStorage.getItem("currentCategoryOff");
                                      var catId = window.localStorage.getItem("currentCategoryIdOff");
                                      selectedCategoryId = catId;
@@ -1279,7 +1313,14 @@ function getAudioVideoItem(xml)
                                      $.mobile.changePage("#TAListResult", {
                                                          transition: "none"
                                                          });
-                                 } else {
+                                 } else if(searchFlag)
+                                {
+                                    //var searchElement = window.localStorage.getItem("searchlement");
+                                    //var searchMedia = window.localStorage.getItem("media");
+                                    //var searchValueElement = window.localStorage.getItem("valueElement");
+                                    $.mobile.changePage('#searchResultPage');
+                             
+                                } else {
 
                                      $.mobile.changePage("#businessCategory", {
                                                          transition: "none"
@@ -1295,6 +1336,7 @@ function getAudioVideoItem(xml)
                                        $(".navigateBackBtn").show();
                                     }
                                  $.mobile.changePage("#businessCategory");
+                                resetSearchFlags();
                              }
                              } else if (pageIdnew == 'TAListResult' || pageIdnew == 'UpcomingEventsPage' || pageIdnew == 'aboutTectTimePage' || pageIdnew == 'contactUsPage' || pageIdnew == 'faqPage') {
                              
@@ -1306,14 +1348,18 @@ function getAudioVideoItem(xml)
                                          defaultNavigate();
                                          $(".navigateBackBtn").hide();
                                          $.mobile.changePage("#businessCategory");
+                             
+                                        resetSearchFlags();
                                     }
                              
-                                                                     
+                             
                              } else if (pageIdnew == 'subscribePage') {
                                      defaultNavigate();
                                      $(".navigateBackBtn").hide();
                                      $("#subscribePageDiv").hide();
                                      $.mobile.changePage("#businessCategory");
+                             
+                                    resetSearchFlags();
                              } else if (pageIdnew == 'DownloadsPage') {
                              
                                 gotFS(fileSystem);
@@ -1340,6 +1386,8 @@ function getAudioVideoItem(xml)
                                          defaultNavigate();
                                          $(".navigateBackBtn").hide();
                                          $.mobile.changePage("#businessCategory");
+                             
+                                        resetSearchFlags();
                                      }
                              
                              } else if (pageIdnew == 'techwatchPage') {
@@ -1520,26 +1568,7 @@ function getAudioVideoItem(xml)
                                      $.mobile.changePage("#businessCategory");
                              
                                     // Reset Flags @ home page
-                                    searchFromMediaPage = false;
-                                    searchFromEventsPage = false;
-                                    searchFromSpotlightPage = false;
-                                    searchFromUpcomingEventsPage = false;
-                                    searchFromTAListResultPage = false;
-                                    searchFromAuthorDetailPage = false;
-                                    searchFromDownloadsPage = false;
-                                    searchFromMainPage = false;
-                                    searchFromContactUsPage = false;
-                                    searchFromAboutPage = false;
-                                    searchFromFaqPage = false;
-                                    searchFroSubscribPage = false;
-                                    searchFromTechWatch = false;
-                                    searchFromtechWatchPage = false;
-                                    searchFromPlaylistsPage = false;
-                                    searchFromContributePage = false;
-                                    searchFromPlaylistItemsPage = false;
-                                    searchFromSharePlaylistsPage = false;
-                                    searchFromAddToPlaylistPage = false;
-                                    searchFromSpotlightPage = false;
+                                    resetSearchFlags();
                                  }
                              } else if(pageIdnew == "sharePlaylistPage")
                              {
@@ -1550,6 +1579,8 @@ function getAudioVideoItem(xml)
                              } else if(pageIdnew == "playlistPage")
                              {
                                 $.mobile.changePage('#businessCategory');
+                             
+                             resetSearchFlags();
                              } else if(pageIdnew == "addToPlaylistPage")
                              {
                                 $.mobile.changePage('#detailMediaPage');
@@ -1563,8 +1594,10 @@ function getAudioVideoItem(xml)
                              }else if(pageIdnew == "contributePage")
                              {
                                 $.mobile.changePage('#businessCategory');
+                                resetSearchFlags();
                              }
                              
+                             resetSearchFlags();
                              
                              }
                              
@@ -1622,7 +1655,7 @@ function getAudioVideoItem(xml)
                              {
                              var localDownloadedData = userDownloadsJson;
                              
-                             var linkUserDownloads = 'https://techtime.stage2.accenture.com/techtimemobile/mobiletrack';
+                             var linkUserDownloads = 'https://techtime.accenture.com/techtimemobile/mobiletrack';
                              if(isOnline){
                              $.ajax({
                                     
@@ -1835,203 +1868,180 @@ function loadShowCaseArticleTechWatch()
 
                              function downloadThumbImagesOnLogin()
                              {
-                             $.each(jsonData.documents, function(key, oldItem) {
-                                        if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
-                                        {
-                                            
-                                            var imageToDownloadThumb = new Object();
-                                            imageToDownloadThumb.itemId = oldItem.itemId;
-                                            imageToDownloadThumb.url = oldItem.thumb;
-                                            imageToDownloadThumb.type = 'thumb';
-                                            
-                                            jsonData.imagesToDownload.push(imageToDownloadThumb);
-                                        }
-                                    
-                                        if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
-                                        {
-                                            
-                                            var imageToDownloadActual = new Object();
-                                            imageToDownloadActual.itemId = oldItem.itemId;
-                                            imageToDownloadActual.url = oldItem.actual;
-                                            imageToDownloadActual.type = 'actual';
-                                            
-                                            jsonData.imagesToDownload.push(imageToDownloadActual);
-                                        }
-                                    
-                                    });
-                             
-                             $.each(jsonData.spotLight, function(key, oldItem){
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
-                                    }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
-                                    }
-                                    
-                                    });
+                                 $.each(jsonData.documents, function(key, oldItem) {
+                                        
+                                            if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
+                                            {
+                                                var imageToDownloadThumb = new Object();
+                                                imageToDownloadThumb.itemId = oldItem.itemId;
+                                                imageToDownloadThumb.url = oldItem.thumb;
+                                                imageToDownloadThumb.type = 'thumb';
+                                        
+                                                jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                            }
+                                        
+                                            if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
+                                            {
+                                                var imageToDownloadActual = new Object();
+                                                imageToDownloadActual.itemId = oldItem.itemId;
+                                                imageToDownloadActual.url = oldItem.actual;
+                                                imageToDownloadActual.type = 'actual';
+                                                
+                                                jsonData.imagesToDownload.push(imageToDownloadActual);
+                                            }
+                                        
+                                        
+                                        });
                              
                              
                              $.each(jsonData.panelDiscussions, function(key, oldItem) {
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
-                                    }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
-                                    }
+                                        if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
+                                        {
+                                            var imageToDownload = new Object();
+                                            imageToDownload.itemId = oldItem.itemId;
+                                            imageToDownload.url = oldItem.thumb;
+                                            imageToDownload.type = 'thumb';
+                                        
+                                            jsonData.imagesToDownload.push(imageToDownload);
+                                        }
+                                        if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
+                                        {
+                                            var imageToDownload = new Object();
+                                            imageToDownload.itemId = oldItem.itemId;
+                                            imageToDownload.url = oldItem.actual;
+                                            imageToDownload.type = 'actual';
+                                            
+                                            jsonData.imagesToDownload.push(imageToDownload);
+                                        }
                                     });
+                             
+                             
                              
                              $.each(jsonData.interviews, function(key, oldItem) {
                                     
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
+                                    if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
                                     {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.thumb;
+                                    imageToDownload.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
+                                    if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
                                     {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.actual;
+                                    imageToDownload.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
                                     });
                              
                              $.each(jsonData.techConf, function(key, oldItem) {
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
+                                    if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
                                     {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.thumb;
+                                    imageToDownload.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
+                                    if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
                                     {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.actual;
+                                    imageToDownload.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
                                     });
-                             
-                             
                              $.each(jsonData.technologySessions, function(key, oldItem) {
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
+                                    if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
                                     {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.thumb;
+                                    imageToDownload.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
+                                    if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
                                     {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.actual;
+                                    imageToDownload.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
                                     });
                              
                              
                              $.each(jsonData.contributor, function(key, oldItem) {
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
-                                    }
-                                    
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
-                                    {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
-                                    
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
-                                    }
+                                        if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
+                                        {
+                                            var imageToDownload = new Object();
+                                            imageToDownload.itemId = oldItem.itemId;
+                                            imageToDownload.url = oldItem.actual;
+                                            imageToDownload.type = 'actual';
+                                            
+                                            jsonData.imagesToDownload.push(imageToDownload);
+                                        }
                                     });
                              
                              $.each(jsonData.events, function(key, oldItem) {
-                                    if(downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1)
+                                    if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
                                     {
-                                      
-                                    var imageToDownloadThumb = new Object();
-                                    imageToDownloadThumb.itemId = oldItem.itemId;
-                                    imageToDownloadThumb.url = oldItem.thumb;
-                                    imageToDownloadThumb.type = 'thumb';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.thumb;
+                                    imageToDownload.type = 'thumb';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
-                                    if(downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1)
+                                    if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
                                     {
-                                      
-                                    var imageToDownloadActual = new Object();
-                                    imageToDownloadActual.itemId = oldItem.itemId;
-                                    imageToDownloadActual.url = oldItem.actual;
-                                    imageToDownloadActual.type = 'actual';
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.actual;
+                                    imageToDownload.type = 'actual';
                                     
-                                    jsonData.imagesToDownload.push(imageToDownloadActual);
+                                    jsonData.imagesToDownload.push(imageToDownload);
                                     }
                                     });
                              
+                             $.each(jsonData.spotLight, function(key, oldItem){
+                                    if((downloadedThumbs.indexOf(oldItem.itemId + 'thumb.png') == -1) && oldItem.thumb != '')
+                                    {
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.thumb;
+                                    imageToDownload.type = 'thumb';
+                                    
+                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    }
+                                    
+                                    if((downloadedActuals.indexOf(oldItem.itemId + 'actual.png') == -1) && oldItem.actual != '')
+                                    {
+                                    var imageToDownload = new Object();
+                                    imageToDownload.itemId = oldItem.itemId;
+                                    imageToDownload.url = oldItem.actual;
+                                    imageToDownload.type = 'actual';
+                                    
+                                    jsonData.imagesToDownload.push(imageToDownload);
+                                    }
+                                    
+                                    });
                              
-                             if(jsonData.imagesToDownload.length != 0 && jsonData.imagesToDownload.length > 0)
-                             {
-                             downloadAllRequiredImages();
-                             }
+                                 if(jsonData.imagesToDownload.length != 0 && jsonData.imagesToDownload.length > 0)
+                                 {
+                                     downloadAllRequiredImages();
+                                 }
                              }
                              
                              var downloadAllRequiredImagesCounter = 0;
@@ -2075,8 +2085,6 @@ function loadShowCaseArticleTechWatch()
                              
                              filePath = globalPathNew + "images/"+ thumbId+imageName + ".png";
                              
-                             if(url!="" ){
-                             
                              fileTransfer.download(
                                                    url,
                                                    filePath,
@@ -2098,7 +2106,7 @@ function loadShowCaseArticleTechWatch()
                                                    }
                                                    }
                                                    );
-                             }
+                             
                              }
                              }
 

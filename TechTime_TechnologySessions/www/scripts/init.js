@@ -15,7 +15,6 @@ var deviceName = '';
 var globalPath = '';
 var globalPathNew = '';
 
-
 var backFlag = false;
 var spotLightFlag = false;
 var playlistItemsPageFlag = false;
@@ -534,23 +533,26 @@ function stopPlayingMedia()
 
 function resetSearchFlags()
 {
-     searchFromMediaPage = false;
-     searchFromEventsPage = false;
-     searchFromSpotlightPage = false;
-     searchFromUpcomingEventsPage = false;
-     searchFromTAListResultPage = false;
-     searchFromAuthorDetailPage = false;
-     searchFromDownloadsPage = false;
-     searchFromMainPage = false;
-     searchFromContactUsPage = false;
-     searchFromAboutPage = false;
-     searchFromFaqPage = false;
-     searchFroSubscribPage = false;
-     searchFromTechWatch = false;
-     searchFromtechWatchPage = false;
-     searchFromPlaylistsPage = false;
-     searchFromPlaylistItemsPage = false;
-     searchFromSharePlaylistsPage = false;
-     searchFromAddToPlaylistPage = false;
-     searchFromDigitalPage = false;
+    searchFlag = false;
+    searchFromMediaPage = false;
+    searchFromEventsPage = false;
+    searchFromSpotlightPage = false;
+    searchFromUpcomingEventsPage = false;
+    searchFromTAListResultPage = false;
+    searchFromAuthorDetailPage = false;
+    searchFromDownloadsPage = false;
+    searchFromMainPage = false;
+    searchFromContactUsPage = false;
+    searchFromAboutPage = false;
+    searchFromFaqPage = false;
+    searchFroSubscribPage = false;
+    searchFromTechWatch = false;
+    searchFromtechWatchPage = false;
+    searchFromPlaylistsPage = false;
+    searchFromContributePage = false;
+    searchFromPlaylistItemsPage = false;
+    searchFromSharePlaylistsPage = false;
+    searchFromAddToPlaylistPage = false;
+    searchFromSpotlightPage = false;
+
 }

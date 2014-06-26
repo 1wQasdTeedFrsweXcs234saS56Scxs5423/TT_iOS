@@ -158,28 +158,27 @@ function showUpcomingEventList(viewMonth,viewCount,monthName)
                s = s.getMonth();
                
                var actualThumb = '';
-               actualThumb = '';
                
-               if(isOnline && itemRes.thumbLocal == '')
+               if(isOnline)
                {
-               actualThumb = itemRes.thumb;
+                   if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
+                   {
+                       actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
+                   {
+                       actualThumb = itemRes.actual;
+                   }
+                   } else if(!isOnline)
+                   {
+                   if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
+                   {
+                       actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
+                   {
+                       actualThumb = "images/TechTime-AppIcon.png";
+                   }
                }
-               else if(isOnline && itemRes.thumbLocal != '')
-               {
-               actualThumb = "file://"+globalPathNew + "/images/" +itemRes.itemId+"thumb.png";
-               }
-               else if(!isOnline && itemRes.thumbLocal == '')
-               {
-               actualThumb = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemRes.thumbLocal != '')
-               {
-               actualThumb = "file://"+window.appRootDir.fullPath + "/images/" +itemRes.itemId+"thumb.png";
-               }
-               else
-               {
-               actualThumb = "file://"+window.appRootDir.fullPath + "/images/" +itemRes.itemId+"thumb.png";
-               }
+               
                
                var authoNames = '';
                $.each(itemRes.author, function(key, itemAuthor) {
@@ -372,15 +371,27 @@ function UpcomingEventsDetail(itemId)
     
     $.each(resUpcomingEvents, function(key, eventItem) {
            if(eventItem.itemId == itemId){
-           var actualLocal = '';
-           actualLocal = '';
            
-           if(eventItem.actualLocal != ''){
-           actualLocal = "file://"+eventItem.actualLocal;
-           
-           }else{
-           actualLocal = eventItem.thumb;
+           if(isOnline)
+           {
+           if(downloadedActuals.indexOf(eventItem.itemId + "actual.png") != -1)
+           {
+           actualLocal = globalPathNew + "images/"+eventItem.itemId+"actual.png";
+           } else if(downloadedActuals.indexOf(eventItem.itemId + "actual.png") == -1)
+           {
+           actualLocal = eventItem.actual;
            }
+           } else if(!isOnline)
+           {
+           if(downloadedActuals.indexOf(eventItem.itemId + "actual.png") != -1)
+           {
+           actualLocal = globalPathNew + "images/"+eventItem.itemId+"actual.png";
+           } else if(downloadedActuals.indexOf(eventItem.itemId + "actual.png") == -1)
+           {
+           actualLocal = "images/TechTime-AppIcon.png";
+           }
+           }
+           
            
            index = key;
            
@@ -690,27 +701,28 @@ function detailPageView(elementId,type,countNum,itemCount)
                var date = detailPageItemContent.publishedDate;
             
                var actualLocal = '';
-                             
-               if(isOnline && detailPageItemContent.actualLocal == '')
-               {
-               actualLocal = detailPageItemContent.actual;
-               }
-               else if(isOnline && detailPageItemContent.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
-               }
-               else if(!isOnline && detailPageItemContent.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && detailPageItemContent.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +detailPageItemContent.itemId+"actual.png";
-               }
+                                    
+                   if(isOnline)
+                   {
+                       if(downloadedActuals.indexOf(detailPageItemContent.itemId + "actual.png") != -1)
+                       {
+                           actualLocal = globalPathNew + "images/"+detailPageItemContent.itemId+"actual.png";
+                       } else if(downloadedActuals.indexOf(detailPageItemContent.itemId + "actual.png") == -1)
+                       {
+                           actualLocal = detailPageItemContent.actual;
+                       }
+                   } else if(!isOnline)
+                   {
+                       if(downloadedActuals.indexOf(detailPageItemContent.itemId + "actual.png") != -1)
+                       {
+                           actualLocal = globalPathNew + "images/"+detailPageItemContent.itemId+"actual.png";
+                       } else if(downloadedActuals.indexOf(detailPageItemContent.itemId + "actual.png") == -1)
+                       {
+                           actualLocal = "images/TechTime-AppIcon.png";
+                       }
+                   }
+
+                   
                strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
                if(vURL != ""){
                if(entries.indexOf(fileNameVideo) != -1){
@@ -853,31 +865,32 @@ function detailPageView(elementId,type,countNum,itemCount)
                var lURL = documentItem.localPath;
                
                var titleE = JSON.stringify(documentItem.title);
-               var actualLocal = '';
-               
-               if(isOnline && documentItem.actualLocal == '')
-               {
-               actualLocal = documentItem.actual;
-               }
-               else if(isOnline && documentItem.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +documentItem.itemId+"actual.png";
-               }
-               else if(!isOnline && documentItem.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && documentItem.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +documentItem.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +documentItem.itemId+"actual.png";
-               }
-               
+                var actualLocal = '';
+                
+                if(isOnline)
+                {
+                    if(downloadedActuals.indexOf(documentItem.itemId + "actual.png") != -1)
+                    {
+                        actualLocal = globalPathNew + "images/"+documentItem.itemId+"actual.png";
+                    } else if(downloadedActuals.indexOf(documentItem.itemId + "actual.png") == -1)
+                    {
+                        actualLocal = documentItem.actual;
+                    }
+                } else if(!isOnline)
+                {
+                    if(downloadedActuals.indexOf(documentItem.itemId + "actual.png") != -1)
+                    {
+                        actualLocal = globalPathNew + "images/"+documentItem.itemId+"actual.png";
+                    } else if(downloadedActuals.indexOf(documentItem.itemId + "actual.png") == -1)
+                    {
+                        actualLocal = "images/TechTime-AppIcon.png";
+                    }
+                }
+                
+
+        
                strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
-               
+        
                strHTMLDetail = strHTMLDetail + "<img id='docImg' src='"+actualLocal+"' style='border:none; height:150px; width:100px; margin:20px 20px;'/><br><br></td>";
                
                strHTMLDetail = strHTMLDetail + "<td style='width : 50%'><br>";
@@ -1071,30 +1084,26 @@ function showAuthorDetailPage(a)
            
            var actualLocal = '';
            
-           if(isOnline && itemContributor.actualLocal == '')
+           if(isOnline)
+           {
+           if(downloadedActuals.indexOf(itemContributor.itemId + "actual.png") != -1)
+           {
+           actualLocal = globalPathNew + "images/"+itemContributor.itemId+"actual.png";
+           } else if(downloadedActuals.indexOf(itemContributor.itemId + "actual.png") == -1)
            {
            actualLocal = itemContributor.actual;
            }
-           else if(isOnline && itemContributor.actualLocal != '')
+           } else if(!isOnline)
            {
-           actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemContributor.itemId+"actual.png";
-           }
-           else if(!isOnline && itemContributor.actualLocal == '')
+           if(downloadedActuals.indexOf(itemContributor.itemId + "actual.png") != -1)
            {
-           actualLocal = 'images/TechTime-AppIcon.png';
-           }
-           else if(!isOnline && itemContributor.actualLocal != '')
+           actualLocal = globalPathNew + "images/"+itemContributor.itemId+"actual.png";
+           } else if(downloadedActuals.indexOf(itemContributor.itemId + "actual.png") == -1)
            {
-           actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemContributor.itemId+"actual.png";
+           actualLocal = "images/TechTime-AppIcon.png";
            }
-           else
-           {
-           actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemContributor.itemId+"actual.png";
            }
-           if(spotLightFlag)
-           {
-            actualLocal = "file://"+window.appRootDir.fullPath + "/images/"+itemContributor.itemId+"actual.png";
-           }
+           
            
            strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
            strHTMLDetail = strHTMLDetail + "<img id='videoImg' src='"+actualLocal+"' style='border:none; height:150px; width:100px; margin:20px 20px;'/><br></td>";
@@ -1447,7 +1456,7 @@ function postJSONData(localJSONData, postMode)
     var uName = document.getElementById("lblUserName").innerHTML;
     uName = uName.replace(/\./g, '_');
     
-    var linkSubscribe = 'https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/uid=';
+    var linkSubscribe = 'https://techtime.accenture.com/techtimemobile/subscribe-service/uid=';
     linkSubscribe = linkSubscribe + uName;
     var localJSONData1 = {"data" :{"mode" : "logout"}};
     
@@ -1490,7 +1499,7 @@ function postJSONData(localJSONData, postMode)
                
                },
                error: function(xhr, textStatus, error){
-               //parent.window.location.href = "https://techtime.stage2.accenture.com/mobile/index.php";
+               //parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
                jAlert('Could not subscribe you to the selected Areas. Please try again.', 'Tech Time');
                console.log('In Failure'+JSON.stringify(xhr));
                }
@@ -1571,7 +1580,7 @@ function postOfflineCommentServiceCall(commentIndex)
     var uName = document.getElementById('lblUserName').innerHTML;
     uName = uName.replace(/\./g,'_');
     
-    var linkContact = 'https://techtime.stage2.accenture.com/techtimemobile/contactus/uid=';
+    var linkContact = 'https://techtime.accenture.com/techtimemobile/contactus/uid=';
     linkContact = linkContact + uName;
     
     commentSubmit = jsonData.offlineCommentsPosted[postCommentIndex].commentSubmit;
@@ -1635,7 +1644,7 @@ function contactUsArea()
     uName = uName.replace(/\./g,'_');
     
     
-    var linkContact = 'https://techtime.stage2.accenture.com/techtimemobile/contactus/uid=';
+    var linkContact = 'https://techtime.accenture.com/techtimemobile/contactus/uid=';
     linkContact = linkContact + uName;
     
     commentSubmit = $('#commentTextArea').val();
@@ -2086,6 +2095,8 @@ function showQnA(elementDetail)
 
 function showSearchResult(element, media, valueElement,a)
 {
+    searchFlag = true;
+    
     window.localStorage.setItem("searchlement",element);
     window.localStorage.setItem("media",media);
     window.localStorage.setItem("valueElement",valueElement);
@@ -2432,28 +2443,26 @@ function renderListItems(itemId, itemRes, authoNames, iconType, itemIndex, count
     
     var contentType ='';
     
-    
-    
-    if(isOnline && itemRes.thumbLocal == '')
+    if(isOnline)
     {
-        actualThumb = itemRes.thumb;
-    }
-    else if(isOnline && itemRes.thumbLocal != '')
+        if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
+        {
+            actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+        } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
+        {
+            actualThumb = itemRes.actual;
+        }
+    } else if(!isOnline)
     {
-        actualThumb = "file://"+window.appRootDir.fullPath + "/images/" +itemRes.itemId+"thumb.png";
+        if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
+        {
+            actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+        } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
+        {
+            actualThumb = "images/TechTime-AppIcon.png";
+        }
     }
-    else if(!isOnline && itemRes.thumbLocal == '')
-    {
-        actualThumb = 'images/TechTime-AppIcon.png';
-    }
-    else if(!isOnline && itemRes.thumbLocal != '')
-    {
-        actualThumb = "file://"+window.appRootDir.fullPath + "/images/" +itemRes.itemId+"thumb.png";
-    }
-    else
-    {
-        actualThumb = "file://"+window.appRootDir.fullPath + "/images/" +itemRes.itemId+"thumb.png";
-    }
+
     
     var authoNames = '';
     $.each(itemRes.author, function(key, itemAuthor) {
