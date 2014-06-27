@@ -3,7 +3,7 @@
 
 function loadPlaylistsData() {
     var loggedInUsername = jsonData.loggedUserName.replace(/_/g, '.');
-    var playlistRss = "https://techtime.accenture.com/mobile-playlist/"+loggedInUsername;
+    var playlistRss = "https://techtime.stage2.accenture.com/mobile-playlist/"+loggedInUsername;
     
     $.ajax({
            type: "GET",
@@ -325,14 +325,14 @@ function displayPlaylistItems(playlistId) {
                 var playlistVideoPlayer = '<video id="playlistItemPlayer" type="video/mp4" style="width:100%;height:100%;" src="'+myPlaylistItems[0].itemPath+'" controls poster="'+myPlaylistItems[0].thumnail+'"></video>';
         } else if(!isOnline)
         {
-                if(myPlaylistItems[0].itemPath.indexOf('techtime.accenture') != -1)
+                if(myPlaylistItems[0].itemPath.indexOf('techtime.stage2.accenture') != -1)
                 {
                         if(myPlaylistItems[0].isItemDownloaded == false)
                         {
-                            var playlistVideoPlayer = '<video id="playlistItemPlayer" type="video/mp4" style="width:100%;height:100%;" src="https://techtime.accenture.com" controls poster="'+myPlaylistItems[0].thumnail+'"></video>';
+                            var playlistVideoPlayer = '<video id="playlistItemPlayer" type="video/mp4" style="width:100%;height:100%;" src="https://techtime.stage2.accenture.com" controls poster="'+myPlaylistItems[0].thumnail+'"></video>';
                         }
                         
-                } else if(myPlaylistItems[0].itemPath.indexOf('techtime.accenture') == -1)
+                } else if(myPlaylistItems[0].itemPath.indexOf('techtime.stage2.accenture') == -1)
                 {
                     if(myPlaylistItems[0].isItemDownloaded == true)
                     {
@@ -574,7 +574,7 @@ var currentOpenPlaylist = '';
 function renamePlaylist()
 {
     
-    var renamePlaylistService = 'https://techtime.accenture.com/techtimemobile/playlist-service';
+    var renamePlaylistService = 'https://techtime.stage2.accenture.com/techtimemobile/playlist-service';
     var renamePlaylistName = $('#renamePlaylistNamePlaceholder').val();
     renamePlaylistName = renamePlaylistName.replace(/[^a-zA-Z0-9 ]/g, "").replace(/[^a-zA-Z0-9 ]/g, "").replace(/^\s\s*/, '');
     renamePlaylistName = renamePlaylistName.substring(0, 40);
@@ -680,7 +680,7 @@ function cancelDeletePlaylistAction()
 
 function deletePlaylist()
 {
-    var deletePlaylistService = 'https://techtime.accenture.com/techtimemobile/playlist-service';
+    var deletePlaylistService = 'https://techtime.stage2.accenture.com/techtimemobile/playlist-service';
     
     var loggedInUsername = jsonData.loggedUserName.replace(/_/g, '.');
     
@@ -771,7 +771,7 @@ function cancelNewPlaylistCreation()
 
 function createNewPlaylist()
 {
-    var createPlaylistService = 'https://techtime.accenture.com/techtimemobile/playlist-service';
+    var createPlaylistService = 'https://techtime.stage2.accenture.com/techtimemobile/playlist-service';
     var createPlaylistName = $('#newPlaylistNamePlaceholder').val();
     createPlaylistName = createPlaylistName.replace(/[^a-zA-Z0-9 ]/g, "").replace(/^\s\s*/, '').replace(/\s\s*$/, '');
     createPlaylistName = createPlaylistName.substring(0, 40);
@@ -984,7 +984,7 @@ function updateAddedItemOnServer(addedToPlaylistId, addedItemId)
     var localPlaylistId = addedToPlaylistId;
     var localItemId = addedItemId;
     
-    var addItemToPlaylistService = 'https://techtime.accenture.com/techtimemobile/playlist-items-service';
+    var addItemToPlaylistService = 'https://techtime.stage2.accenture.com/techtimemobile/playlist-items-service';
     
     var loggedInUsername = jsonData.loggedUserName.replace(/_/g, '.');
     
@@ -1200,7 +1200,7 @@ function generateSharePlaylistRecepientsList()
 
 function sharePlaylistsToRecepients(serviceJson)
 {
-    var sharePlaylistService = 'https://techtime.accenture.com/techtimemobile/playlist-service';
+    var sharePlaylistService = 'https://techtime.stage2.accenture.com/techtimemobile/playlist-service';
     
     if(isOnline)
     {

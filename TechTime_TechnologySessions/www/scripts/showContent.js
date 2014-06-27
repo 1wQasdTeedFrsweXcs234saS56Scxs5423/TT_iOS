@@ -1456,7 +1456,7 @@ function postJSONData(localJSONData, postMode)
     var uName = document.getElementById("lblUserName").innerHTML;
     uName = uName.replace(/\./g, '_');
     
-    var linkSubscribe = 'https://techtime.accenture.com/techtimemobile/subscribe-service/uid=';
+    var linkSubscribe = 'https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/uid=';
     linkSubscribe = linkSubscribe + uName;
     var localJSONData1 = {"data" :{"mode" : "logout"}};
     
@@ -1499,7 +1499,7 @@ function postJSONData(localJSONData, postMode)
                
                },
                error: function(xhr, textStatus, error){
-               //parent.window.location.href = "https://techtime.accenture.com/mobile/index.php";
+               //parent.window.location.href = "https://techtime.stage2.accenture.com/mobile/index.php";
                jAlert('Could not subscribe you to the selected Areas. Please try again.', 'Tech Time');
                console.log('In Failure'+JSON.stringify(xhr));
                }
@@ -1580,7 +1580,7 @@ function postOfflineCommentServiceCall(commentIndex)
     var uName = document.getElementById('lblUserName').innerHTML;
     uName = uName.replace(/\./g,'_');
     
-    var linkContact = 'https://techtime.accenture.com/techtimemobile/contactus/uid=';
+    var linkContact = 'https://techtime.stage2.accenture.com/techtimemobile/contactus/uid=';
     linkContact = linkContact + uName;
     
     commentSubmit = jsonData.offlineCommentsPosted[postCommentIndex].commentSubmit;
@@ -1644,7 +1644,7 @@ function contactUsArea()
     uName = uName.replace(/\./g,'_');
     
     
-    var linkContact = 'https://techtime.accenture.com/techtimemobile/contactus/uid=';
+    var linkContact = 'https://techtime.stage2.accenture.com/techtimemobile/contactus/uid=';
     linkContact = linkContact + uName;
     
     commentSubmit = $('#commentTextArea').val();

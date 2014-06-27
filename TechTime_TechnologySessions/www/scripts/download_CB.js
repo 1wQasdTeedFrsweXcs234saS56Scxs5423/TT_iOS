@@ -49,7 +49,7 @@ var dwPgflag = false;
 
 function changedwFlag()
 {
-    dwPgflag = false;
+    dwPgflag = true;
 }
 
 function downloadFile(downloadIdtest,downloadtitletest,isDownloadedFlag,elementAudio,val, isFromSpotlight)
@@ -439,7 +439,7 @@ function onvideoError(e)
 function playMedia(filePath,name,mediaType)
 {
     document.getElementById('avPlayer').innerHTML = "";
-    
+    playFromDownloadsPage = true;
     $('#avPlayer').css("display","block");
     
     $.mobile.changePage("#itemVideo");

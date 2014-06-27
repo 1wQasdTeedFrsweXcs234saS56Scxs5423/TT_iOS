@@ -38,6 +38,7 @@ var searchFromPlaylistItemsPage = false;
 var searchFromSharePlaylistsPage = false;
 var searchFromAddToPlaylistPage = false;
 var searchFromDigitalPage = false;
+var playFromDownloadsPage = false;
 
 var entries = [];
 var downloadedThumbs = [];
@@ -554,5 +555,7 @@ function resetSearchFlags()
     searchFromSharePlaylistsPage = false;
     searchFromAddToPlaylistPage = false;
     searchFromSpotlightPage = false;
+    mediaFlag = false;
+    playFromDownloadsPage = false;
 
 }

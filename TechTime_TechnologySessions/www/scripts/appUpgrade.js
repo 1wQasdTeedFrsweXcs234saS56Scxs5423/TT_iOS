@@ -61,7 +61,7 @@ function warnUserForUpgrade(upgradeCheckboxElement)
 {
     if(upgradeCheckboxElement.checked == true)
     {   
-        jConfirm('You will not be prompted to update this application again. If you still wish to upgrade to our latest Tech Time application, please visit https://techtime.accenture.com from your Safari browser of iPhone or iPad.', 'Tech Time', function(userConfirmation) {
+        jConfirm('You will not be prompted to update this application again. If you still wish to upgrade to our latest Tech Time application, please visit https://techtime.stage2.accenture.com from your Safari browser of iPhone or iPad.', 'Tech Time', function(userConfirmation) {
                      if(userConfirmation == true){
                             window.localStorage.setItem("promptUserForUpgrade",false);
                                  if(isDataLoaded == true)
@@ -91,7 +91,7 @@ function warnUserForUpgrade(upgradeCheckboxElement)
 
 function upgradeUserApplication()
 {
-    window.open("https://techtime.accenture.com", "_system");
+    window.open("https://techtime.stage2.accenture.com", "_system");
 }
 
 // -------------------------- Upgrade App -------------------------- //
