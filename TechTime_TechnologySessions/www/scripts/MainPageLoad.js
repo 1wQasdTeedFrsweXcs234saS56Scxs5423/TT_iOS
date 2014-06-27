@@ -325,8 +325,6 @@ function getAudioVideoItem(xml)
                              for(var i=0;i<categoryIdArray.length;i++)
                              {
                                     var categoryIdNumber = categoryIdArray[i].split('-')[1];
-                                    console.log(categoryIdArray[i] + ' ' + jsonData.digitalAreas.indexOf(categoryIdNumber));
-                             
                                     if(jsonData.digitalAreas.indexOf(categoryIdNumber) != -1)
                                     {
                                         jsonData.digitalAreasItems.push(sguid);

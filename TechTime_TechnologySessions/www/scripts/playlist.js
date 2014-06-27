@@ -15,7 +15,6 @@ function loadPlaylistsData() {
            });
 }
 
-var playlistThumbnails = [];
 
 function getPlaylistsData(xml) {
     $(xml).find('playlist').each(function(index, item) {
@@ -63,7 +62,18 @@ function getPlaylistsData(xml) {
                                                            }
                                                            playlistThumbDetails.thumbUrl = playlistItem.playlistItemThumb;
                                                            
-                                                           playlistThumbnails.push(playlistThumbDetails);
+                                                           
+                                                           
+                                                           if((downloadedThumbs.indexOf(playlistThumbDetails.itemId + 'thumb.png') == -1) && playlistItem.playlistItemThumb != '')
+                                                           {
+                                                               var imageToDownloadThumb = new Object();
+                                                                imageToDownloadThumb.itemId = playlistThumbDetails.itemId;
+                                                                imageToDownloadThumb.url = playlistItem.playlistItemThumb;
+                                                                imageToDownloadThumb.type = 'thumb';
+                                                               
+                                                                jsonData.imagesToDownload.push(imageToDownloadThumb);
+                                                           }
+                                                           
                                                            
                                                            if(playlistItem.playlistItemFormat != 'mp3' || playlistItem.playlistItemContentType != 'd')
                                                            {
@@ -78,10 +88,6 @@ function getPlaylistsData(xml) {
                                  
                                  });
     
-    if(isOnline)
-    {
-        downloadPlaylistThumbnails();
-    }
     
 }
 
@@ -452,79 +458,6 @@ function downloadPlaylistItem(item)
 
 
 // ---------------------------------- Display Playlist Items ---------------------------------- //
-
-
-var playlistDownloadedThumbIndex = 0;
-var numberOfThumbsToDownload = 0;
-
-function downloadPlaylistThumbnails()
-{
-    //updateThumbnailList();
-    var playlistItemId = playlistThumbnails[playlistDownloadedThumbIndex].itemId;
-    var playlistThumbUrl = playlistThumbnails[playlistDownloadedThumbIndex].thumbUrl;
-    var playlistThumbMediaType = playlistThumbnails[playlistDownloadedThumbIndex].mediaType;
-    
-    numberOfThumbsToDownload = playlistThumbnails.length;
-    
-    if(playlistDownloadedThumbIndex < numberOfThumbsToDownload)
-    {
-        downloadPlaylistThumbImages(playlistItemId, "thumb", playlistThumbUrl, playlistThumbMediaType);
-    }
-    
-}
-
-function downloadPlaylistThumbImages(thumbId,imageName,imageLink,mediaType)
-{
-    var url = '';
-    url = imageLink;
-    
-    var name = '';
-    name = imageName;
-    
-    var valueReturn = '';
-    valueReturn = 'false';
-    
-    var filePath = '';
-    filePath = '';
-    
-    if(downloadedThumbs.indexOf(playlistThumbnails[playlistDownloadedThumbIndex].itemId.substring(2, playlistThumbnails[playlistDownloadedThumbIndex].itemId.length)+"thumb.png") == -1)
-    {
-        //        alert(playlistThumbnails[playlistDownloadedThumbIndex].itemId.substring(2, playlistThumbnails[playlistDownloadedThumbIndex].itemId.length)+"thumb.png");
-        var fileTransfer = new FileTransfer();
-        
-        if(isOnline){
-            filePath = globalPathNew + "images/"+ thumbId+imageName + ".png";
-            if(url!="" ){
-                fileTransfer.download(
-                                      url,
-                                      filePath,
-                                      function(entry){
-                                      // changePath(thumbId,name,mediaType,filePath);
-                                      playlistDownloadedThumbIndex = playlistDownloadedThumbIndex + 1;
-                                      if(playlistDownloadedThumbIndex < numberOfThumbsToDownload)
-                                      {
-                                      downloadPlaylistThumbnails();
-                                      }
-                                      },
-                                      function(error) {
-                                      console.log("download error source " + error.source);
-                                      
-                                      }
-                                      );
-            }
-        }
-    } else
-    {
-        playlistDownloadedThumbIndex = playlistDownloadedThumbIndex + 1;
-        if(playlistDownloadedThumbIndex < numberOfThumbsToDownload)
-        {
-            //alert("START THUMBNAIL DOWNLOAD");
-            downloadPlaylistThumbnails();
-        }
-    }
-    
-}
-
 
 // ---------------------------------- Playlist: AutoPlay Feature ---------------------------------- //
 
