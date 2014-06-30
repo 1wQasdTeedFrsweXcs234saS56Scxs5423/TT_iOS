@@ -265,6 +265,10 @@ function readRSSFileJSON(file) {
             {
                 loadContributePage();
                 $.mobile.changePage("#ContributePage");
+            } if(lastPageOpen=="digitalAreaHomePage")
+            {
+                loadDigitalContents();
+                $.mobile.changePage("#"+lastPageOpen);
             }
             else
             {

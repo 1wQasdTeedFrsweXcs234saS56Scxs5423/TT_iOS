@@ -23,6 +23,7 @@ function loadDigitalTab()
 
 function loadDigitalContents()
 {
+    window.localStorage.setItem("currentPage", "digitalAreaHomePage");
     defaultNavigate();
     // Loads Digital TA's under Digital Tab
     loadSubscribedDigitalAreas();

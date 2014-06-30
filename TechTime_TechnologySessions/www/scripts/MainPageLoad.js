@@ -14,9 +14,9 @@ var isSubscribeDocument = "no";
 var isSubscribePodcast = "no";
 var isSubscribeEvent = "no";
 
-var rssUrl = "https://techtime.stage2.accenture.com/techno-areas/1+2/audio-video-listing-view";
-var documentRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/documents-listing-view";
-var eventsRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/events-listing-view";
+var rssUrl = "https://techtime.accenture.com/techno-areas/1+2/audio-video-listing-view";
+var documentRss = "https://techtime.accenture.com/techno-areas/1+2/documents-listing-view";
+var eventsRss = "https://techtime.accenture.com/techno-areas/1+2/events-listing-view";
 
 var selectedCategoryId='';
 var selectedCategoryName='';
@@ -74,7 +74,7 @@ function getSubscribeRss()
     uName = uName.replace(/\./g, '_');
     jsonData.loggedUserName = uName;
     
-   var subscribeRss = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/uid=";
+   var subscribeRss = "https://techtime.accenture.com/techtimemobile/subscribe-service/uid=";
   //  subscribeRss = "http://localhost:8888/spotlight/subscriptions.xml";
     subscribeRss = subscribeRss + uName;
     $.ajax({
@@ -159,10 +159,10 @@ function subscribeTA(xml)
         eventsRss = "";
         documentRss = "";
         
-        rssUrl = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
-       // rssUrl = "https://techtime.stage2.accenture.com/technologySession.xml";
-        eventsRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
-        documentRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
+        rssUrl = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
+       // rssUrl = "https://techtime.accenture.com/technologySession.xml";
+        eventsRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
+        documentRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
     }
     
     loadtechnologyAreaListUrl();
@@ -171,7 +171,7 @@ function subscribeTA(xml)
 
 function loadtechnologyAreaListUrl() {
     
-    var technologyAreaListUrl = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/all";
+    var technologyAreaListUrl = "https://techtime.accenture.com/techtimemobile/subscribe-service/all";
     
 	$.ajax({
            type:"GET",
@@ -911,7 +911,7 @@ function getAudioVideoItem(xml)
                              }
                              
                              function loadContributorRss() {
-                             var contributorRss = "https://techtime.stage2.accenture.com/mobile-contributor-listing.xml";
+                             var contributorRss = "https://techtime.accenture.com/mobile-contributor-listing.xml";
                              $.ajax({
                                     type : "GET",
                                     url : contributorRss,
@@ -987,7 +987,7 @@ function getAudioVideoItem(xml)
                              function loadTechWatchMultipleUrl()
                              {
                              
-                             var techWatchRss = "https://techtime.stage2.accenture.com/mobile-tech-watch";
+                             var techWatchRss = "https://techtime.accenture.com/mobile-tech-watch";
                              $.ajax({
                                     type : "GET",
                                     url : techWatchRss,
@@ -1129,7 +1129,7 @@ function getAudioVideoItem(xml)
                              
                              function loadSpotlightUrl()
                              {
-                             var spotlightRss = "https://techtime.stage2.accenture.com/mobile-spotlight-feeds.xml";
+                             var spotlightRss = "https://techtime.accenture.com/mobile-spotlight-feeds.xml";
                              
                              $.ajax({
                                     type : "GET",
@@ -1146,7 +1146,7 @@ function getAudioVideoItem(xml)
                              
                              function loadFaqRss()
                              {
-                             var faqRss = "https://techtime.stage2.accenture.com/mobile-faq-rss/faq.xml";
+                             var faqRss = "https://techtime.accenture.com/mobile-faq-rss/faq.xml";
                              $.ajax({
                                     type : "GET",
                                     url : faqRss,
@@ -1205,7 +1205,7 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTimeRss()
                              {
-                               var aboutTechTimeRss = "https://techtime.stage2.accenture.com/mobile-about-us/aboutus.xml";
+                               var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
                               // var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
                              
                              $.ajax({
@@ -1668,7 +1668,7 @@ function getAudioVideoItem(xml)
                              {
                              var localDownloadedData = userDownloadsJson;
                              
-                             var linkUserDownloads = 'https://techtime.stage2.accenture.com/techtimemobile/mobiletrack';
+                             var linkUserDownloads = 'https://techtime.accenture.com/techtimemobile/mobiletrack';
                              if(isOnline){
                              $.ajax({
                                     
