@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "www/scripts/genericSpotlight.js"
-         timestampString = "424099361.312546"
+         timestampString = "425890114.451169"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1"
-         endingLineNumber = "1"
+         startingLineNumber = "3"
+         endingLineNumber = "3"
          landmarkName = "loadSpotlightGeneral"
          landmarkType = "7">
       </FileBreakpoint>

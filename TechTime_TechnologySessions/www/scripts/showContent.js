@@ -184,7 +184,7 @@ function showUpcomingEventList(viewMonth,viewCount,monthName)
                        actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
                    } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
                    {
-                       actualThumb = itemRes.actual;
+                       actualThumb = itemRes.thumb;
                    }
                    } else if(!isOnline)
                    {

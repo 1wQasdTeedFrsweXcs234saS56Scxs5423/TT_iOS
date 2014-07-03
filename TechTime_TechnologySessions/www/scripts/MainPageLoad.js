@@ -41,6 +41,9 @@ function createJsonFormat()
     jsonData.techWatchMultiple = new Array();
     jsonData.techWatchQuotesMultiple = new Array();
     jsonData.spotLight = new Array();
+    
+    jsonData.digitalSpotLight = new Array();
+    
     jsonData.contributor = new Array();
     jsonData.aboutTechTime = new Array();
     jsonData.contributions = new Array();
@@ -925,8 +928,7 @@ function getAudioVideoItem(xml)
                              
                              contributorRss = '';
                              
-                             loadSpotlightUrl();
-                             
+                             loadSpotlightUrl('genericSpotlight');
                              loadFaqRss();
                              downloadThumbImagesOnLogin();
                              
@@ -1127,21 +1129,40 @@ function getAudioVideoItem(xml)
                              }
                              
                              
-                             function loadSpotlightUrl()
+                             function loadSpotlightUrl(spotlightType)
                              {
                              var spotlightRss = "https://techtime.stage2.accenture.com/mobile-spotlight-feeds.xml";
+                             var digitalSpotlightRss = "https://techtime.stage2.accenture.com/digital-spotlight-feeds";
                              
-                             $.ajax({
-                                    type : "GET",
-                                    url : spotlightRss,
-                                    dataType : "xml",
-                                    success : loadSpotlightGeneral,
-                                    error : function(xhr, textStatus, errorThrown) {
-                                    console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
-                                    }
-                                    });
+                             if(spotlightType == 'genericSpotlight')
+                             {
+                                loadedSpotlightType = 'generic';
+                                 $.ajax({
+                                        type : "GET",
+                                        url : spotlightRss,
+                                        dataType : "xml",
+                                        success : loadSpotlightGeneral,
+                                        error : function(xhr, textStatus, errorThrown) {
+                                        console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
+                                        }
+                                        });
+                                 
+                                 spotlightRss = '';
+                             } else if(spotlightType == 'digitalSpotlight')
+                             {
+                                loadedSpotlightType = 'digital';
+                                 $.ajax({
+                                        type : "GET",
+                                        url : digitalSpotlightRss,
+                                        dataType : "xml",
+                                        success : loadSpotlightGeneral,
+                                        error : function(xhr, textStatus, errorThrown) {
+                                        console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
+                                        }
+                                        });
+                             }
                              
-                             spotlightRss = '';
+                             
                              }
                              
                              function loadFaqRss()
@@ -1191,6 +1212,9 @@ function getAudioVideoItem(xml)
                                                       }
                                                       
                                                       });
+                             
+                             
+                             loadSpotlightUrl('digitalSpotlight');
                              
                              if(isAppUpgradeAvailable == false)
                              {
@@ -1296,6 +1320,8 @@ function getAudioVideoItem(xml)
                              
                              } else if (pageIdnew == "detailMediaPage") {
                              
+                             mediaFlag = window.localStorage.getItem("mediaFlag");
+                             
                              if (eventsFlag) {
                              
                              var eveMnt = window.localStorage.getItem("eventmonth");
@@ -1323,18 +1349,20 @@ function getAudioVideoItem(xml)
                                                          });
                                  } else if(searchFlag)
                                 {
-                                    //var searchElement = window.localStorage.getItem("searchlement");
-                                    //var searchMedia = window.localStorage.getItem("media");
-                                    //var searchValueElement = window.localStorage.getItem("valueElement");
                                     $.mobile.changePage('#searchResultPage');
                              
                                 } else {
-
+                                    
+                             
                                      $.mobile.changePage("#businessCategory", {
                                                          transition: "none"
                                                          });
                              
-                                    resetSearchFlags();
+                                     if(!isFromDigitalHomePage)
+                                     {
+                                        resetSearchFlags();
+                                     }
+
                                  }
                              
                              
@@ -1345,16 +1373,25 @@ function getAudioVideoItem(xml)
                              } else if (searchFromMainPage) {
                                 $.mobile.changePage("#searchResultPage");
                              } else {
-                                 $(".navigateBackBtn").hide();
-                                if(sptFlagGlobal)
-                                    {
-                                       $(".navigateBackBtn").show();
-                                    }
-                                 $.mobile.changePage("#businessCategory");
-                                resetSearchFlags();
+                             
+                                if(!isFromDigitalHomePage)
+                                {
+                                     $(".navigateBackBtn").hide();
+                                     if(sptFlagGlobal)
+                                     {
+                                     $(".navigateBackBtn").show();
+                                     }
+                                     
+                                     
+                                     $.mobile.changePage("#businessCategory");
+                                     resetSearchFlags();
+                                } else if(isFromDigitalHomePage)
+                                {
+                                    $.mobile.changePage('#digitalAreaHomePage');
+                                }
+                             
                              }
                              } else if (pageIdnew == 'TAListResult' || pageIdnew == 'UpcomingEventsPage' || pageIdnew == 'aboutTectTimePage' || pageIdnew == 'contactUsPage' || pageIdnew == 'faqPage') {
-                             
                                     if(isFromDigitalHomePage)
                                     {
                                         $.mobile.changePage('#digitalAreaHomePage');
@@ -1422,7 +1459,10 @@ function getAudioVideoItem(xml)
                                  
                                  currentTechWatchItemId = window.localStorage.getItem("currentTechWatchItemId");
                                  currentTechWatchItemIndex = window.localStorage.getItem("currentTechWatchItemIndex");
-                                resetSearchFlags();
+                                 if(!isFromDigitalHomePage)
+                                 {
+                                 resetSearchFlags();
+                                 }
                              } else if (pageIdnew == 'detailAuthor' && sptFlagGlobal != "true") {
                                  var evtFlag = window.localStorage.getItem("eventFlag");
                                  var sptFlag = window.localStorage.getItem("spotLightFlag");
@@ -1445,16 +1485,21 @@ function getAudioVideoItem(xml)
                                      
                                      detailPageView(eleId,eleType,eleNum,eleCnt);
                                      $.mobile.changePage("#detailMediaPage");
-                                    resetSearchFlags();
-                                 } 
+                                     if(!isFromDigitalHomePage)
+                                     {
+                                     resetSearchFlags();
+                                     }
+                                 }
                                  else
                                  {
-                                 $.mobile.changePage("#businessCategory");
-                                resetSearchFlags();
-                                 }
+                                    $.mobile.changePage("#businessCategory");
+                                     if(!isFromDigitalHomePage)
+                                     {
+                                     resetSearchFlags();
+                                     }
+                                }
                                  
                                  
-                             
                              } else if(pageIdnew == 'detailAuthor' && sptFlagGlobal == "true"){
                              $.mobile.changePage("#businessCategory");
                              resetSearchFlags();

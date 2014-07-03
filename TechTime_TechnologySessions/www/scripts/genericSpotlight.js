@@ -1,3 +1,5 @@
+var loadedSpotlightType = '';
+
 function loadSpotlightGeneral(xml) {
     
     $(xml).find('item').each(function () {
@@ -84,16 +86,13 @@ function loadSpotlightGeneral(xml) {
                              tempMediaSpot.saURL = saURL;
                              tempMediaSpot.saText = saText;
                              
-                             
                              tempMediaSpot.isDownloadedAudio = 'false';
                              tempMediaSpot.localPathAudio = '';
                              tempMediaSpot.downloadedDateA = '';
                              
-                             
                              tempMediaSpot.isDownloadedVideo = 'false';
                              tempMediaSpot.localPathVideo = '';
                              tempMediaSpot.downloadedDateV = '';
-                             
                              
                              tempMediaSpot.isDownloadedTranscript = 'false';
                              tempMediaSpot.localPathTranscript = '';
@@ -107,7 +106,6 @@ function loadSpotlightGeneral(xml) {
                              tempMediaSpot.localPath = '';
                              tempMediaSpot.downloadedDateD = '';
                              
-                             
                              tempMediaSpot.isDownloadedFromSpotLight = 'false';
                              tempMediaSpot.isAudioFromSpotlight = 'false';
                              tempMediaSpot.isVideoFromSpotlight = 'false';
@@ -115,64 +113,14 @@ function loadSpotlightGeneral(xml) {
                              tempMediaSpot.isPresentationFromSpotlight = 'false';
                              tempMediaSpot.isDocumentFromSpotlight = 'false';
                              
-                             if(tempMediaSpot.formattype == 'contributor')
+                             
+                             if(loadedSpotlightType == 'generic')
                              {
-                              //  downloadThumbImages(tempMediaSpot.contributorId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
-                               // downloadThumbImages(tempMediaSpot.contributorId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
-                             } else
+                                jsonData.spotLight.push(tempMediaSpot);
+                             } else if(loadedSpotlightType == 'digital')
                              {
-                               // downloadThumbImages(tempMediaSpot.itemId, 'thumb', tempMediaSpot.thumb, tempMediaSpot.formattype);
-                               // downloadThumbImages(tempMediaSpot.itemId, 'actual', tempMediaSpot.actual, tempMediaSpot.formattype);
+                                jsonData.digitalSpotLight.push(tempMediaSpot);
                              }
-                             
-                             
-                             
-                             if (scontenttype == 'podcast') { 
-                             
-                             if (sformattype == "Audios") {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (sformattype == "Videos") {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (sformattype == "Panel Discussions") {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (sformattype == "Technology Conferences") {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             }
-                             else if (sformattype == "Interviews") {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             }
-                             
-                             } else if (scontenttype == 'documents') {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (scontenttype == 'events') {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (scontenttype == 'contributor') {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             
-                             } else if (scontenttype == 'tech_area') {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-
-                             } else if (scontenttype == 'special_ads') {
-                             
-                             jsonData.spotLight.push(tempMediaSpot);
-                             } else {
-                             }
-                             
-                             
                              
                              var str = JSON.stringify(scategory);
                              
@@ -233,7 +181,6 @@ function loadSpotlightGeneral(xml) {
                              }
                              });
     
-    
     if (isOnline) {
         getFileSystemRefForReading(false, jsonData);
     }   
@@ -245,7 +192,6 @@ var SpotLightContentFlag = false;
 
 function showSpotLightContent()
 {
-       
     spotLightFlag = true;
     playlistItemsPageFlag = false;
     eventsFlag = false;
@@ -254,12 +200,28 @@ function showSpotLightContent()
     window.localStorage.setItem("spotLightFlag", spotLightFlag);
     window.localStorage.setItem("mediaFlag",mediaFlag);
         var stringIWant = '';
-        
         var strHTMLshowTAList = "";
         $('#spotlightContentArea').empty('');
-        
-        document.getElementById('spotlightList').style.display = 'block';
     
+    var spotlightSourceArray = [];
+    
+    if(!isSpotlightDigital)
+    {
+            document.getElementById('spotlightList').style.display = 'block';
+            document.getElementById('spotlightDigitalList').style.display = 'none';
+            isFromDigitalHomePage = false;
+            spotlightSourceArray = jsonData.spotLight;
+        
+    } else if(isSpotlightDigital)
+    {
+            document.getElementById('spotlightList').style.display = 'none';
+            document.getElementById('spotlightDigitalList').style.display = 'block';
+            isFromDigitalHomePage = true;
+            spotlightSourceArray = jsonData.digitalSpotLight;
+    }
+    
+    
+   
     
     $.each(jsonData.downloadedSpotLightItems, function (key, oldItem) {
            $.each(jsonData.spotLight, function (key, spotLightItem) {
@@ -509,8 +471,7 @@ function showSpotLightContent()
                   });
            });
     
-    
-        $.each(jsonData.spotLight, function (index, itemRes) {
+        $.each(spotlightSourceArray, function (index, itemRes) {
                var count = '-100';
                var imgsrc = '';
                
@@ -540,8 +501,6 @@ function showSpotLightContent()
                }
 
                
-               
-               
                if (itemRes.type == 'podcast' || itemRes.type == 'documents' || itemRes.type == 'events' || itemRes.type == 'contributor') {
                if (itemRes.type == 'events') {
                itemRes.formattype = itemRes.type;
@@ -551,26 +510,27 @@ function showSpotLightContent()
                itemRes.itemId = itemRes.contributorId;
                }
                
-               if(isOnline && itemRes.thumbLocal == '')
+               if(isOnline)
                {
-               actualThumb = itemRes.thumb;
-               }
-               else if(isOnline && itemRes.thumbLocal != '')
+                   if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
+                   {
+                        actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
+                   {
+                        actualThumb = itemType.actual;
+                   }
+               } else if(!isOnline)
                {
-               actualThumb = "file://"+window.appRootDir.fullPath + "images/" +itemRes.itemId+"thumb.png";
+                   if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") != -1)
+                   {
+                        actualThumb = globalPathNew + "images/"+itemType.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") == -1)
+                   {
+                        actualThumb = "images/TechTime-AppIcon.png";
+                   }
                }
-               else if(!isOnline && itemRes.thumbLocal == '')
-               {
-               actualThumb = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemRes.thumbLocal != '')
-               {
-               actualThumb = "file://"+window.appRootDir.fullPath + "images/" +itemRes.itemId+"thumb.png";
-               }
-               else
-               {
-               actualThumb = "file://"+window.appRootDir.fullPath+"images/"+itemRes.itemId+"thumb.png";
-               }
+               
+               
                var authoNames = '';
                $.each(itemRes.author, function (key, itemAuthor) {
                       if (key == 0) {
@@ -598,6 +558,9 @@ function showSpotLightContent()
                }
                if (itemRes.formattype == 'Interviews') {
                imgsrc = 'images/icon_interview.png';
+               }
+               if (itemRes.formattype == 'Technology Sessions') {
+               imgsrc = 'images/icon_video.png';
                }
                if (itemRes.formattype == 'documents') {
                imgsrc = 'images/icon_document.png';
@@ -684,14 +647,23 @@ function showSpotLightContent()
 
                
                document.getElementById('spotlightListNoSubscribe').style.display = 'none';
-               $('#spotlightList').html(strHTMLshowTAList);
+               
+               if(!isSpotlightDigital)
+               {
+                    $('#spotlightList').html(strHTMLshowTAList);
+               } else if(isSpotlightDigital)
+               {
+                    $('#spotlightDigitalList').html(strHTMLshowTAList);
+               }
                
                
                } else if (itemRes.type == 'tech_area') {
+               
                var strHTMLCategory = "";               
                
                var strHTMLCategory = "";
                $('#spotlightListArea').empty('');
+               $('#spotlightDigitalListArea').empty('');
                
                $.each(jsonData.category, function(key, item) {
                       
@@ -718,7 +690,17 @@ function showSpotLightContent()
                       
                       });
                
-               $('#spotlightListArea').html(strHTMLCategory);
+               
+               if(!isSpotlightDigital)
+               {
+                $('#spotlightListArea').html(strHTMLCategory);
+               
+               } else if(isSpotlightDigital)
+               {
+                    $('#spotlightDigitalListArea').html(strHTMLCategory);
+                }
+               
+               
                strHTMLCategory = '';
                
                
@@ -749,6 +731,15 @@ function showSpotLightContent()
                document.getElementById('spotlightListNoSubscribe').style.display = 'none';
                $('#spotlightList').html(strHtmlContent);
                
+               
+               if(!isSpotlightDigital)
+               {
+               $('#spotlightList').html(strHTMLCategory);
+               
+               } else if(isSpotlightDigital)
+               {
+               $('#spotlightDigitalList').html(strHTMLCategory);
+               }
                
                }
                
@@ -810,6 +801,7 @@ function displayTA1(element)
 
 function spotlightDataTypes(elementId,type,countNum)
 {
+    
     $('#detailPageArea').html('');
     
     searchFromMediaPage = false;
@@ -830,10 +822,22 @@ function spotlightDataTypes(elementId,type,countNum)
     searchFromAddToPlaylistPage = false;
     
     defaultNavigate();
+    
+    var spotlightSourceArray = [];
+    
+    if(!isSpotlightDigital)
+    {   
+        spotlightSourceArray = jsonData.spotLight;
+        
+    } else if(isSpotlightDigital)
+    {   
+        spotlightSourceArray = jsonData.digitalSpotLight;
+    }
+
+    
     if (type == 'contributor') {
     
-        
-        $.each(jsonData.spotLight, function (key, itemType) {
+        $.each(spotlightSourceArray, function (key, itemType) {
                showAuthorDetailPage(itemType.title);
                defaultNavigate();
                $.mobile.changePage('#detailAuthor');
@@ -853,8 +857,8 @@ function spotlightDataTypes(elementId,type,countNum)
         currElementtypeSpot = type;
         currElementcountNumSpot = countNum;
         var icons = '';
-
-        $.each(jsonData.spotLight, function(key, itemType) {
+        
+        $.each(spotlightSourceArray, function(key, itemType) {
                
                if (itemType.itemId == elementId) {
                
@@ -950,6 +954,33 @@ function spotlightDataTypes(elementId,type,countNum)
                
                }
                
+               if (type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'Technology Session' || type == 'TechnologySession') {
+               
+               
+               icons = "images/icon_panelDiscussion.png";
+               if (vURL != "") {
+               
+               var cVId = "VV" + cId;
+               }
+               
+               if (aURL != "") {
+               
+               var cAId = "VA" + cId;
+               }
+               
+               if (pURL != "") {
+               
+               var cPId = "VP" + cId;
+               }
+               
+               if (tURL != "") {
+               
+               var cTId = "VT" + cId;
+               }
+               
+               
+               }
+               
                if (type == 'Interviews') {
                
                
@@ -999,7 +1030,7 @@ function spotlightDataTypes(elementId,type,countNum)
                
                
                
-               $.each(jsonData.spotLight, function(key, eventItem) {
+               $.each(spotlightSourceArray, function(key, eventItem) {
                       
                       stringIWant = '';
                       var stringIGet = eventItem.category;
@@ -1053,37 +1084,38 @@ function spotlightDataTypes(elementId,type,countNum)
                
                }
                
-               if(isOnline && itemType.actualLocal == '')
+               if(isOnline)
                {
-               actualLocal = itemType.actual;
+                   if(downloadedActuals.indexOf(itemType.itemId + "actual.png") != -1)
+                   {
+                        actualLocal = globalPathNew + "images/"+itemType.itemId+"actual.png";
+                   } else if(downloadedActuals.indexOf(itemType.itemId + "actual.png") == -1)
+                   {
+                        actualLocal = itemType.actual;
+                   }
+               } else if(!isOnline)
+                   {
+                    if(downloadedActuals.indexOf(itemType.itemId + "actual.png") != -1)
+                        {
+                            actualLocal = globalPathNew + "images/"+itemType.itemId+"actual.png";
+                        } else if(downloadedActuals.indexOf(itemType.itemId + "actual.png") == -1)
+                        {
+                            actualLocal = "images/TechTime-AppIcon.png";
+                        }
                }
-               else if(isOnline && itemType.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemType.itemId+"actual.png";
-               }
-               else if(!isOnline && itemType.actualLocal == '')
-               {
-               actualLocal = 'images/TechTime-AppIcon.png';
-               }
-               else if(!isOnline && itemType.actualLocal != '')
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemType.itemId+"actual.png";
-               }
-               else
-               {
-               actualLocal = "file://"+window.appRootDir.fullPath + "/images/" +itemType.itemId+"actual.png";
-               }
+               
                posterImage = actualLocal;
-            
-               if (type == 'Audios' || type == 'Videos' || type == 'Interviews' || type == 'Technology Conferences' || type == 'TechnologyConferences' || type == 'Panel Discussions' || type == 'PanelDiscussions') {
+               
+               
+               if (type == 'Audios' || type == 'Videos' || type == 'Interviews' || type == 'Technology Conferences' || type == 'TechnologyConferences' || type == 'Panel Discussions' || type == 'PanelDiscussions' || type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'Technology Session' || type == 'TechnologySession') {
                strHTMLDetail = strHTMLDetail + "<br><div class='detailPageDiv' style='border :none'><table border='0' class='detailPageTable'><tr><td style='width : 50%'>";
                
                if(vURL != "")
                {
                
-                if(itemType.isDownloadedVideo == "true" || itemType.isDownloadedVideo == true)
+                if(itemType.isDownloadedVideo == "true" || itemType.isDownloadedVideo == true || entries.indexOf(cVId) != -1)
                {
-                strHTMLDetail = strHTMLDetail + "<img id='"+cVId+"' title='"+itemType.localPathVideo+"' onclick='downloadFileAudioMain(this,"+itemType.isDownloadedVideo+","+titleE+",2, true,true)' src='"+actualLocal+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
+                strHTMLDetail = strHTMLDetail + "<img id='"+cVId+"' title='"+itemType.localPathVideo+"' onclick='downloadFileAudioMain(this,"+itemType.isDownloadedVideo+","+titleE+",2, true,true)' src='"+posterImage+"' style='border:none; width:150px; height:100px; margin:20px 20px;'/><br><br>";
                
                 }
                 else
@@ -1204,7 +1236,7 @@ function spotlightDataTypes(elementId,type,countNum)
                
                if(type == 'Audios' || type == 'Audio' || type == 'audios' || type == 'audio'){
                strHTMLDetail = strHTMLDetail + "<img src='images/icon_audio.png' style='height:20px; width:20px;border:none;padding:0px;margin-right:10px'/>";
-               } else if(type == 'Videos' || type == 'Video' || type == 'videos' || type == 'videos'){
+               } else if(type == 'Videos' || type == 'Video' || type == 'videos' || type == 'videos' || type == 'Technology Sessions' || type == 'TechnologySessions' || type == 'Technology Session' || type == 'TechnologySession'){
                strHTMLDetail = strHTMLDetail + "<img src='images/icon_video.png' style='height:15px; width:20px;border:none;padding:0px;margin-right:10px'/>";
                } else if(type == 'Interviews' || type == 'Interview' || type == 'interviews' || type == 'interview'){
                strHTMLDetail = strHTMLDetail + "<img src='images/icon_interview.png' style='height:20px; width:20px;border:none;padding:0px;margin-right:10px'/>";
@@ -1301,6 +1333,7 @@ function spotlightDataTypes(elementId,type,countNum)
                
                }
                });
+        
         
         
         document.getElementById('spotItemContent').style.display = "none";

@@ -447,6 +447,19 @@
                                         $('#digitalAreaHomePageTechnologyArea').css('display', 'block');
                                     }
                                     
+                                } else if(el == "digitalSpotlight")
+                                {
+                                    isSpotlightDigital=true;
+                                    
+                                    var b = $('#'+el+'1').is(':visible');
+                                    
+                                    $('#digitalSpotlightArrow').html("<img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:15px;'/>");
+                                    $(".mainMenuListContent").hide();
+                                    
+                                    if(!b){
+                                        $('#'+el+'1').show('slow');
+                                        $('#'+el+ 'Arrow').html("<img src='images/icon_whiteDown.png' style='float:right;height:20px; width:20px;padding-right:15px;'/>");
+                                    }
                                 }
                             }
                             
@@ -841,7 +854,7 @@
                         </a>
                     </div>
                     
-                    <div class=dynamicDiv onclick="getList();setFlag('spotlight');">
+                    <div class=dynamicDiv onclick="isSpotlightDigital=false;getList();setFlag('spotlight');">
                         <a id="spotlight" class='anchorCategory test' onclick='homeScreenMenus("spotlight");showSpotLightContent()'>
                             <div style='color:white;'>Spotlight
                                 <div id="spotlightArrow" style="width : 50px; float:right;">
@@ -1979,6 +1992,37 @@
                     </a>
                 </div>
                 <div id="digitalAreaHomePageTechnologyArea" style="background:#F0EFED;margin-bottom:8px;"></div>
+                
+                <div class=dynamicDiv onclick="isSpotlightDigital=true;setFlag('spotlight');">
+                    <a id="spotlight" class='anchorCategory test' onclick='isSpotlightDigital=true;homeScreenMenus("digitalSpotlight");showSpotLightContent()'>
+                        <div style='color:white;'>Spotlight
+                            <div id="digitalSpotlightArrow" style="width : 50px; float:right;">
+                                <img src='images/icon_whiteRight.png' style='float:right;height:20px; width:20px;padding-right:15px;' onclick='showSpotLightContent();homeScreenMenus("digitalSpotlight");setFlag('spotlight');'/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+                <div id="digitalSpotlight1" class='mainMenuListContent' style="display:none;width:100%">
+                    
+                    <table id="spotlightListNoSubscribe" border='0' style="width:100%;display:none;" cellspacing='4'>
+                        <tr>
+                            <td  style="width:100%;padding-left:12px;"><label>There are no Spotlight items available for your subscribed Areas.<br></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%; padding-left:12px;" align='left'>
+                                <div style="width:150px; height : 30px;background:orange; line-height : 30px;">
+                                    <div style="width:150px; height : 30px;background:orange; color:white; line-height : 30px;" onclick='homeScreenMenus("spotlight")'>&nbsp; Close</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div id="spotlightDigitalList"></div>
+                    <ul id="spotlightDigitalListArea" data-role="listview" data-theme="b"></ul>
+                </div>
+                
                 
                 <div class=dynamicDiv>
                     <a id="upcomingEvents" class='anchorCategory test' href="#UpcomingEventsPage" onclick="isFromDigitalHomePage=true;showUpcomingEventList('curr',5,null);resetSearchBar(currentSearchKey);">

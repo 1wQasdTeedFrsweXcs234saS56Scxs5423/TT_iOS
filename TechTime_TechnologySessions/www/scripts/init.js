@@ -558,5 +558,6 @@ function resetSearchFlags()
     mediaFlag = false;
     playFromDownloadsPage = false;
     isFromDigitalHomePage = false;
+    isSpotlightDigital = false;
 
 }

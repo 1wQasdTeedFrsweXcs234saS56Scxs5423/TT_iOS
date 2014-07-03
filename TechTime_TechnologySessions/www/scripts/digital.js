@@ -1,6 +1,8 @@
 // -------------------------- Digital Flags --------------------- //
 
 var isFromDigitalHomePage = false;
+var isSpotlightDigital = false;
+
 
 // -------------------------- Digital Flags --------------------- //
 
