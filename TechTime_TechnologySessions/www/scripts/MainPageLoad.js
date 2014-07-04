@@ -213,6 +213,7 @@ function displayTAList(xml)
                              var mainCat = new Object();
                              mainCat.categoryid = $(this).find('categoryid').text();
                              mainCat.categoryname = $(this).find('categoryname').text();
+                             mainCat.weight = $(this).find('weight').text();
                              mainCat.subCategoryCount = '';
                              mainCat.subCategory = '';
                              mainCat.subscribe = 'yes';
@@ -221,12 +222,14 @@ function displayTAList(xml)
                              mainCat.subbscribeEvent = isSubscribeEvent;
                              
                              
+                             
                              mainCategoryList.push(mainCat);
                              }else{
                              
                              var mainCat = new Object();
                              mainCat.categoryid = $(this).find('categoryid').text();
                              mainCat.categoryname = $(this).find('categoryname').text();
+                             mainCat.weight = $(this).find('weight').text();
                              mainCat.subCategoryCount = '';
                              mainCat.subCategory = '';
                              mainCat.subscribe = 'no';
@@ -238,6 +241,11 @@ function displayTAList(xml)
                              }
                              }
                              });
+    
+    mainCategoryList.sort(function(a, b){
+                          var weightA=a.weight, weightB=b.weight;
+                          return weightA - weightB;
+                  }); 
     
     //TODO: Change TS
     
@@ -1501,8 +1509,24 @@ function getAudioVideoItem(xml)
                                  
                                  
                              } else if(pageIdnew == 'detailAuthor' && sptFlagGlobal == "true"){
-                             $.mobile.changePage("#businessCategory");
-                             resetSearchFlags();
+                             var evtFlag = window.localStorage.getItem("eventFlag");
+                             var sptFlag = window.localStorage.getItem("spotLightFlag");
+                             var mdFlag = window.localStorage.getItem("mediaFlag");
+                            
+                             if(sptFlag)
+                             {
+                                 eleId = window.localStorage.getItem("detailPageelementIdSpot");
+                                 eleType = window.localStorage.getItem("detailPagetypeSpot");
+                                 eleNum = window.localStorage.getItem("detailPagecountNumSpot");
+                                 spotlightDataTypes(eleId, eleType, eleNum);
+                                 $.mobile.changePage("#detailMediaPage");
+                                 resetSearchFlags();
+                             } else
+                             {
+                                $.mobile.changePage("#businessCategory");
+                                resetSearchFlags();
+                             }
+                          
                              } else if (pageIdnew == 'itemVideo') {
                                  if (mediaFlag && playFromDownloadsPage) {
                                      var eleId = window.localStorage.getItem("detailPageelementId");

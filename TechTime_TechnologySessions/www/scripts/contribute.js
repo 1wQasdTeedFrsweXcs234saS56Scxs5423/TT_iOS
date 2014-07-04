@@ -520,11 +520,10 @@ function previewRecordedAudio()
 
 function addRecordedSessionDetailsToJSON()
 {
+    
     if($('#selfRecordingNameInput').val() != '' && $('#selfRecordingTopicInput').val() != '')
     {
         var recordedSessionDetailsToBeModifiedPath =  $(currentSessionElementBeingUploaded).attr("data-sessionFilePath");
-        
-        compressRecordedSessionFile(recordedSessionDetailsToBeModifiedPath);
         
         $.each(jsonData.contributions, function(key, item){
                if(item.sessionFilePath == recordedSessionDetailsToBeModifiedPath)
@@ -557,6 +556,8 @@ function addRecordedSessionDetailsToJSON()
                }
                }
                });
+        
+        
         
         getFileSystemRefForWriting(jsonData);
         resetSelfRecordingForms();

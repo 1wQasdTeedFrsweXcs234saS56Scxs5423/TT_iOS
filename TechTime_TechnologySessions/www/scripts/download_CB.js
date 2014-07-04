@@ -1,4 +1,3 @@
-
 var filePath;
 var id = cordova.createUID();
 window.ChildBrowser = ChildBrowser;
