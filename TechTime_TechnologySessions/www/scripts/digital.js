@@ -40,8 +40,25 @@ function loadSubscribedDigitalAreas()
 {
     var digitalTechnologyAreaHTML = '';
     
-    $.each(jsonData.digitalAreas, function(key, item){
-                digitalTechnologyAreaHTML += generateDigitalTechnologyAreaHTML(item);
+    var digitalAreasSorted = [];
+    
+        $.each(jsonData.digitalAreas, function(key, item){
+                $.each(jsonData.category, function(key, itemMain)
+                       {
+                            if(item == itemMain.categoryid)
+                                {
+                                    digitalAreasSorted.push(itemMain);
+                                }
+                       });
+           });
+    
+    
+    digitalAreasSorted.sort(function(categoryA, categoryB){
+                                return categoryA.weight - categoryB.weight;
+                            });
+    
+    $.each(digitalAreasSorted, function(key, item){
+                digitalTechnologyAreaHTML += generateDigitalTechnologyAreaHTML(item.categoryid);
            });
     
     $('#digitalAreaHomePageTechnologyArea').html(digitalTechnologyAreaHTML);
