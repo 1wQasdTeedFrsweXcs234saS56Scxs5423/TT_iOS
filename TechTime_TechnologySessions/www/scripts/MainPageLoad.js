@@ -1318,6 +1318,8 @@ function getAudioVideoItem(xml)
                              function backPage(pageIdnew) {
                              var sptFlagGlobal = window.localStorage.getItem("spotLightFlag");
                              stopPlayingMedia();
+                             
+                             $('#digitalSpotlightArrow').html("<img src='images/icon_whiteRight.png' style='float:right;height:17px;width:17px;padding-right:15px;'/>");
                              $(".mainMenuListContent").hide();
                              
                              if(pageIdnew == "digitalAreaHomePage")
@@ -1360,17 +1362,22 @@ function getAudioVideoItem(xml)
                                     $.mobile.changePage('#searchResultPage');
                              
                                 } else {
-                                    
                              
-                                     $.mobile.changePage("#businessCategory", {
-                                                         transition: "none"
-                                                         });
+                                    if(sptFlagGlobal && isFromDigitalHomePage)
+                                    {
+                                        $.mobile.changePage("#digitalAreaHomePage");
+                                    } else
+                                    {
+                                         $.mobile.changePage("#businessCategory", {
+                                                             transition: "none"
+                                                             });
+                                         
+                                         if(!isFromDigitalHomePage)
+                                         {
+                                         resetSearchFlags();
+                                         }
+                                    }
                              
-                                     if(!isFromDigitalHomePage)
-                                     {
-                                        resetSearchFlags();
-                                     }
-
                                  }
                              
                              
