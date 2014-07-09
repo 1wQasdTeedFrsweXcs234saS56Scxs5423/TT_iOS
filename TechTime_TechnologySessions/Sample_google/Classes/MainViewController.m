@@ -290,7 +290,7 @@ NSString *strCurrentYpos;
 
     
     
-    if([[urlArr objectAtIndex:0] isEqualToString:@"https://techtime.stage2.accenture.com/mobile/authenticated/index.html"])
+    if([[urlArr objectAtIndex:0] isEqualToString:@"https://techtime.accenture.com/mobile/authenticated/index.html"])
     {
         NSLog(@"----**&&**-----");
         
@@ -361,22 +361,22 @@ NSString *strCurrentYpos;
         {
             NSLog(@"The internet is working via WIFI.");
             
-            // NSString *urlAddress = @"https://federation-sts.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.stage2.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2013-04-11T12%3a15%3a21Z";
+            // NSString *urlAddress = @"https://federation-sts.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2013-04-11T12%3a15%3a21Z";
             
             //NSString *urlAddress = @"https://myte.accenture.com";
-            //NSString *urlAddress = @"https://techtime.stage2.accenture.com/mobile/index.php";
+            //NSString *urlAddress = @"https://techtime.accenture.com/mobile/index.php";
             
-            NSString *urlAddress = @"https://federation-sts.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.stage2.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fmobile%252findex.php";
+            NSString *urlAddress = @"https://federation-sts.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fmobile%252findex.php";
             
             
             // Use this for Stage 1
             
-            //            NSString *urlAddress = @"https://federation-sts-stage.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.stage2.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fmobile%252findex.php";
+            //            NSString *urlAddress = @"https://federation-sts-stage.accenture.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2ftechtime.accenture.com&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fmobile%252findex.php";
             
             
             NSURL *url = [[[NSURL alloc] initWithString:urlAddress] autorelease];
             
-            //NSURL *url = [NSURL URLWithString:@"https://techtime.stage2.accenture.com/mobile/index.php"];
+            //NSURL *url = [NSURL URLWithString:@"https://techtime.accenture.com/mobile/index.php"];
             [NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:[url host]];
             
             // [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
