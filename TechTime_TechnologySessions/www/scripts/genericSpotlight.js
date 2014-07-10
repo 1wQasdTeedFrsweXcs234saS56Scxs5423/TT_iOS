@@ -523,7 +523,7 @@ function showSpotLightContent()
                         actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
                    } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
                    {
-                        actualThumb = itemType.actual;
+                        actualThumb = itemRes.actual;
                    }
                } else if(!isOnline)
                {
