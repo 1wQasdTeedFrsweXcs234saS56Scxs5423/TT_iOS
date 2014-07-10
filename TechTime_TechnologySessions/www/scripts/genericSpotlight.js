@@ -471,6 +471,8 @@ function showSpotLightContent()
                   });
            });
     
+
+    
         $.each(spotlightSourceArray, function (index, itemRes) {
                var count = '-100';
                var imgsrc = '';
@@ -493,13 +495,16 @@ function showSpotLightContent()
                }
                }
                
+               
+              
+               
                if (stringIWant.length > 25) {
-               var stringToDisplay = stringIWant.substring(0,
-                                                           22);
+               var stringToDisplay = stringIWant.substring(0,22);
                var trimmedCatDisplay = stringToDisplay + "...";
                stringIWant = stringToDisplay;
                }
 
+                
                
                if (itemRes.type == 'podcast' || itemRes.type == 'documents' || itemRes.type == 'events' || itemRes.type == 'contributor') {
                if (itemRes.type == 'events') {
@@ -509,6 +514,7 @@ function showSpotLightContent()
                itemRes.formattype = itemRes.type;
                itemRes.itemId = itemRes.contributorId;
                }
+
                
                if(isOnline)
                {
@@ -521,15 +527,16 @@ function showSpotLightContent()
                    }
                } else if(!isOnline)
                {
-                   if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") != -1)
+                   if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
                    {
-                        actualThumb = globalPathNew + "images/"+itemType.itemId+"thumb.png";
-                   } else if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") == -1)
+                        actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
                    {
                         actualThumb = "images/TechTime-AppIcon.png";
                    }
-               }
                
+               
+               }
                
                var authoNames = '';
                $.each(itemRes.author, function (key, itemAuthor) {
