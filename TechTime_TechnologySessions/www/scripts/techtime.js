@@ -394,3 +394,14 @@ function confirmDeleteFile() {
     }
     
 }
+
+
+
+function applicationErrorLogger(errorAction, errorObject)
+{
+    var errorLogDate = new Date();
+    var errorEventCategory = "ERROR_"+jsonData.loggedUserName.replace(/\_/g, '.')+"_iOS_3.6.0";
+    var errorLevel = errorLogDate + ' ' + JSON.stringify(errorObject);
+    
+    window.GA.trackEventWithCategory(errorEventCategory, errorAction, errorLevel,1);
+}

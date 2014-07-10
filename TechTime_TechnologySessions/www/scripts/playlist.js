@@ -11,6 +11,10 @@ function loadPlaylistsData() {
            dataType: "xml",
            success: getPlaylistsData,
            error: function (xhr, textStatus, errorThrown) {
+           if(isOnline)
+           {
+           applicationErrorLogger("SERVICE: Playlists", xhr);
+           }
            }
            });
 }

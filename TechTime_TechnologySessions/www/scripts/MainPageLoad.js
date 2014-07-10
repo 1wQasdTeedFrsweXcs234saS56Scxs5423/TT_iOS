@@ -86,6 +86,10 @@ function getSubscribeRss()
            dataType : "xml",
            success : subscribeTA,
            error : function(xhr, textStatus, errorThrown) {
+           if(isOnline)
+           {
+           applicationErrorLogger("SERVICE: Subscribe RSS", xhr);
+           }
            console.log('In Failure'+JSON.stringify(xhr));
            }
            });
@@ -182,6 +186,10 @@ function loadtechnologyAreaListUrl() {
            dataType: "xml",
            success:displayTAList,
            error:function(xhr, textStatus, errorThrown) {
+           if(isOnline)
+           {
+           applicationErrorLogger("SERVICE: All Areas List", xhr);
+           }
            console.log('In Failure'+JSON.stringify(xhr));
            }
            });
@@ -312,6 +320,10 @@ function loadAudioVideoURL() {
            dataType : "xml",
            success : getAudioVideoItem,
            error : function(xhr, textStatus, errorThrown) {
+           if(isOnline)
+           {
+           applicationErrorLogger("SERVICE: Audio Video Items", xhr);
+           }
            console.log('In Failure'+JSON.stringify(xhr));
            }
            });
@@ -569,6 +581,10 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : getEventItem,
                                     error : function(xhr, textStatus, errorThrown) {
+                                    if(isOnline)
+                                    {
+                                    applicationErrorLogger("SERVICE: Event Items", xhr);
+                                    }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
                                     });
@@ -736,6 +752,10 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : getDocumentItem,
                                     error : function(xhr, textStatus, errorThrown) {
+                                    if(isOnline)
+                                    {
+                                    applicationErrorLogger("SERVICE: Document Items", xhr);
+                                    }
                                     }
                                     });
                              }
@@ -929,6 +949,10 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : loadContributorData,
                                     error : function(xhr, textStatus, errorThrown) {
+                                    if(isOnline)
+                                    {
+                                    applicationErrorLogger("SERVICE: Contributors List", xhr);
+                                    }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
                                     });
@@ -1004,6 +1028,10 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : loadTechWatchMultipleData,
                                     error : function(xhr, textStatus, errorThrown) {
+                                    if(isOnline)
+                                    {
+                                    applicationErrorLogger("SERVICE: Tech Watch", xhr);
+                                    }
                                     }
                                     });
                              
@@ -1151,6 +1179,10 @@ function getAudioVideoItem(xml)
                                         dataType : "xml",
                                         success : loadSpotlightGeneral,
                                         error : function(xhr, textStatus, errorThrown) {
+                                        if(isOnline)
+                                        {
+                                        applicationErrorLogger("SERVICE: Home Spotlight", xhr);
+                                        }
                                         console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
                                         }
                                         });
@@ -1165,6 +1197,10 @@ function getAudioVideoItem(xml)
                                         dataType : "xml",
                                         success : loadSpotlightGeneral,
                                         error : function(xhr, textStatus, errorThrown) {
+                                        if(isOnline)
+                                        {
+                                        applicationErrorLogger("SERVICE: Digital Spotlight", xhr);
+                                        }
                                         console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
                                         }
                                         });
@@ -1182,6 +1218,10 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : loadFaq,
                                     error : function(xhr, textStatus, errorThrown) {
+                                    if(isOnline)
+                                    {
+                                    applicationErrorLogger("SERVICE: FAQs", xhr);
+                                    }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
                                     });
@@ -1247,6 +1287,10 @@ function getAudioVideoItem(xml)
                                     success : loadAboutTechTime,
                                     error : function(xhr, textStatus, errorThrown) {
                                        // alert(JSON.stringify(xhr) + ' ' + JSON.stringify(textStatus) + ' ' + errorThrown);
+                                        if(isOnline)
+                                        {
+                                            applicationErrorLogger("SERVICE: About Tech Time", xhr);
+                                        }
                                     }
                                     });
                              aboutTechTimeRss = '';
@@ -2225,6 +2269,12 @@ function loadShowCaseArticleTechWatch()
                                                    }
                                                    },
                                                    function(error) {
+                                                   
+                                                   if(isOnline)
+                                                   {
+                                                        applicationErrorLogger("Images Download Service", error);
+                                                   }
+                                                   
                                                    downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
                                                    
                                                    if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)

@@ -517,14 +517,14 @@ function showSpotLightContent()
                         actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
                    } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
                    {
-                        actualThumb = itemType.actual;
+                        actualThumb = itemRes.actual;
                    }
                } else if(!isOnline)
                {
-                   if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") != -1)
+                   if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") != -1)
                    {
-                        actualThumb = globalPathNew + "images/"+itemType.itemId+"thumb.png";
-                   } else if(downloadedThumbs.indexOf(itemType.itemId + "thumb.png") == -1)
+                        actualThumb = globalPathNew + "images/"+itemRes.itemId+"thumb.png";
+                   } else if(downloadedThumbs.indexOf(itemRes.itemId + "thumb.png") == -1)
                    {
                         actualThumb = "images/TechTime-AppIcon.png";
                    }

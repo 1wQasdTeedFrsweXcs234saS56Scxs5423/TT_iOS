@@ -75,9 +75,9 @@ function readMoreData(urlToOpen)
 function onDeviceReady() {
     
     // Main Account ID
-     window.GA.trackerWithTrackingId("UA-41889841-1");
+    // window.GA.trackerWithTrackingId("UA-41889841-1");
     // Testing Account ID
-    //window.GA.trackerWithTrackingId("UA-48298549-1");
+    window.GA.trackerWithTrackingId("UA-48298549-1");
     window.GA.trackView("/TechTimeApp-IOS");
     
     document.addEventListener("backbutton", backKeyDown, false);
