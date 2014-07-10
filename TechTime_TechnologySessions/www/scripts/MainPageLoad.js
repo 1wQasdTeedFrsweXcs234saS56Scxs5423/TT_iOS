@@ -1246,6 +1246,7 @@ function getAudioVideoItem(xml)
                                     dataType : "xml",
                                     success : loadAboutTechTime,
                                     error : function(xhr, textStatus, errorThrown) {
+                                       // alert(JSON.stringify(xhr) + ' ' + JSON.stringify(textStatus) + ' ' + errorThrown);
                                     }
                                     });
                              aboutTechTimeRss = '';
@@ -2207,6 +2208,7 @@ function loadShowCaseArticleTechWatch()
                              
                              var fileTransfer = new FileTransfer();
                              
+                             
                              if(isOnline){
                              
                              filePath = globalPathNew + "images/"+ thumbId+imageName + ".png";
@@ -2223,7 +2225,6 @@ function loadShowCaseArticleTechWatch()
                                                    }
                                                    },
                                                    function(error) {
-                                                   
                                                    downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
                                                    
                                                    if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
