@@ -2272,7 +2272,7 @@ function loadShowCaseArticleTechWatch()
                                                    
                                                    if(isOnline)
                                                    {
-                                                        applicationErrorLogger("Images Download Service", error);
+                                                        applicationErrorLogger("Images Download: Thumbnail Actual Download", error);
                                                    }
                                                    
                                                    downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;

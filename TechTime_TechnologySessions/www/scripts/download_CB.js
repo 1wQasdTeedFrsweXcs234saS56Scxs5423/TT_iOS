@@ -271,6 +271,12 @@ function downloadFileAudioMainYes(elementId,elementTitle,isDownloadedFlag,elemen
                           
                             },
                             function(error) {
+                            
+                            if(isOnline)
+                            {
+                            applicationErrorLogger("File Download: Audio Download", error);
+                            }
+                            
                             console.log("Error Code " + error.code);
                             modifyDownloadsFromSpotlightFlag(elementId, false);
                             if(error.code != 4 || error.code != '4'){
@@ -382,6 +388,12 @@ function downloadFileVideoMain(elementId,elementTitle,isDownloadedFlag,elementAu
                              
                              },
                              function(error) {
+                             
+                             if(isOnline)
+                             {
+                             applicationErrorLogger("File Download: Video Download", error);
+                             }
+                             
                              modifyDownloadsFromSpotlightFlag(elementId, false);
                              if(error.code != 4 || error.code != '4'){
                              
@@ -578,6 +590,11 @@ function downloadFileDocMain(elementId,elementTitle,isDownloadedFlag,elementAudi
                              
                              },
                              function(error) {
+                             if(isOnline)
+                             {
+                             applicationErrorLogger("File Download: Document Download", error);
+                             }
+                             
                              modifyDownloadsFromSpotlightFlag(elementId, false);
                              if(error.code != 4 || error.code != '4'){
                              jAlert('Download was not completed due to lost internet connection. Please connect to the Internet and re-download.', 'Tech Time');
@@ -666,6 +683,12 @@ function downloadTechWatchImages(techWatchImage, downloadIndex)
                                   function(entry){
                                   },
                                   function(error) {
+                                  
+                                  if(isOnline)
+                                  {
+                                  applicationErrorLogger("Tech Watch Image Download: Image Download", error);
+                                  }
+                                  
                                   console.log("download error source " + error.source);
                                   }
                                   );

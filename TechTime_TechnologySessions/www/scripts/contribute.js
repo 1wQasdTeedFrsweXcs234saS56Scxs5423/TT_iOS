@@ -1014,6 +1014,12 @@ function uploadCurrentSession(uploadElement)
                               resetSelfRecordingForms();
                               },
                               function(error) {
+                              
+                              if(isOnline)
+                              {
+                              applicationErrorLogger("File Upload: Contribute Upload", error);
+                              }
+                              
                               console.log("ERROR UPLOAD "+JSON.stringify(error));
                               filesToBeUploadedArray.splice(0, 1);
                               if(error.code == 4)
