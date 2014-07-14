@@ -13,7 +13,8 @@ function loadPlaylistsData() {
            error: function (xhr, textStatus, errorThrown) {
            if(isOnline)
            {
-           applicationErrorLogger("SERVICE: Playlists", xhr);
+           var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+           applicationErrorLogger("SERVICE: Playlists", errorString);
            }
            }
            });

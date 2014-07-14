@@ -1017,7 +1017,8 @@ function uploadCurrentSession(uploadElement)
                               
                               if(isOnline)
                               {
-                              applicationErrorLogger("File Upload: Contribute Upload", error);
+                              var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                              applicationErrorLogger("File Upload: Contribute Upload", errorString);
                               }
                               
                               console.log("ERROR UPLOAD "+JSON.stringify(error));

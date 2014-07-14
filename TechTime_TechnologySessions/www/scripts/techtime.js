@@ -397,11 +397,12 @@ function confirmDeleteFile() {
 
 
 
-function applicationErrorLogger(errorAction, errorObject)
+function applicationErrorLogger(errorAction, errorString)
 {
+    
     var errorLogDate = new Date();
     var errorEventCategory = "ERROR_"+jsonData.loggedUserName.replace(/\_/g, '.')+"_iOS_3.6.0";
-    var errorLevel = errorLogDate + ' ' + JSON.stringify(errorObject);
+    var errorLevel = errorLogDate + ' ' + errorString;
     
     window.GA.trackEventWithCategory(errorEventCategory, errorAction, errorLevel,1);
 }

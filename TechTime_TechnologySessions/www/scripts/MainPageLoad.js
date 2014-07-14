@@ -88,7 +88,8 @@ function getSubscribeRss()
            error : function(xhr, textStatus, errorThrown) {
            if(isOnline)
            {
-           applicationErrorLogger("SERVICE: Subscribe RSS", xhr);
+           var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+           applicationErrorLogger("SERVICE: Subscription RSS", errorString);
            }
            console.log('In Failure'+JSON.stringify(xhr));
            }
@@ -188,7 +189,8 @@ function loadtechnologyAreaListUrl() {
            error:function(xhr, textStatus, errorThrown) {
            if(isOnline)
            {
-           applicationErrorLogger("SERVICE: All Areas List", xhr);
+           var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+           applicationErrorLogger("SERVICE: All Areas List", errorString);
            }
            console.log('In Failure'+JSON.stringify(xhr));
            }
@@ -322,7 +324,8 @@ function loadAudioVideoURL() {
            error : function(xhr, textStatus, errorThrown) {
            if(isOnline)
            {
-           applicationErrorLogger("SERVICE: Audio Video Items", xhr);
+           var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+           applicationErrorLogger("SERVICE: Audio Video Items", errorString);
            }
            console.log('In Failure'+JSON.stringify(xhr));
            }
@@ -583,7 +586,8 @@ function getAudioVideoItem(xml)
                                     error : function(xhr, textStatus, errorThrown) {
                                     if(isOnline)
                                     {
-                                    applicationErrorLogger("SERVICE: Event Items", xhr);
+                                    var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                    applicationErrorLogger("SERVICE: Event Items", errorString);
                                     }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
@@ -754,7 +758,8 @@ function getAudioVideoItem(xml)
                                     error : function(xhr, textStatus, errorThrown) {
                                     if(isOnline)
                                     {
-                                    applicationErrorLogger("SERVICE: Document Items", xhr);
+                                    var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                    applicationErrorLogger("SERVICE: Document Items", errorString);
                                     }
                                     }
                                     });
@@ -951,7 +956,8 @@ function getAudioVideoItem(xml)
                                     error : function(xhr, textStatus, errorThrown) {
                                     if(isOnline)
                                     {
-                                    applicationErrorLogger("SERVICE: Contributors List", xhr);
+                                    var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                    applicationErrorLogger("SERVICE: Contributors List", errorString);
                                     }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
@@ -1030,7 +1036,8 @@ function getAudioVideoItem(xml)
                                     error : function(xhr, textStatus, errorThrown) {
                                     if(isOnline)
                                     {
-                                    applicationErrorLogger("SERVICE: Tech Watch", xhr);
+                                    var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                    applicationErrorLogger("SERVICE: Tech Watch", errorString);
                                     }
                                     }
                                     });
@@ -1181,7 +1188,8 @@ function getAudioVideoItem(xml)
                                         error : function(xhr, textStatus, errorThrown) {
                                         if(isOnline)
                                         {
-                                        applicationErrorLogger("SERVICE: Home Spotlight", xhr);
+                                        var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                        applicationErrorLogger("SERVICE: Home Spotlight", errorString);
                                         }
                                         console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
                                         }
@@ -1199,7 +1207,8 @@ function getAudioVideoItem(xml)
                                         error : function(xhr, textStatus, errorThrown) {
                                         if(isOnline)
                                         {
-                                        applicationErrorLogger("SERVICE: Digital Spotlight", xhr);
+                                        var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                        applicationErrorLogger("SERVICE: Digital Spotlight", errorString);
                                         }
                                         console.log('In Failure SPOTLIGHT '+JSON.stringify(xhr));
                                         }
@@ -1220,7 +1229,8 @@ function getAudioVideoItem(xml)
                                     error : function(xhr, textStatus, errorThrown) {
                                     if(isOnline)
                                     {
-                                    applicationErrorLogger("SERVICE: FAQs", xhr);
+                                    var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                    applicationErrorLogger("SERVICE: FAQs", errorString);
                                     }
                                     console.log('In Failure'+JSON.stringify(xhr));
                                     }
@@ -1289,7 +1299,8 @@ function getAudioVideoItem(xml)
                                        // alert(JSON.stringify(xhr) + ' ' + JSON.stringify(textStatus) + ' ' + errorThrown);
                                         if(isOnline)
                                         {
-                                            applicationErrorLogger("SERVICE: About Tech Time", xhr);
+                                            var errorString = xhr.readyState + ' ' + xhr.status + ' ' + xhr.statusText;
+                                            applicationErrorLogger("SERVICE: About Tech Time", errorString);
                                         }
                                     }
                                     });
@@ -2257,6 +2268,8 @@ function loadShowCaseArticleTechWatch()
                              
                              filePath = globalPathNew + "images/"+ thumbId+imageName + ".png";
                              
+                             //url = "http://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_22222.png"
+                             
                              fileTransfer.download(
                                                    url,
                                                    filePath,
@@ -2270,17 +2283,20 @@ function loadShowCaseArticleTechWatch()
                                                    },
                                                    function(error) {
                                                    
-                                                   if(isOnline)
-                                                   {
-                                                        applicationErrorLogger("Images Download: Thumbnail Actual Download", error);
-                                                   }
-                                                   
                                                    downloadAllRequiredImagesCounter = downloadAllRequiredImagesCounter + 1;
                                                    
                                                    if(downloadAllRequiredImagesCounter < downloadAllRequiredImagesLength)
                                                    {
                                                    downloadAllRequiredImages();
                                                    }
+                                                   
+                                                   if(isOnline)
+                                                   {
+                                                        var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                                                        applicationErrorLogger("Images Download: Thumbnail Actual Download", errorString);
+                                                   }
+                                                   
+                                                   
                                                    }
                                                    );
                              

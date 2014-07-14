@@ -274,7 +274,8 @@ function downloadFileAudioMainYes(elementId,elementTitle,isDownloadedFlag,elemen
                             
                             if(isOnline)
                             {
-                            applicationErrorLogger("File Download: Audio Download", error);
+                            var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                            applicationErrorLogger("File Download: Audio Download", errorString);
                             }
                             
                             console.log("Error Code " + error.code);
@@ -391,7 +392,8 @@ function downloadFileVideoMain(elementId,elementTitle,isDownloadedFlag,elementAu
                              
                              if(isOnline)
                              {
-                             applicationErrorLogger("File Download: Video Download", error);
+                             var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                             applicationErrorLogger("File Download: Video Download", errorString);
                              }
                              
                              modifyDownloadsFromSpotlightFlag(elementId, false);
@@ -592,7 +594,8 @@ function downloadFileDocMain(elementId,elementTitle,isDownloadedFlag,elementAudi
                              function(error) {
                              if(isOnline)
                              {
-                             applicationErrorLogger("File Download: Document Download", error);
+                             var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                             applicationErrorLogger("File Download: Document Download", errorString);
                              }
                              
                              modifyDownloadsFromSpotlightFlag(elementId, false);
@@ -686,7 +689,8 @@ function downloadTechWatchImages(techWatchImage, downloadIndex)
                                   
                                   if(isOnline)
                                   {
-                                  applicationErrorLogger("Tech Watch Image Download: Image Download", error);
+                                  var errorString = error.code + ' ' + error.source + ' ' + error.http_status + ' ' + error.body;
+                                  applicationErrorLogger("Tech Watch Image Download: Image Download", errorString);
                                   }
                                   
                                   console.log("download error source " + error.source);
