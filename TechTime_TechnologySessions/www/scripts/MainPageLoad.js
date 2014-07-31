@@ -14,9 +14,9 @@ var isSubscribeDocument = "no";
 var isSubscribePodcast = "no";
 var isSubscribeEvent = "no";
 
-var rssUrl = "https://techtime.accenture.com/techno-areas/1+2/audio-video-listing-view";
-var documentRss = "https://techtime.accenture.com/techno-areas/1+2/documents-listing-view";
-var eventsRss = "https://techtime.accenture.com/techno-areas/1+2/events-listing-view";
+var rssUrl = "https://techtime.stage2.accenture.com/techno-areas/1+2/audio-video-listing-view";
+var documentRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/documents-listing-view";
+var eventsRss = "https://techtime.stage2.accenture.com/techno-areas/1+2/events-listing-view";
 
 var selectedCategoryId='';
 var selectedCategoryName='';
@@ -63,9 +63,12 @@ function createJsonFormat()
     
     jsonData.playlists = new Array();
     jsonData.recommendations = new Array();
+    jsonData.digitalRecommendations = new Array();
     
     jsonData.digitalAreas = new Array();
     jsonData.digitalAreasItems = new Array();
+    
+    jsonData.pageStack = new Array();
 
 }
 
@@ -77,7 +80,7 @@ function getSubscribeRss()
     uName = uName.replace(/\./g, '_');
     jsonData.loggedUserName = uName;
     
-   var subscribeRss = "https://techtime.accenture.com/techtimemobile/subscribe-service/uid=";
+   var subscribeRss = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/uid=";
   //  subscribeRss = "http://localhost:8888/spotlight/subscriptions.xml";
     subscribeRss = subscribeRss + uName;
     $.ajax({
@@ -167,10 +170,10 @@ function subscribeTA(xml)
         eventsRss = "";
         documentRss = "";
         
-        rssUrl = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
-       // rssUrl = "https://techtime.accenture.com/technologySession.xml";
-        eventsRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
-        documentRss = "https://techtime.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
+        rssUrl = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/audio-video-listing-view";
+       // rssUrl = "https://techtime.stage2.accenture.com/technologySession.xml";
+        eventsRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/events-listing-view";
+        documentRss = "https://techtime.stage2.accenture.com/techno-areas/"+subscribeCatList+"/documents-listing-view";
     }
     
     loadtechnologyAreaListUrl();
@@ -179,7 +182,7 @@ function subscribeTA(xml)
 
 function loadtechnologyAreaListUrl() {
     
-    var technologyAreaListUrl = "https://techtime.accenture.com/techtimemobile/subscribe-service/all";
+    var technologyAreaListUrl = "https://techtime.stage2.accenture.com/techtimemobile/subscribe-service/all";
     
 	$.ajax({
            type:"GET",
@@ -310,6 +313,7 @@ function displayTAList(xml)
     $.each(mainCategoryList, function(index, item) {
            jsonData.category.push(item);
            });
+    loadrecoEngineData('home');
     loadAudioVideoURL();
     // loadPlaylistsData();
     
@@ -746,6 +750,7 @@ function getAudioVideoItem(xml)
                                                       });
                              
                              loadDocumentRss();
+                             
                              }
                              
                              function loadDocumentRss()
@@ -938,7 +943,9 @@ function getAudioVideoItem(xml)
                                 $('#applicationUpdateButton').css('display', 'block');
                                 // $('#applicationUpdateVersion').html(newAppVersion);
                              }
-                                                          
+                             
+                             initializePageStackArray();
+                             
                              $("#imgRefreshProgress").hide();
                              
                             // generateTechWatchShowCaseArticle();
@@ -947,7 +954,7 @@ function getAudioVideoItem(xml)
                              }
                              
                              function loadContributorRss() {
-                             var contributorRss = "https://techtime.accenture.com/mobile-contributor-listing.xml";
+                             var contributorRss = "https://techtime.stage2.accenture.com/mobile-contributor-listing.xml";
                              $.ajax({
                                     type : "GET",
                                     url : contributorRss,
@@ -1027,7 +1034,7 @@ function getAudioVideoItem(xml)
                              function loadTechWatchMultipleUrl()
                              {
                              
-                             var techWatchRss = "https://techtime.accenture.com/mobile-tech-watch";
+                             var techWatchRss = "https://techtime.stage2.accenture.com/mobile-tech-watch";
                              $.ajax({
                                     type : "GET",
                                     url : techWatchRss,
@@ -1174,8 +1181,8 @@ function getAudioVideoItem(xml)
                              
                              function loadSpotlightUrl(spotlightType)
                              {
-                             var spotlightRss = "https://techtime.accenture.com/mobile-spotlight-feeds.xml";
-                             var digitalSpotlightRss = "https://techtime.accenture.com/digital-spotlight-feeds";
+                             var spotlightRss = "https://techtime.stage2.accenture.com/mobile-spotlight-feeds.xml";
+                             var digitalSpotlightRss = "https://techtime.stage2.accenture.com/digital-spotlight-feeds";
                              
                              if(spotlightType == 'genericSpotlight')
                              {
@@ -1220,7 +1227,7 @@ function getAudioVideoItem(xml)
                              
                              function loadFaqRss()
                              {
-                             var faqRss = "https://techtime.accenture.com/mobile-faq-rss/faq.xml";
+                             var faqRss = "https://techtime.stage2.accenture.com/mobile-faq-rss/faq.xml";
                              $.ajax({
                                     type : "GET",
                                     url : faqRss,
@@ -1273,6 +1280,7 @@ function getAudioVideoItem(xml)
                              
                              
                              loadSpotlightUrl('digitalSpotlight');
+                             loadrecoEngineData('digital');
                              
                              if(isAppUpgradeAvailable == false)
                              {
@@ -1287,7 +1295,7 @@ function getAudioVideoItem(xml)
                              
                              function loadAboutTechTimeRss()
                              {
-                               var aboutTechTimeRss = "https://techtime.accenture.com/mobile-about-us/aboutus.xml";
+                               var aboutTechTimeRss = "https://techtime.stage2.accenture.com/mobile-about-us/aboutus.xml";
                               // var aboutTechTimeRss = "http://localhost:8888/spotlight/AboutTechTime.xml";
                              
                              $.ajax({
@@ -1386,82 +1394,104 @@ function getAudioVideoItem(xml)
                              
                              } else if (pageIdnew == "detailMediaPage") {
                              
-                             mediaFlag = window.localStorage.getItem("mediaFlag");
+                             var recommendationFlagHome = window.localStorage.getItem("recommendationFlagHome");
+                             var recommendationFlagDigital = window.localStorage.getItem("recommendationFlagDigital");
                              
-                             if (eventsFlag) {
+                             alert(recommendationFlagHome + ' ' + recommendationFlagDigital);
                              
-                             var eveMnt = window.localStorage.getItem("eventmonth");
-                             var eveCnt = window.localStorage.getItem("eventcount");
-                             var currMonthName = window.localStorage.getItem("currMonth");
-                             
-                             showUpcomingEventList(eveMnt, eveCnt, currMonthName);
-                             
-                             $.mobile.changePage("#UpcomingEventsPage");
-                             
-                             if(!isFromDigitalHomePage)
+                             if((recommendationFlagHome || recommendationFlagDigital) == false)
                              {
+                                 mediaFlag = window.localStorage.getItem("mediaFlag");
+                                 
+                                 if (eventsFlag) {
+                                 
+                                 var eveMnt = window.localStorage.getItem("eventmonth");
+                                 var eveCnt = window.localStorage.getItem("eventcount");
+                                 var currMonthName = window.localStorage.getItem("currMonth");
+                                 
+                                 showUpcomingEventList(eveMnt, eveCnt, currMonthName);
+                                 
+                                 $.mobile.changePage("#UpcomingEventsPage");
+                                 
+                                 if(!isFromDigitalHomePage)
+                                 {
                                  resetSearchFlags();
-                             }
-                              
-                                
-                             } else if (mediaFlag) {
-                                 if(!spotLightFlag && !searchFlag){
-                                     var catName = window.localStorage.getItem("currentCategoryOff");
-                                     var catId = window.localStorage.getItem("currentCategoryIdOff");
-                                     selectedCategoryId = catId;
-                                     selectedCategoryName = catName;
-                                     $.mobile.changePage("#TAListResult", {
-                                                         transition: "none"
-                                                         });
-                                 } else if(searchFlag)
-                                {
-                                    $.mobile.changePage('#searchResultPage');
-                             
-                                } else {
-                             
-                                    if(sptFlagGlobal && isFromDigitalHomePage)
-                                    {
-                                        $.mobile.changePage("#digitalAreaHomePage");
-                                    } else
-                                    {
-                                         $.mobile.changePage("#businessCategory", {
-                                                             transition: "none"
-                                                             });
-                                         
-                                         if(!isFromDigitalHomePage)
-                                         {
-                                         resetSearchFlags();
-                                         }
-                                    }
-                             
                                  }
+                                 
+                                 
+                                 } else if (mediaFlag) {
+                                 if(!spotLightFlag && !searchFlag){
+                                 var catName = window.localStorage.getItem("currentCategoryOff");
+                                 var catId = window.localStorage.getItem("currentCategoryIdOff");
+                                 selectedCategoryId = catId;
+                                 selectedCategoryName = catName;
+                                 $.mobile.changePage("#TAListResult", {
+                                                     transition: "none"
+                                                     });
+                                 } else if(searchFlag)
+                                 {
+                                 $.mobile.changePage('#searchResultPage');
+                                 
+                                 } else {
+                                 
+                                 if(sptFlagGlobal && isFromDigitalHomePage)
+                                 {
+                                 $.mobile.changePage("#digitalAreaHomePage");
+                                 } else
+                                 {
+                                 $.mobile.changePage("#businessCategory", {
+                                                     transition: "none"
+                                                     });
+                                 
+                                 if(!isFromDigitalHomePage)
+                                 {
+                                 resetSearchFlags();
+                                 }
+                                 }
+                                 
+                                 }
+                                 
+                                 
+                                 mediaFlag = false;
+                                 searchFlag = false;
+                                 eventsFlag = false;
+                                 
+                                 } else if (searchFromMainPage) {
+                                 $.mobile.changePage("#searchResultPage");
+                                 } else {
+                                 
+                                 if(!isFromDigitalHomePage)
+                                 {
+                                 $(".navigateBackBtn").hide();
+                                 if(sptFlagGlobal)
+                                 {
+                                 $(".navigateBackBtn").show();
+                                 }
+                                 
+                                 
+                                 $.mobile.changePage("#businessCategory");
+                                 resetSearchFlags();
+                                 } else if(isFromDigitalHomePage)
+                                 {
+                                 $.mobile.changePage('#digitalAreaHomePage');
+                                 }
+                                 
+                                 }
+                             } else
+                             {
                              
-                             
-                             mediaFlag = false;
-                             searchFlag = false;
-                             eventsFlag = false;
-                             
-                             } else if (searchFromMainPage) {
-                                $.mobile.changePage("#searchResultPage");
-                             } else {
-                             
-                                if(!isFromDigitalHomePage)
+                                if(recommendationFlagHome)
                                 {
-                                     $(".navigateBackBtn").hide();
-                                     if(sptFlagGlobal)
-                                     {
-                                     $(".navigateBackBtn").show();
-                                     }
-                                     
-                                     
-                                     $.mobile.changePage("#businessCategory");
-                                     resetSearchFlags();
-                                } else if(isFromDigitalHomePage)
+                                    $.mobile.changePage("#businessCategory");
+                                } else if(recommendationFlagDigital)
                                 {
                                     $.mobile.changePage('#digitalAreaHomePage');
                                 }
                              
+                                recommendationFlagHome = window.localStorage.setItem("recommendationFlagHome", false);
+                                recommendationFlagDigital = window.localStorage.setItem("recommendationFlagDigital", false);
                              }
+                             
                              } else if (pageIdnew == 'TAListResult' || pageIdnew == 'UpcomingEventsPage' || pageIdnew == 'aboutTectTimePage' || pageIdnew == 'contactUsPage' || pageIdnew == 'faqPage') {
                                     if(isFromDigitalHomePage)
                                     {
@@ -1763,7 +1793,7 @@ function getAudioVideoItem(xml)
                                 resetSearchFlags();
                              }
                              
-                             
+                             displayRecoEngine();
                              
                              }
                              
@@ -1837,7 +1867,7 @@ function getAudioVideoItem(xml)
                              {
                              var localDownloadedData = userDownloadsJson;
                              
-                             var linkUserDownloads = 'https://techtime.accenture.com/techtimemobile/mobiletrack';
+                             var linkUserDownloads = 'https://techtime.stage2.accenture.com/techtimemobile/mobiletrack';
                              if(isOnline){
                              $.ajax({
                                     

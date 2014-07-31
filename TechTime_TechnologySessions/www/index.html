@@ -28,12 +28,14 @@
                         <script type="text/javascript" src="scripts/appUpgrade.js"></script>
                         <script type="text/javascript" src="scripts/techtime.js"></script>
                         <script type="text/javascript" src="scripts/MainPageLoad.js"></script>
+                        <script type="text/javascript" src="scripts/recommendation.js"></script>
                         <script type="text/javascript" src="scripts/playlist.js"></script> 
                         <script type="text/javascript" src="scripts/genericSpotlight.js"></script>
                         <script type="text/javascript" src="scripts/showContent.js"></script>
                         <script type="text/javascript" src="scripts/listing.js"></script>
                         <script type="text/javascript" src="scripts/download_CB.js"></script>
                         <script type="text/javascript" src="scripts/digital.js"></script>
+                        <script type="text/javascript" src="scripts/pageStack.js"></script>
                         <script type="text/javascript" src="plugins/ChildBrowser.js"></script>
                         <script type="text/javascript" charset="utf-8" src="plugins/video.js"></script>
                         <script type="text/javascript" src="plugins/drop-down-menu.js"></script>
@@ -959,7 +961,7 @@
                         </a>
                     </div>
                     
-                    <div id="recoDiv"></div>
+                    <div id="recoDiv" onclick='setRecommendationLocationFlag("home");'></div>
                     
                     <div class=dynamicDivForLogout id="homescreenLogout" style="display:none">
                         <a id="logout1" class='anchorCategory test' onclick='postJSONData("logout","logout")'>
@@ -2037,6 +2039,8 @@
                         </div>
                     </a>
                 </div> 
+                
+                <div id="recoDivDigital" onclick='setRecommendationLocationFlag("digital");'></div>
                 
                 <div id="digitalAreaHomePageSpotlightArea" style="background:#F0EFED"></div>
                 <div id="digitalAreaHomePageRecommendationArea" style="background:#F0EFED"></div>

@@ -965,7 +965,7 @@ function uploadCurrentSession(uploadElement)
             fileBeingUploadedName += 'iOS_'+jsonData.loggedUserName+'_';
             fileBeingUploadedName += jsonData.contributions[fileBeingUploaded.uploadedFileKey].sessionTopic.replace(/\s/g, '_')+'_'+jsonData.contributions[fileBeingUploaded.uploadedFileKey].sessionRecordDate+fileBeingUploaded.uploadedFilePath.substring(fileBeingUploaded.uploadedFilePath.lastIndexOf('.'), fileBeingUploaded.uploadedFilePath.length);
             
-            var uploadCurrentSession = "https://techtime.accenture.com/sites/default/files/FileUpload/upload_file.php";
+            var uploadCurrentSession = "https://techtime.stage2.accenture.com/sites/default/files/FileUpload/upload_file.php";
             //var uploadCurrentSession = "https://posttestserver.com/post.php";
             
             //?name='testing"
@@ -1124,7 +1124,7 @@ function postRecordingDetails(recordingType)
 {
     if(isOnline)
     {
-        var postRecordingDetailsService = 'https://techtime.accenture.com/techtimemobile/record-upload';
+        var postRecordingDetailsService = 'https://techtime.stage2.accenture.com/techtimemobile/record-upload';
         
         var sessionRecordingEmailId = $('#assistedRecordingEmailInput').val();
         var sessionRecordingName = $('#assistedRecordingNameInput').val();
@@ -1177,7 +1177,7 @@ function postSelfRecordingDetails(recordedItemDetails)
 {
     if(isOnline)
     {
-        var postRecordingDetailsService = 'https://techtime.accenture.com/techtimemobile/record-upload';
+        var postRecordingDetailsService = 'https://techtime.stage2.accenture.com/techtimemobile/record-upload';
         
         var sessionRecordingEmailId = recordedItemDetails.sessionEmailId;
         var sessionRecordingName = recordedItemDetails.sessionName;

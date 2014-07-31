@@ -112,6 +112,7 @@ function readRSSFileJSON(file) {
         {
         }
         
+        
         if(toShowCategories) {
             createJsonFormatOffline(obj);
             showCategoriesListsagar(obj);
@@ -277,6 +278,8 @@ function readRSSFileJSON(file) {
                 
             }
             
+            displayRecoEngine('home');
+            displayRecoEngine('digital');
         }
         else{
             jsonFileData = obj;
@@ -292,7 +295,7 @@ function readRSSFileJSON(file) {
                 }
             }
         }
-		
+		//displayRecoEngine();
         loadDigitalTab();
 	};
     

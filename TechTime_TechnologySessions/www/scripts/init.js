@@ -478,7 +478,7 @@ function takeAppOffline(){
     networkState = navigator.network.connection.type;
     if ((networkState != 'unknown') && (networkState != 'No network connection') && (networkState != 'none')) {
     }
-
+    
     var DivData =  $('div[id="showProgressBar"]').html();
     $('div[id="showProgressBar"]').html('');
     var DivData =  $('div[id="showProgressBar"]').html();
