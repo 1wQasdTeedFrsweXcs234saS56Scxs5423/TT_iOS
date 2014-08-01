@@ -546,7 +546,7 @@ function downloadFileDocMain(elementId,elementTitle,isDownloadedFlag,elementAudi
                 };
                 
                 fileObjAbort = ftd;
-                alert(filePath);
+               // alert(filePath);
                 ftd.download(
                              url,
                              filePath,

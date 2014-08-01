@@ -1397,7 +1397,7 @@ function getAudioVideoItem(xml)
                              var recommendationFlagHome = window.localStorage.getItem("recommendationFlagHome");
                              var recommendationFlagDigital = window.localStorage.getItem("recommendationFlagDigital");
                              
-                             alert(recommendationFlagHome + ' ' + recommendationFlagDigital);
+                           //  alert(recommendationFlagHome + ' ' + recommendationFlagDigital);
                              
                              if((recommendationFlagHome || recommendationFlagDigital) == false)
                              {
